@@ -1,6 +1,6 @@
 /* ===================================================================
-   FLEXORA - RTL (Right-to-Left) Stylesheet
-   Include this file when [dir="rtl"] is set on <html>
+   FLEXORA - RTL (Right-to-Left) Master Stylesheet
+   Activated when [dir="rtl"] is set on <html>
 =================================================================== */
 
 [dir="rtl"] {
@@ -8,9 +8,162 @@
   text-align: right;
 }
 
-[dir="rtl"] .top-bar-item {
+/* --- Header & Navbar RTL Layout --- */
+[dir="rtl"] .site-header .navbar {
+  direction: rtl;
+}
+
+[dir="rtl"] .navbar-brand {
   margin-right: 0;
-  margin-left: 1.25rem;
+  margin-left: 1.5rem;
+}
+
+[dir="rtl"] .navbar-nav {
+  direction: rtl;
+  padding: 4px 6px;
+  gap: 2px;
+}
+
+[dir="rtl"] .navbar-nav .nav-item {
+  text-align: center;
+}
+
+[dir="rtl"] .nav-actions {
+  margin-left: 0 !important;
+  margin-right: 2rem !important;
+}
+
+[dir="rtl"] .dropdown-menu {
+  text-align: right;
+  left: auto !important;
+  right: 0 !important;
+}
+
+[dir="rtl"] .dropdown-item i {
+  margin-right: 0 !important;
+  margin-left: 0.5rem !important;
+}
+
+/* --- Icons with Directionality --- */
+[dir="rtl"] .fa-angle-right,
+[dir="rtl"] .fa-arrow-right,
+[dir="rtl"] .fa-chevron-right {
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] .fa-angle-left,
+[dir="rtl"] .fa-arrow-left,
+[dir="rtl"] .fa-chevron-left {
+  transform: scaleX(-1);
+}
+
+/* --- RTL Toggle Button Styling --- */
+.rtl-toggle-btn {
+  height: 42px;
+  padding: 0 1.1rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  background-color: rgba(124, 58, 237, 0.08);
+  color: var(--secondary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: var(--transition-fast);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.rtl-toggle-btn i {
+  font-size: 0.85rem;
+  color: var(--primary);
+  transition: transform var(--transition-fast);
+}
+
+.rtl-toggle-btn:hover {
+  background-color: var(--primary);
+  color: #FFFFFF !important;
+  border-color: var(--primary);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(124, 58, 237, 0.25);
+}
+
+.rtl-toggle-btn:hover i {
+  color: #FFFFFF !important;
+  transform: rotate(180deg);
+}
+
+.rtl-toggle-btn.is-active {
+  background: linear-gradient(135deg, #EC4899 0%, #7C3AED 100%);
+  color: #FFFFFF !important;
+  border-color: transparent;
+  box-shadow: 0 4px 14px rgba(236, 72, 153, 0.35);
+}
+
+.rtl-toggle-btn.is-active i {
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .rtl-toggle-btn {
+  background-color: rgba(139, 92, 246, 0.15);
+  border-color: rgba(139, 92, 246, 0.35);
+  color: #EDE6FD;
+}
+
+[data-theme="dark"] .rtl-toggle-btn i {
+  color: #00F5FF;
+}
+
+[data-theme="dark"] .rtl-toggle-btn:hover {
+  background-color: var(--primary);
+  color: #FFFFFF !important;
+  border-color: #00F5FF;
+}
+
+/* --- Footer RTL --- */
+[dir="rtl"] .site-footer {
+  text-align: right;
+}
+
+[dir="rtl"] .footer-title::after {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .footer-links a::after {
+  left: 0;
+  right: 1.25rem;
+  transform-origin: right;
+}
+
+[dir="rtl"] .footer-links a i {
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] .footer-links a:hover {
+  transform: translateX(-5px);
+}
+
+[dir="rtl"] .footer-links a:hover i {
+  transform: scaleX(-1) translateX(-3px);
+}
+
+[dir="rtl"] .footer-contact-item {
+  flex-direction: row;
+}
+
+[dir="rtl"] .footer-contact-item:hover {
+  transform: translateX(-4px);
+}
+
+[dir="rtl"] .footer-social-links {
+  justify-content: flex-start;
 }
 
 [dir="rtl"] .card-service::before {
@@ -26,15 +179,6 @@
 [dir="rtl"] .testimonial-quote-icon {
   right: auto;
   left: 1.5rem;
-}
-
-[dir="rtl"] .footer-title::after {
-  left: auto;
-  right: 0;
-}
-
-[dir="rtl"] .footer-links a:hover {
-  transform: translateX(-4px);
 }
 
 [dir="rtl"] .before-after-img.after-layer {
@@ -63,6 +207,28 @@
   animation-name: slideInLeft;
 }
 
+/* --- Curved Horizon Marquee in RTL --- */
+[dir="rtl"] .curved-marquee-track {
+  direction: ltr;
+}
+
+/* --- Input Groups & Buttons in RTL --- */
+[dir="rtl"] .input-group > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+  margin-right: -1px;
+  margin-left: 0;
+  border-top-left-radius: var(--bs-border-radius);
+  border-bottom-left-radius: var(--bs-border-radius);
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+[dir="rtl"] .input-group > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating) {
+  border-top-right-radius: var(--bs-border-radius);
+  border-bottom-right-radius: var(--bs-border-radius);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
 @keyframes slideInLeft {
   from {
     opacity: 0;
@@ -72,4 +238,13 @@
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+/* --- Hero Home 1 RTL Layout --- */
+[dir="rtl"] .hero-home-1 .hero-text-col {
+  text-align: right;
+}
+
+[dir="rtl"] .hero-home-1 .hero-trust-row {
+  justify-content: flex-start;
 }

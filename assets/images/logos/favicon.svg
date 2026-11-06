@@ -1,45 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="fav-cosmic-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1E0C42"/>
-      <stop offset="50%" stop-color="#12062E"/>
-      <stop offset="100%" stop-color="#080218"/>
+    <linearGradient id="fav-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE885"/>
+      <stop offset="50%" stop-color="#FFB703"/>
+      <stop offset="100%" stop-color="#D97706"/>
     </linearGradient>
-    <linearGradient id="fav-arch-grad" x1="0%" y1="100%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00F5FF"/>
-      <stop offset="45%" stop-color="#EC4899"/>
-      <stop offset="85%" stop-color="#8B5CF6"/>
-    </linearGradient>
-    <linearGradient id="fav-border-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="fav-f" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#00F5FF"/>
       <stop offset="50%" stop-color="#EC4899"/>
-      <stop offset="100%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#FFB703"/>
     </linearGradient>
-    <linearGradient id="fav-core-1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#F43F5E"/>
+    <linearGradient id="fav-wing" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7C3AED"/>
       <stop offset="50%" stop-color="#EC4899"/>
-      <stop offset="100%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#00F5FF"/>
     </linearGradient>
-    <clipPath id="fav-clip">
-      <rect x="9" y="9" width="46" height="46" rx="14"/>
-    </clipPath>
   </defs>
 
-  <!-- Arch Swoop -->
-  <path d="M 6 36 C 6 18, 20 4, 38 4 C 50 4, 59 11, 62 21" 
-        fill="none" 
-        stroke="url(#fav-arch-grad)" 
-        stroke-width="2.5" 
-        stroke-linecap="round"/>
-  <circle cx="6" cy="36" r="2" fill="#00F5FF"/>
-  <circle cx="62" cy="21" r="2" fill="#8B5CF6"/>
+  <rect width="100" height="100" rx="22" fill="#0C0320"/>
 
-  <g clip-path="url(#fav-clip)">
-    <rect x="9" y="9" width="46" height="46" rx="14" fill="url(#fav-cosmic-bg)"/>
-    <path d="M 20 16 L 45 16 C 46.5 16, 47.5 17, 47 18.5 L 44 26 C 43.5 27, 42.5 27.5, 41 27.5 L 28 27.5 L 28 32 L 39 32 C 40.5 32, 41.5 33, 41 34.5 L 39 39 C 38.5 40, 37.5 40.5, 36 40.5 L 28 40.5 L 28 48 C 28 49.2, 27 50, 26 49.5 L 21 47.5 C 20.2 47, 20 46.2, 20 45.5 Z" fill="url(#fav-core-1)"/>
-    <circle cx="33" cy="46" r="1.5" fill="#00F5FF"/>
-    <circle cx="37" cy="46" r="1.5" fill="#EC4899"/>
-    <circle cx="41" cy="46" r="1.5" fill="#8B5CF6"/>
-  </g>
-  <rect x="9" y="9" width="46" height="46" rx="14" fill="none" stroke="url(#fav-border-grad)" stroke-width="1.6"/>
+  <!-- Left Wing -->
+  <path d="M 33 46 C 30 35, 22 22, 13 14 C 18 28, 20 34, 14 26 C 8 30, 12 38, 14 43 C 6 45, 11 51, 14 55 C 9 61, 18 67, 33 60 Z" fill="url(#fav-wing)"/>
+  <!-- Right Wing -->
+  <path d="M 67 46 C 70 35, 78 22, 87 14 C 82 28, 80 34, 86 26 C 92 30, 88 38, 86 43 C 94 45, 89 51, 86 55 C 91 61, 82 67, 67 60 Z" fill="url(#fav-wing)"/>
+
+  <!-- Crown -->
+  <path d="M 38 27 L 36 17 L 43 23 L 50 13 L 57 23 L 64 17 L 62 27 Z" fill="url(#fav-gold)"/>
+  <circle cx="50" cy="12" r="2.2" fill="#FFE885"/>
+
+  <!-- Center Circle Medallion -->
+  <circle cx="50" cy="53" r="21" fill="#14052E" stroke="url(#fav-gold)" stroke-width="2.5"/>
+
+  <!-- Center 'F' -->
+  <path d="M 43 40.5 L 57 40.5 C 58.5 40.5 59.5 41.5 59.5 43 L 59.5 45 C 59.5 46.5 58.5 47 57 47 L 48.5 47 L 48.5 50.5 L 55 50.5 C 56.5 50.5 57.5 51.5 57.5 53 L 57.5 54.5 C 57.5 56 56.5 56.5 55 56.5 L 48.5 56.5 L 48.5 64 C 48.5 65.5 47.5 66 46 66 L 43 66 Z" fill="url(#fav-f)"/>
+
+  <!-- Bottom Ribbon -->
+  <rect x="26" y="73" width="48" height="9" rx="3" fill="#14052E" stroke="url(#fav-gold)" stroke-width="1.2"/>
 </svg>
