@@ -1,0 +1,75 @@
+/* ===================================================================
+   FLEXORA - RTL (Right-to-Left) Stylesheet
+   Include this file when [dir="rtl"] is set on <html>
+=================================================================== */
+
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] .top-bar-item {
+  margin-right: 0;
+  margin-left: 1.25rem;
+}
+
+[dir="rtl"] .card-service::before {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .product-category-badge {
+  left: auto;
+  right: 12px;
+}
+
+[dir="rtl"] .testimonial-quote-icon {
+  right: auto;
+  left: 1.5rem;
+}
+
+[dir="rtl"] .footer-title::after {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .footer-links a:hover {
+  transform: translateX(-4px);
+}
+
+[dir="rtl"] .before-after-img.after-layer {
+  border-right: none;
+  border-left: 3px solid var(--primary);
+}
+
+[dir="rtl"] .before-label {
+  right: auto;
+  left: 15px;
+}
+
+[dir="rtl"] .after-label {
+  left: auto;
+  right: 15px;
+}
+
+[dir="rtl"] .custom-toast-container {
+  right: auto;
+  left: 25px;
+}
+
+[dir="rtl"] .custom-toast {
+  border-left: none;
+  border-right: 4px solid var(--primary);
+  animation-name: slideInLeft;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

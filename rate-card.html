@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rate Card & Instant Price Calculator – FLEXORA Flex Printing</title>
+  <meta name="description" content="Official FLEXORA Rate Card: Transparent square footage pricing for Frontlit Flex, Backlit, Vinyl, Sunboard, and Roll-up Standees with live dynamic price calculator.">
+  
+  <link rel="icon" type="image/svg+xml" href="assets/images/logos/favicon.svg">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <div class="cmyk-strip" aria-hidden="true">
+    <span class="cmyk-c"></span>
+    <span class="cmyk-m"></span>
+    <span class="cmyk-y"></span>
+    <span class="cmyk-k"></span>
+    <span class="cmyk-o"></span>
+  </div>
+
+  <div class="top-bar">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="top-bar-left">
+          <span class="top-bar-item"><i class="fa-solid fa-phone"></i> +1 (800) 555-FLEX</span>
+          <span class="top-bar-item"><i class="fa-solid fa-envelope"></i> billing@flexora-print.com</span>
+        </div>
+        <div class="top-bar-right d-flex align-items-center gap-3">
+          <span class="badge-tag badge-dark mb-0 py-1"><i class="fa-solid fa-calculator text-warning"></i> Instant Live Online Estimate</span>
+          <a href="login.html" class="top-bar-item m-0"><i class="fa-solid fa-user"></i> Portal Login</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="index.html">
+        <span class="logo-mark">
+          <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="fx-cosmic-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#1E0C42"/>
+                <stop offset="50%" stop-color="#12062E"/>
+                <stop offset="100%" stop-color="#080218"/>
+              </linearGradient>
+              <linearGradient id="fx-arch-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#00F5FF"/>
+                <stop offset="45%" stop-color="#EC4899"/>
+                <stop offset="85%" stop-color="#8B5CF6"/>
+                <stop offset="100%" stop-color="#6366F1"/>
+              </linearGradient>
+              <linearGradient id="fx-border-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#00F5FF"/>
+                <stop offset="35%" stop-color="#EC4899"/>
+                <stop offset="70%" stop-color="#8B5CF6"/>
+                <stop offset="100%" stop-color="#3B82F6"/>
+              </linearGradient>
+              <linearGradient id="fx-core-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#F43F5E"/>
+                <stop offset="45%" stop-color="#EC4899"/>
+                <stop offset="85%" stop-color="#8B5CF6"/>
+                <stop offset="100%" stop-color="#7C3AED"/>
+              </linearGradient>
+              <linearGradient id="fx-core-2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#00F5FF"/>
+                <stop offset="50%" stop-color="#8B5CF6"/>
+                <stop offset="100%" stop-color="#EC4899"/>
+              </linearGradient>
+              <linearGradient id="fx-sheen-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0"/>
+                <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.55"/>
+                <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+              </linearGradient>
+              <filter id="fx-neon-glow" x="-30%" y="-30%" width="160%" height="160%">
+                <feGaussianBlur stdDeviation="2.5" result="blur"/>
+                <feMerge>
+                  <feMergeNode in="blur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+              <filter id="fx-laser-glow" x="-30%" y="-30%" width="160%" height="160%">
+                <feGaussianBlur stdDeviation="1.6" result="blur"/>
+                <feMerge>
+                  <feMergeNode in="blur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+              <clipPath id="fx-badge-clip">
+                <rect x="14" y="16" width="72" height="72" rx="20"/>
+              </clipPath>
+            </defs>
+            <circle cx="50" cy="50" r="42" fill="none" stroke="#8B5CF6" stroke-width="1" opacity="0.25"/>
+            <path d="M 8 52 C 8 24, 28 5, 54 5 C 72 5, 87 15, 93 30" fill="none" stroke="#EC4899" stroke-width="5" stroke-linecap="round" opacity="0.35" filter="url(#fx-neon-glow)"/>
+            <path class="fx-arch-glow" d="M 9 52 C 9 25, 29 6, 54 6 C 72 6, 86 16, 92 30" fill="none" stroke="url(#fx-arch-grad)" stroke-width="3.5" stroke-linecap="round"/>
+            <circle cx="9" cy="52" r="2.8" fill="#00F5FF" filter="url(#fx-neon-glow)"/>
+            <circle cx="92" cy="30" r="2.8" fill="#8B5CF6" filter="url(#fx-neon-glow)"/>
+            <g clip-path="url(#fx-badge-clip)">
+              <rect x="14" y="16" width="72" height="72" rx="20" fill="url(#fx-cosmic-bg)"/>
+              <g stroke="rgba(139, 92, 246, 0.12)" stroke-width="0.8" stroke-dasharray="2 3">
+                <line x1="20" y1="36" x2="80" y2="36"/>
+                <line x1="20" y1="52" x2="80" y2="52"/>
+                <line x1="20" y1="68" x2="80" y2="68"/>
+                <line x1="36" y1="20" x2="36" y2="80"/>
+                <line x1="52" y1="20" x2="52" y2="80"/>
+                <line x1="68" y1="20" x2="68" y2="80"/>
+              </g>
+              <rect x="26" y="23" width="48" height="6.5" rx="3.25" fill="#241048" stroke="rgba(236,72,153,0.4)" stroke-width="0.8"/>
+              <circle cx="28" cy="26.25" r="2.2" fill="#00F5FF"/>
+              <circle cx="72" cy="26.25" r="2.2" fill="#8B5CF6"/>
+              <path d="M 29 27 L 68 27 L 64 39 L 43 39 L 43 47 L 59 47 L 56 56 L 43 56 L 43 71 L 30 67 Z" fill="rgba(0,0,0,0.55)" transform="translate(2, 2)"/>
+              <path class="fx-core-stem" d="M 30 26.5 C 30 25.5, 31 24.5, 32.5 24.5 L 69 24.5 C 71 24.5, 72.5 26, 72 28 L 67 40 C 66.3 41.5, 64.8 42.5, 63 42.5 L 44 42.5 L 44 48 L 60 48 C 62 48, 63.3 49.3, 62.8 51.3 L 59.5 58 C 59 59.5, 57.5 60.5, 56 60.5 L 44 60.5 L 44 73 C 44 74.5, 42.8 75.8, 41.2 75.3 L 32 72 C 30.8 71.5, 30 70.3, 30 69 Z" fill="url(#fx-core-1)"/>
+              <path class="fx-core-cross" d="M 30 24.5 L 69 24.5 L 65 32 L 41 32 L 41 48 L 60 48 L 57 55 L 41 55 L 41 70 L 30 66 Z" fill="url(#fx-core-2)" opacity="0.92"/>
+              <path d="M 32 72 L 44 73 L 49 68 L 37 67 Z" fill="#00F5FF" opacity="0.85"/>
+              <g class="fx-laser-carriage">
+                <line class="fx-laser-beam" x1="20" y1="50" x2="80" y2="50" stroke="#00F5FF" stroke-width="1.8" filter="url(#fx-laser-glow)" opacity="0.9"/>
+                <circle class="fx-laser-nozzle" cx="50" cy="50" r="2.8" fill="#FFFFFF" filter="url(#fx-laser-glow)"/>
+              </g>
+              <g class="fx-neon-dots">
+                <circle class="fx-neon-dot fx-dot-c" cx="50" cy="71" r="2.6" fill="#00F5FF"/>
+                <circle class="fx-neon-dot fx-dot-m" cx="58" cy="71" r="2.6" fill="#EC4899"/>
+                <circle class="fx-neon-dot fx-dot-v" cx="66" cy="71" r="2.6" fill="#8B5CF6"/>
+                <circle class="fx-neon-dot fx-dot-w" cx="74" cy="71" r="2.6" fill="#FFFFFF"/>
+              </g>
+              <rect class="fx-sheen-swipe" x="-70" y="0" width="40" height="110" fill="url(#fx-sheen-grad)" transform="skewX(-26)"/>
+            </g>
+            <rect class="fx-badge-border" x="14" y="16" width="72" height="72" rx="20" fill="none" stroke="url(#fx-border-grad)" stroke-width="2.2" filter="url(#fx-neon-glow)"/>
+          </svg>
+        </span>
+        <span class="brand-text">FLEX<span class="brand-text-accent">ORA</span><span class="logo-dot">.</span></span>
+      </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#flexoraNav" aria-controls="flexoraNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="flexoraNav">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="homeDropdown">
+                <li><a class="dropdown-item" href="index.html"><i class="fa-solid fa-cube me-2 text-primary"></i> Home 1 – General Printing</a></li>
+                <li><a class="dropdown-item" href="home-2.html"><i class="fa-solid fa-palette me-2 text-primary"></i> Home 2 – Creative Showcase</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link active" href="rate-card.html">Rate Card</a></li>
+            <li class="nav-item"><a class="nav-link" href="pricing.html">Packages</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+          </ul>
+
+          <div class="nav-actions">
+            <button class="theme-toggle-btn" type="button" aria-label="Toggle theme">
+              <i class="fa-solid fa-moon"></i>
+            </button>
+            <a href="contact.html" class="btn btn-primary">
+              <i class="fa-solid fa-file-invoice"></i> Get a Quote
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Breadcrumb Header -->
+  <section class="py-5 bg-white border-bottom" style="background-color: var(--surface) !important;">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-2 small">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Rate Card</li>
+        </ol>
+      </nav>
+      <h1 class="display-5 fw-bold mb-2">Printing Rate Card & Calculator</h1>
+      <p class="text-muted lead mb-0">Transparent square footage rates with zero hidden factory markups. Use our live dimension calculator below for instant order estimates.</p>
+    </div>
+  </section>
+
+  <!-- Rate Card Main Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-5">
+        
+        <!-- Left: Official Price Tables -->
+        <div class="col-lg-7">
+          <div class="d-flex align-items-center justify-content-between mb-3">
+            <div>
+              <span class="section-subtitle mb-0">Standard Factory Tariffs</span>
+              <h3 class="h4 fw-bold">Commercial Substrate Rates</h3>
+            </div>
+            <span class="badge-tag badge-dark mb-0"><i class="fa-solid fa-arrows-rotate text-success me-1"></i> Updated for 2026</span>
+          </div>
+
+          <div class="rate-card-table mb-4">
+            <table class="table table-hover align-middle mb-0">
+              <thead>
+                <tr>
+                  <th>Product & Substrate</th>
+                  <th>Material Specs</th>
+                  <th>Standard Sizes</th>
+                  <th>Price / Unit</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <strong>Frontlit Flex</strong>
+                    <div class="small text-muted">Standard Grade</div>
+                  </td>
+                  <td>340 GSM Weatherproof Fabric</td>
+                  <td>Roll width up to 10.5 ft</td>
+                  <td><span class="rate-badge">$1.20</span> <small class="text-muted">/ sq.ft</small></td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Backlit Flex</strong>
+                    <div class="small text-muted">High Translucent</div>
+                  </td>
+                  <td>510 GSM Light Diffusing Fabric</td>
+                  <td>Lightboxes & Signboards</td>
+                  <td><span class="rate-badge">$2.40</span> <small class="text-muted">/ sq.ft</small></td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Star Flex</strong>
+                    <div class="small text-muted">Heavy Duty Outdoor</div>
+                  </td>
+                  <td>440 GSM Blackout Backing</td>
+                  <td>Highway Hoardings</td>
+                  <td><span class="rate-badge">$1.75</span> <small class="text-muted">/ sq.ft</small></td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Vinyl Printing</strong>
+                    <div class="small text-muted">Air-Release Cast</div>
+                  </td>
+                  <td>100 Micron Self-Adhesive</td>
+                  <td>Glass, Metal, Boards</td>
+                  <td><span class="rate-badge">$2.50</span> <small class="text-muted">/ sq.ft</small></td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>One Way Vision</strong>
+                    <div class="small text-muted">Perforated Window Film</div>
+                  </td>
+                  <td>60/40 Micro Perforations</td>
+                  <td>Storefront Glass, Cars</td>
+                  <td><span class="rate-badge">$3.20</span> <small class="text-muted">/ sq.ft</small></td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Sunboard Printing</strong>
+                    <div class="small text-muted">Rigid PVC Foam Sheet</div>
+                  </td>
+                  <td>5mm High Density Direct UV</td>
+                  <td>POS Displays up to 8x4 ft</td>
+                  <td><span class="rate-badge">$4.10</span> <small class="text-muted">/ sq.ft</small></td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Roll-up Standee</strong>
+                    <div class="small text-muted">Aluminum Pull-Up Base</div>
+                  </td>
+                  <td>Synthetic Non-Curling Sheet</td>
+                  <td>Standard 6x3 ft unit</td>
+                  <td><span class="rate-badge">$35.00</span> <small class="text-muted">/ piece</small></td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Custom Banner Printing</strong>
+                    <div class="small text-muted">Reflective / Mesh / Fabric</div>
+                  </td>
+                  <td>Custom Engineered Media</td>
+                  <td>Any dimension specification</td>
+                  <td><span class="rate-badge">Custom</span> <small class="text-muted">Quote</small></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Note on pricing -->
+          <div class="alert alert-warning border-0 bg-opacity-10 bg-warning text-dark small p-3 rounded">
+            <i class="fa-solid fa-circle-info text-warning me-2"></i>
+            <strong>Pricing Notice:</strong> Demo pricing values listed above are based on standard volume production. Final contract prices may vary depending on customized lamination (matt/gloss), wind slits, reinforced perimeter hems, eyelet frequency, and bulk quantity discounts. Minimum order charges may apply for single prints under 6 sq.ft.
+          </div>
+
+          <!-- Finishing Add-ons Table -->
+          <h4 class="h5 fw-bold mt-4 mb-3">Finishing & Post-Press Add-On Rates</h4>
+          <div class="rate-card-table">
+            <table class="table table-hover align-middle mb-0">
+              <thead>
+                <tr>
+                  <th>Finishing Service</th>
+                  <th>Description</th>
+                  <th>Rate</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Brass Eyelets (Grommets)</strong></td>
+                  <td>Solid brass stamped every 2 feet with double hem</td>
+                  <td><span class="fw-bold text-primary">+$0.15</span> / sq.ft</td>
+                </tr>
+                <tr>
+                  <td><strong>Heat Welded Hems</strong></td>
+                  <td>1.5-inch continuous perimeter RF welding</td>
+                  <td><span class="fw-bold text-primary">+$0.10</span> / sq.ft</td>
+                </tr>
+                <tr>
+                  <td><strong>Matt / Gloss Lamination</strong></td>
+                  <td>Cold pressure laminate layer for vinyl protection</td>
+                  <td><span class="fw-bold text-primary">+$0.45</span> / sq.ft</td>
+                </tr>
+                <tr>
+                  <td><strong>Pole Pockets</strong></td>
+                  <td>3-inch top & bottom sleeves for truss hanging</td>
+                  <td><span class="fw-bold text-primary">+$0.20</span> / sq.ft</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Right: Interactive Instant Price Calculator -->
+        <div class="col-lg-5" id="calculator">
+          <div class="calculator-box">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <span class="badge-tag badge-dark mb-0"><i class="fa-solid fa-calculator text-warning"></i> Real-Time Engine</span>
+            </div>
+            <h3 class="h4 fw-bold mb-1">Instant Price Calculator</h3>
+            <p class="text-muted small mb-4">Select product, enter dimensions (width × height), choose quantity, and inspect live estimates instantly.</p>
+
+            <form id="priceCalculatorForm">
+              <!-- Product Select -->
+              <div class="mb-3">
+                <label for="calcProduct" class="form-label">Select Product & Media:</label>
+                <select id="calcProduct" class="form-select">
+                  <option value="frontlit-flex" selected>Frontlit Flex 340 GSM ($1.20 / sq.ft)</option>
+                  <option value="backlit-flex">Backlit Translucent Flex 510 GSM ($2.40 / sq.ft)</option>
+                  <option value="star-flex">Star Flex Heavy Duty 440 GSM ($1.75 / sq.ft)</option>
+                  <option value="vinyl">Self-Adhesive Cast Vinyl ($2.50 / sq.ft)</option>
+                  <option value="oneway-vision">One Way Vision Window Film ($3.20 / sq.ft)</option>
+                  <option value="sunboard">Rigid Sunboard 5mm Direct Print ($4.10 / sq.ft)</option>
+                  <option value="rollup-standee">Roll-Up Standee 6x3 ft ($35.00 / piece)</option>
+                  <option value="glowsign-board">Glow Sign Box Fascia ($6.50 / sq.ft)</option>
+                  <option value="reflective-flex">Reflective Night Glow Flex ($3.80 / sq.ft)</option>
+                </select>
+              </div>
+
+              <!-- Dimensions & Unit -->
+              <div class="row g-2 mb-3">
+                <div class="col-4">
+                  <label for="calcWidth" class="form-label">Width:</label>
+                  <input type="number" id="calcWidth" class="form-control" value="8" min="1" step="0.5">
+                </div>
+                <div class="col-4">
+                  <label for="calcHeight" class="form-label">Height:</label>
+                  <input type="number" id="calcHeight" class="form-control" value="4" min="1" step="0.5">
+                </div>
+                <div class="col-4">
+                  <label for="calcUnit" class="form-label">Unit:</label>
+                  <select id="calcUnit" class="form-select">
+                    <option value="feet" selected>Feet (ft)</option>
+                    <option value="inches">Inches (in)</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Quantity -->
+              <div class="mb-3">
+                <label for="calcQty" class="form-label">Order Quantity (Pieces):</label>
+                <input type="number" id="calcQty" class="form-control" value="1" min="1" max="1000">
+              </div>
+
+              <!-- Finishing Options Checkboxes -->
+              <div class="mb-3">
+                <label class="form-label d-block">Finishing Add-Ons:</label>
+                <div class="row g-2">
+                  <div class="col-6">
+                    <div class="form-check small">
+                      <input class="form-check-input calc-finishing" type="checkbox" value="eyelets" id="finEyelets" checked>
+                      <label class="form-check-label" for="finEyelets">Brass Eyelets (+$0.15)</label>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="form-check small">
+                      <input class="form-check-input calc-finishing" type="checkbox" value="hemming" id="finHemming" checked>
+                      <label class="form-check-label" for="finHemming">Welded Hems (+$0.10)</label>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="form-check small">
+                      <input class="form-check-input calc-finishing" type="checkbox" value="lamination" id="finLamination">
+                      <label class="form-check-label" for="finLamination">Lamination (+$0.45)</label>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="form-check small">
+                      <input class="form-check-input calc-finishing" type="checkbox" value="pole-pockets" id="finPolePockets">
+                      <label class="form-check-label" for="finPolePockets">Pole Pockets (+$0.20)</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Dynamic Result Box -->
+              <div class="calc-result-box">
+                <div class="d-flex justify-content-between mb-1 small text-white-50">
+                  <span>Calculated Area:</span>
+                  <strong class="text-white" id="calcResultArea">32.0 sq.ft</strong>
+                </div>
+                <div class="d-flex justify-content-between mb-1 small text-white-50">
+                  <span>Base Rate:</span>
+                  <strong class="text-white" id="calcResultRate">$1.20 / sq.ft</strong>
+                </div>
+                <div class="d-flex justify-content-between mb-3 small text-white-50">
+                  <span>Finishing Additions:</span>
+                  <strong class="text-white" id="calcResultFinishing">$8.00</strong>
+                </div>
+                <hr class="border-secondary my-2">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <span class="small text-white-50 text-uppercase fw-bold">Estimated Total:</span>
+                    <div class="calc-total" id="calcResultTotal">$46.40</div>
+                  </div>
+                  <div class="small text-white-50 text-end">
+                    <span>*Excl. tax & freight</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Request Quote Button linked with parameters -->
+              <div class="mt-3">
+                <a href="contact.html?product=frontlit-flex&width=8&height=4&unit=feet&qty=1" id="calcRequestQuoteBtn" class="btn btn-primary w-100 py-3">
+                  <i class="fa-solid fa-paper-plane me-2"></i> Request Official Quote with These Specs
+                </a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-brand">
+            <a class="navbar-brand text-white" href="index.html">
+        <span class="logo-mark">
+          <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="fx-cosmic-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#1E0C42"/>
+                <stop offset="50%" stop-color="#12062E"/>
+                <stop offset="100%" stop-color="#080218"/>
+              </linearGradient>
+              <linearGradient id="fx-arch-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#00F5FF"/>
+                <stop offset="45%" stop-color="#EC4899"/>
+                <stop offset="85%" stop-color="#8B5CF6"/>
+                <stop offset="100%" stop-color="#6366F1"/>
+              </linearGradient>
+              <linearGradient id="fx-border-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#00F5FF"/>
+                <stop offset="35%" stop-color="#EC4899"/>
+                <stop offset="70%" stop-color="#8B5CF6"/>
+                <stop offset="100%" stop-color="#3B82F6"/>
+              </linearGradient>
+              <linearGradient id="fx-core-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#F43F5E"/>
+                <stop offset="45%" stop-color="#EC4899"/>
+                <stop offset="85%" stop-color="#8B5CF6"/>
+                <stop offset="100%" stop-color="#7C3AED"/>
+              </linearGradient>
+              <linearGradient id="fx-core-2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#00F5FF"/>
+                <stop offset="50%" stop-color="#8B5CF6"/>
+                <stop offset="100%" stop-color="#EC4899"/>
+              </linearGradient>
+              <linearGradient id="fx-sheen-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0"/>
+                <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.55"/>
+                <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+              </linearGradient>
+              <filter id="fx-neon-glow" x="-30%" y="-30%" width="160%" height="160%">
+                <feGaussianBlur stdDeviation="2.5" result="blur"/>
+                <feMerge>
+                  <feMergeNode in="blur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+              <filter id="fx-laser-glow" x="-30%" y="-30%" width="160%" height="160%">
+                <feGaussianBlur stdDeviation="1.6" result="blur"/>
+                <feMerge>
+                  <feMergeNode in="blur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+              <clipPath id="fx-badge-clip">
+                <rect x="14" y="16" width="72" height="72" rx="20"/>
+              </clipPath>
+            </defs>
+            <circle cx="50" cy="50" r="42" fill="none" stroke="#8B5CF6" stroke-width="1" opacity="0.25"/>
+            <path d="M 8 52 C 8 24, 28 5, 54 5 C 72 5, 87 15, 93 30" fill="none" stroke="#EC4899" stroke-width="5" stroke-linecap="round" opacity="0.35" filter="url(#fx-neon-glow)"/>
+            <path class="fx-arch-glow" d="M 9 52 C 9 25, 29 6, 54 6 C 72 6, 86 16, 92 30" fill="none" stroke="url(#fx-arch-grad)" stroke-width="3.5" stroke-linecap="round"/>
+            <circle cx="9" cy="52" r="2.8" fill="#00F5FF" filter="url(#fx-neon-glow)"/>
+            <circle cx="92" cy="30" r="2.8" fill="#8B5CF6" filter="url(#fx-neon-glow)"/>
+            <g clip-path="url(#fx-badge-clip)">
+              <rect x="14" y="16" width="72" height="72" rx="20" fill="url(#fx-cosmic-bg)"/>
+              <g stroke="rgba(139, 92, 246, 0.12)" stroke-width="0.8" stroke-dasharray="2 3">
+                <line x1="20" y1="36" x2="80" y2="36"/>
+                <line x1="20" y1="52" x2="80" y2="52"/>
+                <line x1="20" y1="68" x2="80" y2="68"/>
+                <line x1="36" y1="20" x2="36" y2="80"/>
+                <line x1="52" y1="20" x2="52" y2="80"/>
+                <line x1="68" y1="20" x2="68" y2="80"/>
+              </g>
+              <rect x="26" y="23" width="48" height="6.5" rx="3.25" fill="#241048" stroke="rgba(236,72,153,0.4)" stroke-width="0.8"/>
+              <circle cx="28" cy="26.25" r="2.2" fill="#00F5FF"/>
+              <circle cx="72" cy="26.25" r="2.2" fill="#8B5CF6"/>
+              <path d="M 29 27 L 68 27 L 64 39 L 43 39 L 43 47 L 59 47 L 56 56 L 43 56 L 43 71 L 30 67 Z" fill="rgba(0,0,0,0.55)" transform="translate(2, 2)"/>
+              <path class="fx-core-stem" d="M 30 26.5 C 30 25.5, 31 24.5, 32.5 24.5 L 69 24.5 C 71 24.5, 72.5 26, 72 28 L 67 40 C 66.3 41.5, 64.8 42.5, 63 42.5 L 44 42.5 L 44 48 L 60 48 C 62 48, 63.3 49.3, 62.8 51.3 L 59.5 58 C 59 59.5, 57.5 60.5, 56 60.5 L 44 60.5 L 44 73 C 44 74.5, 42.8 75.8, 41.2 75.3 L 32 72 C 30.8 71.5, 30 70.3, 30 69 Z" fill="url(#fx-core-1)"/>
+              <path class="fx-core-cross" d="M 30 24.5 L 69 24.5 L 65 32 L 41 32 L 41 48 L 60 48 L 57 55 L 41 55 L 41 70 L 30 66 Z" fill="url(#fx-core-2)" opacity="0.92"/>
+              <path d="M 32 72 L 44 73 L 49 68 L 37 67 Z" fill="#00F5FF" opacity="0.85"/>
+              <g class="fx-laser-carriage">
+                <line class="fx-laser-beam" x1="20" y1="50" x2="80" y2="50" stroke="#00F5FF" stroke-width="1.8" filter="url(#fx-laser-glow)" opacity="0.9"/>
+                <circle class="fx-laser-nozzle" cx="50" cy="50" r="2.8" fill="#FFFFFF" filter="url(#fx-laser-glow)"/>
+              </g>
+              <g class="fx-neon-dots">
+                <circle class="fx-neon-dot fx-dot-c" cx="50" cy="71" r="2.6" fill="#00F5FF"/>
+                <circle class="fx-neon-dot fx-dot-m" cx="58" cy="71" r="2.6" fill="#EC4899"/>
+                <circle class="fx-neon-dot fx-dot-v" cx="66" cy="71" r="2.6" fill="#8B5CF6"/>
+                <circle class="fx-neon-dot fx-dot-w" cx="74" cy="71" r="2.6" fill="#FFFFFF"/>
+              </g>
+              <rect class="fx-sheen-swipe" x="-70" y="0" width="40" height="110" fill="url(#fx-sheen-grad)" transform="skewX(-26)"/>
+            </g>
+            <rect class="fx-badge-border" x="14" y="16" width="72" height="72" rx="20" fill="none" stroke="url(#fx-border-grad)" stroke-width="2.2" filter="url(#fx-neon-glow)"/>
+          </svg>
+        </span>
+        <span class="brand-text">FLEX<span class="brand-text-accent">ORA</span><span class="logo-dot">.</span></span>
+      </a>
+          </div>
+          <p class="footer-text">FLEXORA Industrial Flex & Banner Printing Shop. High-capacity large format printing engineered for durability and true Pantone fidelity.</p>
+          <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>840 Printworks Boulevard, Industrial Area Phase 2, New York, NY 10001</span></div>
+          <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><span>+1 (800) 555-FLEX</span></div>
+        </div>
+        <div class="col-lg-2 col-md-6 col-6">
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Home 1</a></li>
+            <li><a href="home-2.html"><i class="fa-solid fa-angle-right"></i> Home 2</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> About Us</a></li>
+            <li><a href="products.html"><i class="fa-solid fa-angle-right"></i> Products</a></li>
+            <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> Services</a></li>
+            <li><a href="rate-card.html"><i class="fa-solid fa-angle-right"></i> Rate Card</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-angle-right"></i> Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 col-6">
+          <h4 class="footer-title">Top Products</h4>
+          <ul class="footer-links">
+            <li><a href="product-details.html?id=flex-banner"><i class="fa-solid fa-angle-right"></i> Flex Banners</a></li>
+            <li><a href="product-details.html?id=backlit-banner"><i class="fa-solid fa-angle-right"></i> Backlit Flex</a></li>
+            <li><a href="product-details.html?id=rollup-standee"><i class="fa-solid fa-angle-right"></i> Roll-Up Standees</a></li>
+            <li><a href="product-details.html?id=vinyl-printing"><i class="fa-solid fa-angle-right"></i> Cast Vinyl</a></li>
+            <li><a href="product-details.html?id=sunboard-printing"><i class="fa-solid fa-angle-right"></i> Sunboard Sheets</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h4 class="footer-title">Print Bulletin</h4>
+          <p class="footer-text">Subscribe for monthly printing updates and wholesale trade rates.</p>
+          <form class="newsletter-form mb-3">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Email address..." required>
+              <button class="btn btn-primary" type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+          </form>
+          <div class="footer-social-links">
+            <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center">
+        <p class="mb-0 text-white-50">&copy; 2026 FLEXORA Flex & Banner Printing Shop. All Rights Reserved.</p>
+        <div class="d-flex gap-3 text-white-50 small mt-2 mt-md-0">
+          <a href="privacy.html" class="text-white-50">Privacy Policy</a>
+          <span>&bull;</span>
+          <a href="terms.html" class="text-white-50">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/calculator.js"></script>
+  <script src="assets/js/forms.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

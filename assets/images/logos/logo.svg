@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 64" width="280" height="64" class="flexora-brand-svg">
+  <defs>
+    <linearGradient id="lfx-cosmic-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E0C42"/>
+      <stop offset="50%" stop-color="#12062E"/>
+      <stop offset="100%" stop-color="#080218"/>
+    </linearGradient>
+
+    <linearGradient id="lfx-arch-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F5FF"/>
+      <stop offset="45%" stop-color="#EC4899"/>
+      <stop offset="85%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+
+    <linearGradient id="lfx-border-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F5FF"/>
+      <stop offset="35%" stop-color="#EC4899"/>
+      <stop offset="70%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+
+    <linearGradient id="lfx-core-1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F43F5E"/>
+      <stop offset="50%" stop-color="#EC4899"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+
+    <linearGradient id="lfx-core-2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F5FF"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+
+    <clipPath id="lfx-badge-clip">
+      <rect x="10" y="10" width="46" height="46" rx="14"/>
+    </clipPath>
+
+    <style>
+      .lfx-pulse-dot {
+        animation: lfxDotPulse 2.8s ease-in-out infinite;
+        transform-origin: 147px 35px;
+      }
+      @keyframes lfxDotPulse {
+        0%, 100% { transform: scale(1); opacity: 0.9; }
+        50% { transform: scale(1.3); opacity: 1; fill: #EC4899; }
+      }
+      .lfx-pulse-ring {
+        animation: lfxRingPulse 2.8s ease-in-out infinite;
+        transform-origin: 147px 35px;
+      }
+      @keyframes lfxRingPulse {
+        0%, 100% { transform: scale(0.8); opacity: 0.2; }
+        50% { transform: scale(1.4); opacity: 0.6; stroke: #EC4899; }
+      }
+    </style>
+  </defs>
+
+  <!-- Logo Mark (Left 64px) -->
+  <g transform="translate(0, 0)">
+    <!-- Signature Neon Arch Swoop -->
+    <path d="M 6 36 C 6 18, 20 4, 38 4 C 50 4, 59 11, 62 21" 
+          fill="none" 
+          stroke="url(#lfx-arch-grad)" 
+          stroke-width="2.5" 
+          stroke-linecap="round"/>
+    <circle cx="6" cy="36" r="2" fill="#00F5FF"/>
+    <circle cx="62" cy="21" r="2" fill="#8B5CF6"/>
+
+    <!-- Inner Badge -->
+    <g clip-path="url(#lfx-badge-clip)">
+      <rect x="10" y="10" width="46" height="46" rx="14" fill="url(#lfx-cosmic-bg)"/>
+      <!-- Grid -->
+      <line x1="16" y1="26" x2="50" y2="26" stroke="rgba(139,92,246,0.15)" stroke-width="0.8" stroke-dasharray="2 2"/>
+      <line x1="16" y1="40" x2="50" y2="40" stroke="rgba(139,92,246,0.15)" stroke-width="0.8" stroke-dasharray="2 2"/>
+      <!-- Top Roller -->
+      <rect x="18" y="15" width="30" height="4" rx="2" fill="#26124C"/>
+      <circle cx="19.5" cy="17" r="1.5" fill="#00F5FF"/>
+      <circle cx="46.5" cy="17" r="1.5" fill="#8B5CF6"/>
+
+      <!-- F Letterform -->
+      <path d="M 21 17 L 46 17 C 47.5 17, 48.5 18, 48 19.5 L 45 27 C 44.5 28, 43.5 28.5, 42 28.5 L 29 28.5 L 29 33 L 40 33 C 41.5 33, 42.5 34, 42 35.5 L 40 40 C 39.5 41, 38.5 41.5, 37 41.5 L 29 41.5 L 29 49 C 29 50.2, 28 51, 27 50.5 L 22 48.5 C 21.2 48, 21 47.2, 21 46.5 Z" fill="url(#lfx-core-1)"/>
+      <path d="M 21 17 L 46 17 L 44 21.5 L 27 21.5 L 27 33 L 40 33 L 38 37.5 L 27 37.5 L 27 47 L 21 44.5 Z" fill="url(#lfx-core-2)" opacity="0.9"/>
+      
+      <!-- Dots -->
+      <circle cx="34" cy="47" r="1.6" fill="#00F5FF"/>
+      <circle cx="38" cy="47" r="1.6" fill="#EC4899"/>
+      <circle cx="42" cy="47" r="1.6" fill="#8B5CF6"/>
+    </g>
+    <!-- Border -->
+    <rect x="10" y="10" width="46" height="46" rx="14" fill="none" stroke="url(#lfx-border-grad)" stroke-width="1.6"/>
+  </g>
+
+  <!-- Typography: FLEXORA (Dark Text) -->
+  <g transform="translate(74, 0)">
+    <text x="0" y="38" font-family="'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif" font-size="30" font-weight="900" letter-spacing="-0.03em" fill="#0D0622">
+      FLEX<tspan fill="#8B5CF6">ORA</tspan>
+    </text>
+    <circle class="lfx-pulse-dot" cx="147" cy="35" r="4" fill="#EC4899"/>
+    <circle class="lfx-pulse-ring" cx="147" cy="35" r="7" fill="none" stroke="#EC4899" stroke-width="1" opacity="0.4"/>
+    <text x="1" y="52" font-family="'Space Grotesk', 'Plus Jakarta Sans', sans-serif" font-size="8.5" font-weight="700" letter-spacing="0.22em" fill="#756D8D">
+      CREATIVE PRINT STUDIO
+    </text>
+  </g>
+</svg>

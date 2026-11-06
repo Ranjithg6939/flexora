@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creative Printing Showcase – FLEXORA Flex & Large Format Studio</title>
+  <meta name="description" content="Explore FLEXORA's creative flex printing showcase. Large format banners, vinyl graphics, and before/after print comparisons.">
+  
+  <link rel="icon" type="image/svg+xml" href="assets/images/logos/favicon.svg">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Main Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- CMYK Top Bar -->
+  <div class="cmyk-strip" aria-hidden="true">
+    <span class="cmyk-c"></span>
+    <span class="cmyk-m"></span>
+    <span class="cmyk-y"></span>
+    <span class="cmyk-k"></span>
+    <span class="cmyk-o"></span>
+  </div>
+
+  <!-- Top Info Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="top-bar-left">
+          <span class="top-bar-item"><i class="fa-solid fa-phone"></i> +1 (800) 555-FLEX</span>
+          <span class="top-bar-item"><i class="fa-solid fa-envelope"></i> studio@flexora-print.com</span>
+          <span class="top-bar-item d-none d-md-inline"><i class="fa-solid fa-location-dot"></i> 840 Printworks Blvd, NY</span>
+        </div>
+        <div class="top-bar-right d-flex align-items-center gap-3">
+          <span class="badge-tag badge-dark mb-0 py-1"><i class="fa-solid fa-wand-magic-sparkles text-warning"></i> Creative Studio & Wide Press</span>
+          <a href="login.html" class="top-bar-item m-0"><i class="fa-solid fa-user"></i> Portal Login</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Header -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="index.html">
+        <span class="logo-mark">
+          <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="fx-cosmic-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#1E0C42"/>
+                <stop offset="50%" stop-color="#12062E"/>
+                <stop offset="100%" stop-color="#080218"/>
+              </linearGradient>
+              <linearGradient id="fx-arch-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#00F5FF"/>
+                <stop offset="45%" stop-color="#EC4899"/>
+                <stop offset="85%" stop-color="#8B5CF6"/>
+                <stop offset="100%" stop-color="#6366F1"/>
+              </linearGradient>
+              <linearGradient id="fx-border-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#00F5FF"/>
+                <stop offset="35%" stop-color="#EC4899"/>
+                <stop offset="70%" stop-color="#8B5CF6"/>
+                <stop offset="100%" stop-color="#3B82F6"/>
+              </linearGradient>
+              <linearGradient id="fx-core-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#F43F5E"/>
+                <stop offset="45%" stop-color="#EC4899"/>
+                <stop offset="85%" stop-color="#8B5CF6"/>
+                <stop offset="100%" stop-color="#7C3AED"/>
+              </linearGradient>
+              <linearGradient id="fx-core-2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#00F5FF"/>
+                <stop offset="50%" stop-color="#8B5CF6"/>
+                <stop offset="100%" stop-color="#EC4899"/>
+              </linearGradient>
+              <linearGradient id="fx-sheen-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0"/>
+                <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.55"/>
+                <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+              </linearGradient>
+              <filter id="fx-neon-glow" x="-30%" y="-30%" width="160%" height="160%">
+                <feGaussianBlur stdDeviation="2.5" result="blur"/>
+                <feMerge>
+                  <feMergeNode in="blur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+              <filter id="fx-laser-glow" x="-30%" y="-30%" width="160%" height="160%">
+                <feGaussianBlur stdDeviation="1.6" result="blur"/>
+                <feMerge>
+                  <feMergeNode in="blur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+              <clipPath id="fx-badge-clip">
+                <rect x="14" y="16" width="72" height="72" rx="20"/>
+              </clipPath>
+            </defs>
+            <circle cx="50" cy="50" r="42" fill="none" stroke="#8B5CF6" stroke-width="1" opacity="0.25"/>
+            <path d="M 8 52 C 8 24, 28 5, 54 5 C 72 5, 87 15, 93 30" fill="none" stroke="#EC4899" stroke-width="5" stroke-linecap="round" opacity="0.35" filter="url(#fx-neon-glow)"/>
+            <path class="fx-arch-glow" d="M 9 52 C 9 25, 29 6, 54 6 C 72 6, 86 16, 92 30" fill="none" stroke="url(#fx-arch-grad)" stroke-width="3.5" stroke-linecap="round"/>
+            <circle cx="9" cy="52" r="2.8" fill="#00F5FF" filter="url(#fx-neon-glow)"/>
+            <circle cx="92" cy="30" r="2.8" fill="#8B5CF6" filter="url(#fx-neon-glow)"/>
+            <g clip-path="url(#fx-badge-clip)">
+              <rect x="14" y="16" width="72" height="72" rx="20" fill="url(#fx-cosmic-bg)"/>
+              <g stroke="rgba(139, 92, 246, 0.12)" stroke-width="0.8" stroke-dasharray="2 3">
+                <line x1="20" y1="36" x2="80" y2="36"/>
+                <line x1="20" y1="52" x2="80" y2="52"/>
+                <line x1="20" y1="68" x2="80" y2="68"/>
+                <line x1="36" y1="20" x2="36" y2="80"/>
+                <line x1="52" y1="20" x2="52" y2="80"/>
+                <line x1="68" y1="20" x2="68" y2="80"/>
+              </g>
+              <rect x="26" y="23" width="48" height="6.5" rx="3.25" fill="#241048" stroke="rgba(236,72,153,0.4)" stroke-width="0.8"/>
+              <circle cx="28" cy="26.25" r="2.2" fill="#00F5FF"/>
+              <circle cx="72" cy="26.25" r="2.2" fill="#8B5CF6"/>
+              <path d="M 29 27 L 68 27 L 64 39 L 43 39 L 43 47 L 59 47 L 56 56 L 43 56 L 43 71 L 30 67 Z" fill="rgba(0,0,0,0.55)" transform="translate(2, 2)"/>
+              <path class="fx-core-stem" d="M 30 26.5 C 30 25.5, 31 24.5, 32.5 24.5 L 69 24.5 C 71 24.5, 72.5 26, 72 28 L 67 40 C 66.3 41.5, 64.8 42.5, 63 42.5 L 44 42.5 L 44 48 L 60 48 C 62 48, 63.3 49.3, 62.8 51.3 L 59.5 58 C 59 59.5, 57.5 60.5, 56 60.5 L 44 60.5 L 44 73 C 44 74.5, 42.8 75.8, 41.2 75.3 L 32 72 C 30.8 71.5, 30 70.3, 30 69 Z" fill="url(#fx-core-1)"/>
+              <path class="fx-core-cross" d="M 30 24.5 L 69 24.5 L 65 32 L 41 32 L 41 48 L 60 48 L 57 55 L 41 55 L 41 70 L 30 66 Z" fill="url(#fx-core-2)" opacity="0.92"/>
+              <path d="M 32 72 L 44 73 L 49 68 L 37 67 Z" fill="#00F5FF" opacity="0.85"/>
+              <g class="fx-laser-carriage">
+                <line class="fx-laser-beam" x1="20" y1="50" x2="80" y2="50" stroke="#00F5FF" stroke-width="1.8" filter="url(#fx-laser-glow)" opacity="0.9"/>
+                <circle class="fx-laser-nozzle" cx="50" cy="50" r="2.8" fill="#FFFFFF" filter="url(#fx-laser-glow)"/>
+              </g>
+              <g class="fx-neon-dots">
+                <circle class="fx-neon-dot fx-dot-c" cx="50" cy="71" r="2.6" fill="#00F5FF"/>
+                <circle class="fx-neon-dot fx-dot-m" cx="58" cy="71" r="2.6" fill="#EC4899"/>
+                <circle class="fx-neon-dot fx-dot-v" cx="66" cy="71" r="2.6" fill="#8B5CF6"/>
+                <circle class="fx-neon-dot fx-dot-w" cx="74" cy="71" r="2.6" fill="#FFFFFF"/>
+              </g>
+              <rect class="fx-sheen-swipe" x="-70" y="0" width="40" height="110" fill="url(#fx-sheen-grad)" transform="skewX(-26)"/>
+            </g>
+            <rect class="fx-badge-border" x="14" y="16" width="72" height="72" rx="20" fill="none" stroke="url(#fx-border-grad)" stroke-width="2.2" filter="url(#fx-neon-glow)"/>
+          </svg>
+        </span>
+        <span class="brand-text">FLEX<span class="brand-text-accent">ORA</span><span class="logo-dot">.</span></span>
+      </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#flexoraNav" aria-controls="flexoraNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="flexoraNav">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="homeDropdown">
+                <li><a class="dropdown-item" href="index.html"><i class="fa-solid fa-cube me-2 text-primary"></i> Home 1 – General Printing</a></li>
+                <li><a class="dropdown-item active" href="home-2.html"><i class="fa-solid fa-palette me-2 text-primary"></i> Home 2 – Creative Showcase</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="rate-card.html">Rate Card</a></li>
+            <li class="nav-item"><a class="nav-link" href="pricing.html">Packages</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+          </ul>
+
+          <div class="nav-actions">
+            <button class="theme-toggle-btn" type="button" aria-label="Toggle theme">
+              <i class="fa-solid fa-moon"></i>
+            </button>
+            <a href="contact.html" class="btn btn-primary">
+              <i class="fa-solid fa-file-invoice"></i> Get a Quote
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Home 2: Creative Printing Showcase (Cosmic Studio Background Model) -->
+  <section class="hero-home-2">
+    <!-- Topographic Constellations & Orbit Traces Overlay -->
+    <div class="cosmic-constellations" aria-hidden="true">
+      <svg viewBox="0 0 1440 600" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="width: 100%; height: 100%;">
+        <path d="M -40,120 C 240,40 480,180 820,90 C 1120,20 1380,140 1500,80" stroke="rgba(139, 92, 246, 0.2)" stroke-width="1.2" stroke-dasharray="4 6" fill="none"/>
+        <path d="M -20,180 C 260,90 510,240 860,150 C 1160,70 1400,200 1520,140" stroke="rgba(236, 72, 153, 0.16)" stroke-width="1" fill="none"/>
+        <circle cx="180" cy="90" r="2" fill="#FFFFFF" opacity="0.85"/>
+        <circle cx="340" cy="65" r="2.8" fill="#00F5FF" opacity="0.9"/>
+        <circle cx="680" cy="80" r="2.5" fill="#EC4899" opacity="0.9"/>
+        <circle cx="1060" cy="55" r="2.8" fill="#8B5CF6" opacity="0.95"/>
+      </svg>
+    </div>
+
+    <div class="container position-relative" style="z-index: 2;">
+      <div class="row align-items-center mb-5">
+        <div class="col-lg-7 animate-on-scroll" data-animate="fade-right">
+          <span class="badge-tag cosmic-badge-violet"><i class="fa-solid fa-eye text-accent"></i> Visual Impact Architecture</span>
+          <h1 class="hero-title mt-2">
+            Where Large Ideas Turn Into <span class="highlight">Colossal Reality.</span>
+          </h1>
+          <p class="hero-desc">
+            An artistic, high-definition flex printing showcase combining vibrant UV pigment saturation, specialty substrates, and architectural installation precision.
+          </p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="rate-card.html" class="btn btn-primary btn-lg rounded-pill px-4">
+              <i class="fa-solid fa-calculator me-1"></i> Calculate Rate Online
+            </a>
+            <a href="products.html" class="btn btn-hero-secondary btn-lg rounded-pill px-4">
+              <i class="fa-solid fa-images me-1"></i> Explore Gallery
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-5 mt-4 mt-lg-0 text-lg-end animate-on-scroll delay-200" data-animate="fade-left">
+          <div class="hero-status-widget d-inline-flex flex-column align-items-start p-4 text-start">
+            <div class="d-flex align-items-center gap-3 mb-2">
+              <span class="badge rounded-pill cosmic-badge-green px-3 py-2"><i class="fa-solid fa-circle text-success me-1"></i> Live Production Status</span>
+            </div>
+            <h4 class="hero-status-title mb-1">Press Room Running at 100%</h4>
+            <p class="small hero-status-desc mb-3">Accepting express orders for tonight's curing shift.</p>
+            <a href="contact.html" class="btn btn-sm btn-primary text-white w-100 rounded-pill">Send Print Ready File &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Creative Visual Grid Layout -->
+      <div class="hero-creative-grid mt-4 animate-on-scroll delay-300" data-animate="zoom-in">
+        <div class="creative-tile creative-tile-1" style="border: 2px solid rgba(139, 92, 246, 0.35); border-radius: 20px;">
+          <img src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1400&q=80" alt="Billboard Flex Printing" loading="lazy">
+          <div class="tile-caption">
+            <span class="text-accent small text-uppercase fw-bold">Massive Outdoor</span>
+            <h4 class="mb-0 text-white">60-Foot Continuous Highway Banner</h4>
+          </div>
+        </div>
+        <div class="creative-tile creative-tile-2" style="border: 2px solid rgba(236, 72, 153, 0.35); border-radius: 20px;">
+          <img src="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=800&q=80" alt="Backlit Illumination" loading="lazy">
+          <div class="tile-caption">
+            <span class="text-accent small text-uppercase fw-bold">Translucent Backlit</span>
+            <h5 class="mb-0 text-white">Luminescent Airport Lightbox</h5>
+          </div>
+        </div>
+        <div class="creative-tile creative-tile-3" style="border: 2px solid rgba(0, 245, 255, 0.35); border-radius: 20px;">
+          <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80" alt="Fleet Vehicle Graphics" loading="lazy">
+          <div class="tile-caption">
+            <span class="text-accent small text-uppercase fw-bold">Vinyl Wrap</span>
+            <h5 class="mb-0 text-white">Full Van Fleet Transformation</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3D Undulating Wave Ribbon Divider -->
+    <div class="cosmic-wave-divider" aria-hidden="true">
+      <svg viewBox="0 0 1440 260" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <defs>
+          <!-- Dark Mode Wave Gradients -->
+          <linearGradient id="wave2-crest-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#4F46E5"/>
+            <stop offset="35%" stop-color="#8B5CF6"/>
+            <stop offset="70%" stop-color="#EC4899"/>
+            <stop offset="100%" stop-color="#00F5FF"/>
+          </linearGradient>
+          <linearGradient id="wave2-surface-grad" x1="50%" y1="0%" x2="50%" y2="100%">
+            <stop offset="0%" stop-color="#3D1885" stop-opacity="0.95"/>
+            <stop offset="45%" stop-color="#240D57" stop-opacity="0.98"/>
+            <stop offset="100%" stop-color="#080216"/>
+          </linearGradient>
+          <!-- Light Mode Wave Gradients -->
+          <linearGradient id="wave2-crest-grad-light" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#7C3AED"/>
+            <stop offset="50%" stop-color="#EC4899"/>
+            <stop offset="100%" stop-color="#00B8D4"/>
+          </linearGradient>
+          <linearGradient id="wave2-surface-grad-light" x1="50%" y1="0%" x2="50%" y2="100%">
+            <stop offset="0%" stop-color="#CBB5F9" stop-opacity="0.96"/>
+            <stop offset="45%" stop-color="#BA9EF5" stop-opacity="0.98"/>
+            <stop offset="100%" stop-color="#F4EFFD"/>
+          </linearGradient>
+          <filter id="wave2-neon-glow" x="-20%" y="-40%" width="140%" height="180%">
+            <feGaussianBlur stdDeviation="3.5" result="blur"/>
+            <feMerge>
+              <feMergeNode in="blur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+        <path class="wave2-surface-path" d="M 0,140 C 280,210 540,75 880,85 C 1160,95 1340,165 1440,145 L 1440,260 L 0,260 Z"/>
+        <path class="wave2-crest-stroke" d="M 0,140 C 280,210 540,75 880,85 C 1160,95 1340,165 1440,145" stroke-width="4.5" stroke-linecap="round" filter="url(#wave2-neon-glow)"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Client Logos Showcase -->
+  <section class="py-4">
+    <div class="container">
+      <p class="text-center text-muted small text-uppercase fw-bold mb-4">Official Print Provider For Leading Brands & Advertising Agencies</p>
+      <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-3 align-items-center text-center opacity-75">
+        <div class="col">
+          <div class="p-3 border rounded fw-bold text-secondary font-monospace"><i class="fa-solid fa-cube text-primary me-2"></i>NEXUS IND</div>
+        </div>
+        <div class="col">
+          <div class="p-3 border rounded fw-bold text-secondary font-monospace"><i class="fa-solid fa-shapes text-warning me-2"></i>APEX MEDIA</div>
+        </div>
+        <div class="col">
+          <div class="p-3 border rounded fw-bold text-secondary font-monospace"><i class="fa-solid fa-building text-info me-2"></i>METRO MALLS</div>
+        </div>
+        <div class="col">
+          <div class="p-3 border rounded fw-bold text-secondary font-monospace"><i class="fa-solid fa-car text-danger me-2"></i>VORTEX AUTO</div>
+        </div>
+        <div class="col">
+          <div class="p-3 border rounded fw-bold text-secondary font-monospace"><i class="fa-solid fa-plane text-success me-2"></i>AIRSKY EXPO</div>
+        </div>
+        <div class="col">
+          <div class="p-3 border rounded fw-bold text-secondary font-monospace"><i class="fa-solid fa-crown text-primary me-2"></i>PRIME RETAIL</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Before & After Design Showcase -->
+  <section class="py-5">
+    <div class="container py-4">
+      <div class="section-header text-center">
+        <span class="section-subtitle">Visual Quality Comparison</span>
+        <h2 class="section-title">See The FLEXORA Difference: Before & After</h2>
+        <p class="section-desc">Drag the interactive slider below to inspect standard 150 DPI consumer print vs. FLEXORA's 1440 DPI Japanese printhead UV cured output.</p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="before-after-container animate-on-scroll" data-animate="zoom-in">
+            <!-- Background Image: After (High-Res 1440 DPI Rich Flex Print) -->
+            <img src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1400&q=95" alt="After: High Definition FLEXORA Print" class="before-after-img">
+            <span class="before-label">Standard Competitor (Low-Res)</span>
+
+            <!-- Sliding Layer: Before (Standard dull print) -->
+            <div class="before-after-img after-layer" style="filter: contrast(0.85) brightness(0.9) blur(1.5px);">
+              <img src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1400&q=30" alt="Before: Low Resolution Print">
+              <span class="after-label">FLEXORA 1440 DPI (Ultra HD)</span>
+            </div>
+
+            <!-- Slider Drag Handle -->
+            <div class="slider-handle">
+              <i class="fa-solid fa-arrows-left-right"></i>
+            </div>
+          </div>
+          <div class="text-center mt-3 text-muted small">
+            <i class="fa-solid fa-hand-pointer text-primary me-1"></i> Drag slider sideways to inspect color contrast, edge sharpness, and ink bleed resistance.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Product Categories Showcase -->
+  <section class="pt-5 pb-0">
+    <div class="container py-4">
+      <div class="section-header text-center">
+        <span class="section-subtitle">Diverse Media Formats</span>
+        <h2 class="section-title">Comprehensive Product Categories</h2>
+        <p class="section-desc">We stock over 20 distinct printing substrates including blackout flex, star fabric, self-adhesive vinyl, and rigid boards.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Cat 1 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card-product">
+            <div class="product-img-box">
+              <img src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809?auto=format&fit=crop&w=700&q=80" alt="Frontlit Banner" loading="lazy">
+              <span class="product-category-badge">Frontlit</span>
+            </div>
+            <div class="product-body">
+              <h4 class="product-title">High-Resolution Frontlit Banners</h4>
+              <p class="product-desc">440 GSM vinyl fabric with matte finish eliminating outdoor glare under direct sunshine.</p>
+              <div class="product-meta">
+                <span>Custom up to 10.5ft</span>
+                <span class="text-primary fw-bold">$1.35 / sq.ft</span>
+              </div>
+              <div class="product-actions">
+                <a href="product-details.html?id=frontlit-banner" class="btn btn-outline-primary btn-sm">Explore Specs</a>
+                <a href="contact.html?product=frontlit-banner" class="btn btn-primary btn-sm">Get Quote</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cat 2 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card-product">
+            <div class="product-img-box">
+              <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=700&q=80" alt="Vinyl Graphics" loading="lazy">
+              <span class="product-category-badge">Vinyl</span>
+            </div>
+            <div class="product-body">
+              <h4 class="product-title">Cast Vinyl & Window Decals</h4>
+              <p class="product-desc">Air-release adhesive vinyl with cold gloss/matte lamination for corporate glass partitions.</p>
+              <div class="product-meta">
+                <span>Rolls up to 60"</span>
+                <span class="text-primary fw-bold">$2.50 / sq.ft</span>
+              </div>
+              <div class="product-actions">
+                <a href="product-details.html?id=vinyl-printing" class="btn btn-outline-primary btn-sm">Explore Specs</a>
+                <a href="contact.html?product=vinyl-printing" class="btn btn-primary btn-sm">Get Quote</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cat 3 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card-product">
+            <div class="product-img-box">
+              <img src="https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=700&q=80" alt="Glow Sign Board" loading="lazy">
+              <span class="product-category-badge">Illuminated</span>
+            </div>
+            <div class="product-body">
+              <h4 class="product-title">Commercial LED Glow Sign Boards</h4>
+              <p class="product-desc">Rust-proof aluminum fabricated box with Samsung IP67 waterproof LED modules.</p>
+              <div class="product-meta">
+                <span>Custom Shopfronts</span>
+                <span class="text-primary fw-bold">$6.50 / sq.ft</span>
+              </div>
+              <div class="product-actions">
+                <a href="product-details.html?id=glow-sign-board" class="btn btn-outline-primary btn-sm">Explore Specs</a>
+                <a href="contact.html?product=glow-sign-board" class="btn btn-primary btn-sm">Get Quote</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cat 4 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card-product">
+            <div class="product-img-box">
+              <img src="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=700&q=80" alt="Promotional Flags" loading="lazy">
+              <span class="product-category-badge">Promotional</span>
+            </div>
+            <div class="product-body">
+              <h4 class="product-title">Promotional Feather & Teardrop Flags</h4>
+              <p class="product-desc">Wind-resistant knitted polyester flags with 95% reverse bleedthrough and fiberglass poles.</p>
+              <div class="product-meta">
+                <span>8ft to 14ft heights</span>
+                <span class="text-primary fw-bold">$45.00 / set</span>
+              </div>
+              <div class="product-actions">
+                <a href="product-details.html?id=promotional-banners" class="btn btn-outline-primary btn-sm">Explore Specs</a>
+                <a href="contact.html?product=promotional-banners" class="btn btn-primary btn-sm">Get Quote</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cat 5 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card-product">
+            <div class="product-img-box">
+              <img src="https://images.unsplash.com/photo-1511556532299-8f662fc26c06?auto=format&fit=crop&w=700&q=80" alt="Rollup Standee" loading="lazy">
+              <span class="product-category-badge">Exhibition</span>
+            </div>
+            <div class="product-body">
+              <h4 class="product-title">Roll-Up Standees & Spider Walls</h4>
+              <p class="product-desc">Compact aluminum pull-up banner stands with anti-curl synthetic paper graphics.</p>
+              <div class="product-meta">
+                <span>6x2.5 ft, 6x3 ft</span>
+                <span class="text-primary fw-bold">$35.00 / pc</span>
+              </div>
+              <div class="product-actions">
+                <a href="product-details.html?id=rollup-standee" class="btn btn-outline-primary btn-sm">Explore Specs</a>
+                <a href="contact.html?product=rollup-standee" class="btn btn-primary btn-sm">Get Quote</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cat 6 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card-product">
+            <div class="product-img-box">
+              <img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=700&q=80" alt="Wall Posters" loading="lazy">
+              <span class="product-category-badge">Fine Art</span>
+            </div>
+            <div class="product-body">
+              <h4 class="product-title">Large Format Architectural Posters</h4>
+              <p class="product-desc">12-color archival pigment inks on 260 GSM satin paper for museum & corporate lobbies.</p>
+              <div class="product-meta">
+                <span>A2, A1, A0, 24x36"</span>
+                <span class="text-primary fw-bold">$3.50 / sq.ft</span>
+              </div>
+              <div class="product-actions">
+                <a href="product-details.html?id=wall-posters" class="btn btn-outline-primary btn-sm">Explore Specs</a>
+                <a href="contact.html?product=wall-posters" class="btn btn-primary btn-sm">Get Quote</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Glowing Neon Wave Divider into Industrial Showcase -->
+  <div class="cosmic-wave-divider wave-section-divider" aria-hidden="true">
+    <svg viewBox="0 0 1440 160" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="wave-crest-multi-1" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#7C3AED"/>
+          <stop offset="35%" stop-color="#8B5CF6"/>
+          <stop offset="65%" stop-color="#EC4899"/>
+          <stop offset="100%" stop-color="#00F5FF"/>
+        </linearGradient>
+        <linearGradient id="wave-surface-multi-dark-1" x1="50%" y1="0%" x2="50%" y2="100%">
+          <stop offset="0%" stop-color="#160836" stop-opacity="0.9"/>
+          <stop offset="60%" stop-color="#0E0424" stop-opacity="0.95"/>
+          <stop offset="100%" stop-color="#080216" stop-opacity="1"/>
+        </linearGradient>
+        <linearGradient id="wave-surface-multi-light-1" x1="50%" y1="0%" x2="50%" y2="100%">
+          <stop offset="0%" stop-color="#D4C2F8" stop-opacity="0.95"/>
+          <stop offset="50%" stop-color="#E2D4FA" stop-opacity="0.98"/>
+          <stop offset="100%" stop-color="#F4EFFD" stop-opacity="1"/>
+        </linearGradient>
+        <filter id="wave-neon-glow-multi-1" x="-20%" y="-40%" width="140%" height="180%">
+          <feGaussianBlur stdDeviation="3.0" result="blur"/>
+          <feMerge>
+            <feMergeNode in="blur"/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
+      </defs>
+      <path class="wave-multi-surface" d="M 0,80 C 320,135 580,30 880,45 C 1160,60 1340,105 1440,85 L 1440,160 L 0,160 Z"/>
+      <path class="wave-multi-crest" d="M 0,80 C 320,135 580,30 880,45 C 1160,60 1340,105 1440,85" stroke="url(#wave-crest-multi-1)" stroke-width="4.5" stroke-linecap="round" filter="url(#wave-neon-glow-multi-1)"/>
+    </svg>
+  </div>
+
+  <!-- Printing Capabilities Table & Specifications -->
+  <section class="py-4 industrial-showcase-section">
+    <div class="container py-4">
+      <div class="row align-items-center">
+        <div class="col-lg-5 mb-4 mb-lg-0">
+          <span class="badge-tag badge-accent mb-2">Technical Rigor</span>
+          <h2 class="section-title">Next-Gen Large Format Printing Engines</h2>
+          <p class="lead-desc">
+            We don't outsource. Our in-house press room accommodates urgent, high-volume orders with state-of-the-art curing units and automated edge-finishing machinery.
+          </p>
+          <ul class="list-unstyled d-flex flex-column gap-2 mt-4">
+            <li class="industrial-stat-label"><i class="fa-solid fa-check text-primary me-2"></i> <strong>UV LED Curing:</strong> Instant drying, 0% VOC emissions.</li>
+            <li class="industrial-stat-label"><i class="fa-solid fa-check text-primary me-2"></i> <strong>Eco-Solvent Inks:</strong> Maximum color gamut and weather durability.</li>
+            <li class="industrial-stat-label"><i class="fa-solid fa-check text-primary me-2"></i> <strong>High-Frequency RF Welding:</strong> Watertight joints for 100+ ft banners.</li>
+            <li class="industrial-stat-label"><i class="fa-solid fa-check text-primary me-2"></i> <strong>CNC Flatbed Router:</strong> Precision contour cutting of acrylic and sunboard.</li>
+          </ul>
+        </div>
+        <div class="col-lg-7">
+          <div class="table-responsive border rounded shadow-sm">
+            <table class="table industrial-spec-table table-hover mb-0">
+              <thead>
+                <tr class="border-secondary">
+                  <th>Machine Platform</th>
+                  <th>Print Width</th>
+                  <th>Resolution</th>
+                  <th>Hourly Output</th>
+                </tr>
+              </thead>
+              <tbody class="small">
+                <tr>
+                  <td class="fw-bold text-warning">Konica Minolta 512i (Solvent)</td>
+                  <td>3.2 Meters (10.5 ft)</td>
+                  <td>1440 DPI</td>
+                  <td>1,400 sq.ft / hr</td>
+                </tr>
+                <tr>
+                  <td class="fw-bold text-warning">Ricoh Gen6 UV Flatbed</td>
+                  <td>2.5 x 1.3 Meters</td>
+                  <td>2400 DPI</td>
+                  <td>650 sq.ft / hr</td>
+                </tr>
+                <tr>
+                  <td class="fw-bold text-warning">Roland TrueVIS Eco-Solvent</td>
+                  <td>1.6 Meters (64 in)</td>
+                  <td>1200 DPI</td>
+                  <td>480 sq.ft / hr</td>
+                </tr>
+                <tr>
+                  <td class="fw-bold text-warning">EFI VUTEk SuperWide Roll</td>
+                  <td>5.0 Meters (16.4 ft)</td>
+                  <td>1000 DPI</td>
+                  <td>2,800 sq.ft / hr</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Glowing Neon Wave Divider out of Industrial Showcase -->
+  <div class="cosmic-wave-divider wave-section-divider wave-invert wave-flip" aria-hidden="true">
+    <svg viewBox="0 0 1440 160" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="wave-crest-multi-2" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#00F5FF"/>
+          <stop offset="35%" stop-color="#EC4899"/>
+          <stop offset="65%" stop-color="#8B5CF6"/>
+          <stop offset="100%" stop-color="#7C3AED"/>
+        </linearGradient>
+        <linearGradient id="wave-surface-multi-dark-2" x1="50%" y1="0%" x2="50%" y2="100%">
+          <stop offset="0%" stop-color="#160836" stop-opacity="0.9"/>
+          <stop offset="60%" stop-color="#0E0424" stop-opacity="0.95"/>
+          <stop offset="100%" stop-color="#080216" stop-opacity="1"/>
+        </linearGradient>
+        <linearGradient id="wave-surface-multi-light-2" x1="50%" y1="0%" x2="50%" y2="100%">
+          <stop offset="0%" stop-color="#D4C2F8" stop-opacity="0.95"/>
+          <stop offset="50%" stop-color="#E2D4FA" stop-opacity="0.98"/>
+          <stop offset="100%" stop-color="#F4EFFD" stop-opacity="1"/>
+        </linearGradient>
+        <filter id="wave-neon-glow-multi-2" x="-20%" y="-40%" width="140%" height="180%">
+          <feGaussianBlur stdDeviation="3.0" result="blur"/>
+          <feMerge>
+            <feMergeNode in="blur"/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
+      </defs>
+      <path class="wave-multi-surface-2" d="M 0,80 C 320,135 580,30 880,45 C 1160,60 1340,105 1440,85 L 1440,160 L 0,160 Z"/>
+      <path class="wave-multi-crest-2" d="M 0,80 C 320,135 580,30 880,45 C 1160,60 1340,105 1440,85" stroke="url(#wave-crest-multi-2)" stroke-width="4.5" stroke-linecap="round" filter="url(#wave-neon-glow-multi-2)"/>
+    </svg>
+  </div>
+
+  <!-- Creative Gallery Section -->
+  <section class="py-5">
+    <div class="container py-4">
+      <div class="section-header text-center">
+        <span class="section-subtitle">Visual Inspiration</span>
+        <h2 class="section-title">Creative Exhibition & Event Gallery</h2>
+        <p class="section-desc">Click any image to enlarge and preview full craftsmanship.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item lightbox-trigger" data-caption="Truss Wall Backdrop for Global Tech Summit">
+          <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=700&q=80" alt="Truss Wall Backdrop">
+          <div class="gallery-overlay">
+            <i class="fa-solid fa-eye"></i>
+            <h5 class="text-white mb-0">Tech Expo Truss Wall</h5>
+          </div>
+        </div>
+        <div class="gallery-item lightbox-trigger" data-caption="Illuminated Storefront Acrylic Letters and Backlit Sign">
+          <img src="https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=700&q=80" alt="Backlit Signboard">
+          <div class="gallery-overlay">
+            <i class="fa-solid fa-eye"></i>
+            <h5 class="text-white mb-0">Illuminated Signboard</h5>
+          </div>
+        </div>
+        <div class="gallery-item lightbox-trigger" data-caption="Full Vehicle Cast Wrap on Commercial Cargo Van">
+          <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=700&q=80" alt="Vehicle Wrap">
+          <div class="gallery-overlay">
+            <i class="fa-solid fa-eye"></i>
+            <h5 class="text-white mb-0">Fleet Vehicle Branding</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Showcase -->
+  <section class="pt-5 pb-0">
+    <div class="container py-4">
+      <div class="row align-items-center">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <span class="section-subtitle">Real Feedback</span>
+          <h2 class="section-title">What Our Creative Partners Say</h2>
+          <p class="section-desc">Advertising agencies count on us to maintain brand color accuracy across hundreds of retail sites.</p>
+          <div class="d-flex gap-2">
+            <button class="btn btn-outline-primary btn-sm testimonial-prev" aria-label="Previous review"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="btn btn-primary btn-sm testimonial-next" aria-label="Next review"><i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="testimonial-slider-container">
+            <!-- Slide 1 -->
+            <div class="testimonial-slide-item">
+              <div class="testimonial-card">
+                <i class="fa-solid fa-quote-right testimonial-quote-icon"></i>
+                <div class="star-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <p class="testimonial-text">
+                  "FLEXORA is the only print shop in the region that reliably matches our Pantone color specs on 340 GSM flex without muddying the shadows. Our client campaigns always look flawless."
+                </p>
+                <div class="testimonial-author">
+                  <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Jessica Huang" class="testimonial-avatar">
+                  <div>
+                    <h5 class="author-name">Jessica Huang</h5>
+                    <span class="author-role">Creative Lead, BrandMatrix NYC</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="testimonial-slide-item d-none">
+              <div class="testimonial-card">
+                <i class="fa-solid fa-quote-right testimonial-quote-icon"></i>
+                <div class="star-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <p class="testimonial-text">
+                  "Their online pricing transparency combined with fast production turnaround helped us win a 50-store franchise rebranding contract. The reinforced eyelets withstood harsh autumn winds without a tear."
+                </p>
+                <div class="testimonial-author">
+                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Tom Henderson" class="testimonial-avatar">
+                  <div>
+                    <h5 class="author-name">Tom Henderson</h5>
+                    <span class="author-role">Franchise Marketing Coordinator</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Glowing Neon Wave Divider into CTA Section -->
+  <div class="cosmic-wave-divider wave-section-divider" aria-hidden="true">
+    <svg viewBox="0 0 1440 160" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="wave-crest-multi-3" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#7C3AED"/>
+          <stop offset="35%" stop-color="#8B5CF6"/>
+          <stop offset="65%" stop-color="#EC4899"/>
+          <stop offset="100%" stop-color="#00F5FF"/>
+        </linearGradient>
+        <linearGradient id="wave-surface-multi-dark-3" x1="50%" y1="0%" x2="50%" y2="100%">
+          <stop offset="0%" stop-color="#160836" stop-opacity="0.9"/>
+          <stop offset="60%" stop-color="#0E0424" stop-opacity="0.95"/>
+          <stop offset="100%" stop-color="#080216" stop-opacity="1"/>
+        </linearGradient>
+        <linearGradient id="wave-surface-multi-light-3" x1="50%" y1="0%" x2="50%" y2="100%">
+          <stop offset="0%" stop-color="#D4C2F8" stop-opacity="0.95"/>
+          <stop offset="50%" stop-color="#E2D4FA" stop-opacity="0.98"/>
+          <stop offset="100%" stop-color="#F4EFFD" stop-opacity="1"/>
+        </linearGradient>
+        <filter id="wave-neon-glow-multi-3" x="-20%" y="-40%" width="140%" height="180%">
+          <feGaussianBlur stdDeviation="3.0" result="blur"/>
+          <feMerge>
+            <feMergeNode in="blur"/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
+      </defs>
+      <path class="wave-multi-surface-3" d="M 0,80 C 320,135 580,30 880,45 C 1160,60 1340,105 1440,85 L 1440,160 L 0,160 Z"/>
+      <path class="wave-multi-crest-3" d="M 0,80 C 320,135 580,30 880,45 C 1160,60 1340,105 1440,85" stroke="url(#wave-crest-multi-3)" stroke-width="4.5" stroke-linecap="round" filter="url(#wave-neon-glow-multi-3)"/>
+    </svg>
+  </div>
+
+  <!-- Contact CTA -->
+  <section class="py-5">
+    <div class="container">
+      <div class="cta-banner">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <span class="badge-tag badge-accent mb-2">Have a Custom Project?</span>
+            <h2>Let's Discuss Custom Specifications & Dimensions</h2>
+            <p>From complex architectural mesh wraps to custom-shaped UV sunboards, our structural print engineers provide free consultation and quote estimates.</p>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <a href="contact.html" class="btn btn-primary btn-lg">
+              <i class="fa-solid fa-paper-plane"></i> Contact Production Desk
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-brand">
+            <a class="navbar-brand text-white" href="index.html">
+        <span class="logo-mark">
+          <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="fx-cosmic-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#1E0C42"/>
+                <stop offset="50%" stop-color="#12062E"/>
+                <stop offset="100%" stop-color="#080218"/>
+              </linearGradient>
+              <linearGradient id="fx-arch-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#00F5FF"/>
+                <stop offset="45%" stop-color="#EC4899"/>
+                <stop offset="85%" stop-color="#8B5CF6"/>
+                <stop offset="100%" stop-color="#6366F1"/>
+              </linearGradient>
+              <linearGradient id="fx-border-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#00F5FF"/>
+                <stop offset="35%" stop-color="#EC4899"/>
+                <stop offset="70%" stop-color="#8B5CF6"/>
+                <stop offset="100%" stop-color="#3B82F6"/>
+              </linearGradient>
+              <linearGradient id="fx-core-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#F43F5E"/>
+                <stop offset="45%" stop-color="#EC4899"/>
+                <stop offset="85%" stop-color="#8B5CF6"/>
+                <stop offset="100%" stop-color="#7C3AED"/>
+              </linearGradient>
+              <linearGradient id="fx-core-2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#00F5FF"/>
+                <stop offset="50%" stop-color="#8B5CF6"/>
+                <stop offset="100%" stop-color="#EC4899"/>
+              </linearGradient>
+              <linearGradient id="fx-sheen-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0"/>
+                <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.55"/>
+                <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+              </linearGradient>
+              <filter id="fx-neon-glow" x="-30%" y="-30%" width="160%" height="160%">
+                <feGaussianBlur stdDeviation="2.5" result="blur"/>
+                <feMerge>
+                  <feMergeNode in="blur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+              <filter id="fx-laser-glow" x="-30%" y="-30%" width="160%" height="160%">
+                <feGaussianBlur stdDeviation="1.6" result="blur"/>
+                <feMerge>
+                  <feMergeNode in="blur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+              <clipPath id="fx-badge-clip">
+                <rect x="14" y="16" width="72" height="72" rx="20"/>
+              </clipPath>
+            </defs>
+            <circle cx="50" cy="50" r="42" fill="none" stroke="#8B5CF6" stroke-width="1" opacity="0.25"/>
+            <path d="M 8 52 C 8 24, 28 5, 54 5 C 72 5, 87 15, 93 30" fill="none" stroke="#EC4899" stroke-width="5" stroke-linecap="round" opacity="0.35" filter="url(#fx-neon-glow)"/>
+            <path class="fx-arch-glow" d="M 9 52 C 9 25, 29 6, 54 6 C 72 6, 86 16, 92 30" fill="none" stroke="url(#fx-arch-grad)" stroke-width="3.5" stroke-linecap="round"/>
+            <circle cx="9" cy="52" r="2.8" fill="#00F5FF" filter="url(#fx-neon-glow)"/>
+            <circle cx="92" cy="30" r="2.8" fill="#8B5CF6" filter="url(#fx-neon-glow)"/>
+            <g clip-path="url(#fx-badge-clip)">
+              <rect x="14" y="16" width="72" height="72" rx="20" fill="url(#fx-cosmic-bg)"/>
+              <g stroke="rgba(139, 92, 246, 0.12)" stroke-width="0.8" stroke-dasharray="2 3">
+                <line x1="20" y1="36" x2="80" y2="36"/>
+                <line x1="20" y1="52" x2="80" y2="52"/>
+                <line x1="20" y1="68" x2="80" y2="68"/>
+                <line x1="36" y1="20" x2="36" y2="80"/>
+                <line x1="52" y1="20" x2="52" y2="80"/>
+                <line x1="68" y1="20" x2="68" y2="80"/>
+              </g>
+              <rect x="26" y="23" width="48" height="6.5" rx="3.25" fill="#241048" stroke="rgba(236,72,153,0.4)" stroke-width="0.8"/>
+              <circle cx="28" cy="26.25" r="2.2" fill="#00F5FF"/>
+              <circle cx="72" cy="26.25" r="2.2" fill="#8B5CF6"/>
+              <path d="M 29 27 L 68 27 L 64 39 L 43 39 L 43 47 L 59 47 L 56 56 L 43 56 L 43 71 L 30 67 Z" fill="rgba(0,0,0,0.55)" transform="translate(2, 2)"/>
+              <path class="fx-core-stem" d="M 30 26.5 C 30 25.5, 31 24.5, 32.5 24.5 L 69 24.5 C 71 24.5, 72.5 26, 72 28 L 67 40 C 66.3 41.5, 64.8 42.5, 63 42.5 L 44 42.5 L 44 48 L 60 48 C 62 48, 63.3 49.3, 62.8 51.3 L 59.5 58 C 59 59.5, 57.5 60.5, 56 60.5 L 44 60.5 L 44 73 C 44 74.5, 42.8 75.8, 41.2 75.3 L 32 72 C 30.8 71.5, 30 70.3, 30 69 Z" fill="url(#fx-core-1)"/>
+              <path class="fx-core-cross" d="M 30 24.5 L 69 24.5 L 65 32 L 41 32 L 41 48 L 60 48 L 57 55 L 41 55 L 41 70 L 30 66 Z" fill="url(#fx-core-2)" opacity="0.92"/>
+              <path d="M 32 72 L 44 73 L 49 68 L 37 67 Z" fill="#00F5FF" opacity="0.85"/>
+              <g class="fx-laser-carriage">
+                <line class="fx-laser-beam" x1="20" y1="50" x2="80" y2="50" stroke="#00F5FF" stroke-width="1.8" filter="url(#fx-laser-glow)" opacity="0.9"/>
+                <circle class="fx-laser-nozzle" cx="50" cy="50" r="2.8" fill="#FFFFFF" filter="url(#fx-laser-glow)"/>
+              </g>
+              <g class="fx-neon-dots">
+                <circle class="fx-neon-dot fx-dot-c" cx="50" cy="71" r="2.6" fill="#00F5FF"/>
+                <circle class="fx-neon-dot fx-dot-m" cx="58" cy="71" r="2.6" fill="#EC4899"/>
+                <circle class="fx-neon-dot fx-dot-v" cx="66" cy="71" r="2.6" fill="#8B5CF6"/>
+                <circle class="fx-neon-dot fx-dot-w" cx="74" cy="71" r="2.6" fill="#FFFFFF"/>
+              </g>
+              <rect class="fx-sheen-swipe" x="-70" y="0" width="40" height="110" fill="url(#fx-sheen-grad)" transform="skewX(-26)"/>
+            </g>
+            <rect class="fx-badge-border" x="14" y="16" width="72" height="72" rx="20" fill="none" stroke="url(#fx-border-grad)" stroke-width="2.2" filter="url(#fx-neon-glow)"/>
+          </svg>
+        </span>
+        <span class="brand-text">FLEX<span class="brand-text-accent">ORA</span><span class="logo-dot">.</span></span>
+      </a>
+          </div>
+          <p class="footer-text">
+            FLEXORA Creative Studio & Industrial Press. Delivering bold large-format flex printing, vinyl wraps, and illuminated commercial signages.
+          </p>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>840 Printworks Boulevard, Industrial Area Phase 2, New York, NY 10001</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>+1 (800) 555-FLEX</span>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Home 1</a></li>
+            <li><a href="home-2.html"><i class="fa-solid fa-angle-right"></i> Home 2</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> About Us</a></li>
+            <li><a href="products.html"><i class="fa-solid fa-angle-right"></i> Products</a></li>
+            <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> Services</a></li>
+            <li><a href="rate-card.html"><i class="fa-solid fa-angle-right"></i> Rate Card</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-angle-right"></i> Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-6">
+          <h4 class="footer-title">Products</h4>
+          <ul class="footer-links">
+            <li><a href="product-details.html?id=flex-banner"><i class="fa-solid fa-angle-right"></i> Flex Banners</a></li>
+            <li><a href="product-details.html?id=backlit-banner"><i class="fa-solid fa-angle-right"></i> Backlit Illumination</a></li>
+            <li><a href="product-details.html?id=rollup-standee"><i class="fa-solid fa-angle-right"></i> Pull-Up Standees</a></li>
+            <li><a href="product-details.html?id=vinyl-printing"><i class="fa-solid fa-angle-right"></i> Cast Vinyl</a></li>
+            <li><a href="product-details.html?id=oneway-vision"><i class="fa-solid fa-angle-right"></i> One Way Vision</a></li>
+            <li><a href="product-details.html?id=sunboard-printing"><i class="fa-solid fa-angle-right"></i> Sunboard Sheets</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h4 class="footer-title">Newsletter</h4>
+          <p class="footer-text">Get monthly tips on banner maintenance, substrate guides, and seasonal wholesale offers.</p>
+          <form class="newsletter-form mb-3">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Email address..." required>
+              <button class="btn btn-primary" type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+          </form>
+          <div class="footer-social-links">
+            <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center">
+        <p class="mb-0 text-white-50">&copy; 2026 FLEXORA Flex & Banner Printing Shop. All Rights Reserved.</p>
+        <div class="d-flex gap-3 text-white-50 small mt-2 mt-md-0">
+          <a href="privacy.html" class="text-white-50">Privacy Policy</a>
+          <span>&bull;</span>
+          <a href="terms.html" class="text-white-50">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/forms.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
