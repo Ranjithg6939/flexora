@@ -35,8 +35,8 @@ Designed around a **Cosmic Studio + Neon Creative Printing** aesthetic:
 ```
 flexora/
 │
-├── index.html              # Home 1 – General Printing Services
-├── home-2.html             # Home 2 – Creative Printing Showcase
+├── index.html              # Commercial Printing (Home 1 – Large Format & Signage)
+├── home-2.html             # Creative Showcase (Home 2 – Visual Architecture Studio)
 ├── about.html              # About Us (Story, Milestones, Team, Capabilities)
 ├── products.html           # Products Catalog (12 Categories with Live Search & Filter)
 ├── product-details.html    # Product Details (Specifications, Finishing, FAQ)

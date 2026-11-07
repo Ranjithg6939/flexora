@@ -17,9 +17,10 @@
 </head>
 <body>
 
-  <header class="site-header">
+<header class="site-header">
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light">
+        <!-- Logo -->
         <a class="navbar-brand" href="index.html">
         <span class="logo-mark">
           <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="FLEXORA Royal Winged 'F' Emblem">
@@ -203,19 +204,22 @@
         <span class="brand-text">FLEX<span class="brand-text-accent">ORA</span><span class="logo-dot">.</span></span>
       </a>
 
+        <!-- Mobile Toggler -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#flexoraNav" aria-controls="flexoraNav" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fa-solid fa-bars"></i>
         </button>
 
+        <!-- Menu Links -->
         <div class="collapse navbar-collapse" id="flexoraNav">
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <!-- Home Dropdown (Only Home 1 and Home 2) -->
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Home
               </a>
               <ul class="dropdown-menu" aria-labelledby="homeDropdown">
-                <li><a class="dropdown-item" href="index.html"><i class="fa-solid fa-cube me-2 text-primary"></i> Home 1 – General Printing</a></li>
-                <li><a class="dropdown-item" href="home-2.html"><i class="fa-solid fa-palette me-2 text-primary"></i> Home 2 – Creative Showcase</a></li>
+                <li><a class="dropdown-item" href="index.html">Commercial Printing</a></li>
+                <li><a class="dropdown-item" href="home-2.html">Creative Showcase</a></li>
               </ul>
             </li>
             <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
@@ -227,14 +231,17 @@
             <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
           </ul>
 
+          <!-- Nav Right Actions -->
           <div class="nav-actions">
             <!-- RTL / LTR Toggle Button -->
             <button class="rtl-toggle-btn" type="button" aria-label="Toggle RTL layout" title="Toggle RTL / LTR layout">
               <i class="fa-solid fa-right-left"></i> <span class="rtl-text">RTL</span>
             </button>
-            <button class="theme-toggle-btn" type="button" aria-label="Toggle theme">
+            <!-- Dark/Light Mode Switcher -->
+            <button class="theme-toggle-btn" type="button" aria-label="Toggle theme" title="Toggle Light/Dark Theme">
               <i class="fa-solid fa-moon"></i>
             </button>
+            <!-- Get a Quote Button -->
             <a href="contact.html" class="btn btn-primary">
               <i class="fa-solid fa-file-invoice"></i> Get a Quote
             </a>
@@ -244,21 +251,51 @@
     </div>
   </header>
 
-  <!-- Breadcrumbs -->
-  <section class="py-5 bg-white border-bottom" style="background-color: var(--surface) !important;">
-    <div class="container">
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb mb-2 small">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Pricing Packages</li>
-        </ol>
-      </nav>
-      <h1 class="display-5 fw-bold mb-2">Printing Packages & Bundles</h1>
-      <p class="text-muted lead mb-0">Engineered bundles combining flex banners, pull standees, promotional flags, and vinyl signage for maximum marketing ROI.</p>
+  <!-- Hero Section: Pricing (Centered Editorial Luxury Style) -->
+  <section class="hero-about-center" id="pricing-hero">
+    <!-- Topographic Constellations Overlay -->
+    <div class="cosmic-constellations" aria-hidden="true">
+      <svg viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="width: 100%; height: 100%;">
+        <path d="M -40,80 C 240,20 480,120 820,60 C 1120,10 1380,90 1500,50" stroke="rgba(139, 92, 246, 0.22)" stroke-width="1.2" stroke-dasharray="4 6" fill="none"/>
+        <path d="M -20,120 C 260,60 510,160 860,100 C 1160,40 1400,130 1520,90" stroke="rgba(236, 72, 153, 0.18)" stroke-width="1" fill="none"/>
+        <circle cx="180" cy="60" r="2" fill="#FFFFFF" opacity="0.85"/>
+        <circle cx="340" cy="45" r="2.8" fill="#00F5FF" opacity="0.9"/>
+        <circle cx="680" cy="55" r="2.5" fill="#EC4899" opacity="0.9"/>
+        <circle cx="1060" cy="35" r="2.8" fill="#8B5CF6" opacity="0.95"/>
+        <circle cx="1380" cy="50" r="2.5" fill="#00F5FF" opacity="0.9"/>
+      </svg>
+    </div>
+    <div class="container position-relative animate-on-scroll" data-animate="fade-up">
+      <!-- Breadcrumb -->
+      <div class="breadcrumb-wrap">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html"><i class="fa-solid fa-house me-1"></i> Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Pricing Packages</li>
+          </ol>
+        </nav>
+      </div>
+
+      <!-- Screenshot-Style Centered Pill Badge -->
+      <div class="mb-3">
+        <span class="hero-editorial-pill">
+          <i class="fa-solid fa-tags"></i> AGENCY &amp; COMMERCIAL BUNDLES
+        </span>
+      </div>
+
+      <!-- Hero Title -->
+      <h1 class="hero-title">
+        Turnkey Printing Packages &amp; <span class="highlight">Retainer Bundles</span>
+      </h1>
+
+      <!-- Subtitle / Lead -->
+      <p class="hero-desc">
+        Predictable recurring print allowances, turnkey store launch kits, and agency retainer contracts engineered with guaranteed press priority, free proofing, and monthly B2B billing.
+      </p>
     </div>
   </section>
 
-  <!-- 4 Packages Grid -->
+<!-- 4 Packages Grid -->
   <section class="py-5">
     <div class="container py-3">
       <div class="section-header text-center">
@@ -267,88 +304,88 @@
         <p class="section-desc">Each package includes pre-flight file checks, reinforced perimeter welding, and guaranteed turnaround.</p>
       </div>
 
-      <div class="row g-4">
+      <div class="row g-4 align-items-stretch">
         <!-- Package 1: Basic Printing Package -->
-        <div class="col-lg-3 col-md-6">
-          <div class="pricing-card">
+        <div class="col-lg-3 col-md-6 d-flex">
+          <div class="pricing-card w-100">
             <h3 class="package-title">Basic Printing Package</h3>
-            <p class="text-muted small">Ideal for single-store retail promotions and quick local announcements.</p>
+            <p class="package-desc">Ideal for single-store retail promotions and quick local announcements.</p>
             <div class="package-price">
-              $149 <small>/ bundle</small>
+              <span class="price-val">$149</span> <small>/ bundle</small>
             </div>
             <ul class="pricing-features-list">
-              <li><i class="fa-solid fa-check"></i> 1x Frontlit Flex Banner (8x4 ft)</li>
-              <li><i class="fa-solid fa-check"></i> 340 GSM Weatherproof Media</li>
-              <li><i class="fa-solid fa-check"></i> Brass Eyelets every 2 feet</li>
-              <li><i class="fa-solid fa-check"></i> Standard 48-Hour Turnaround</li>
-              <li class="text-muted"><i class="fa-solid fa-xmark"></i> Roll-Up Standee</li>
-              <li class="text-muted"><i class="fa-solid fa-xmark"></i> Window Vinyl Film</li>
-              <li class="text-muted"><i class="fa-solid fa-xmark"></i> On-Site Installation</li>
+              <li><span class="item-icon"><i class="fa-solid fa-check"></i></span> <span>1x Frontlit Flex Banner (8x4 ft)</span></li>
+              <li><span class="item-icon"><i class="fa-solid fa-check"></i></span> <span>340 GSM Weatherproof Media</span></li>
+              <li><span class="item-icon"><i class="fa-solid fa-check"></i></span> <span>Brass Eyelets every 2 feet</span></li>
+              <li><span class="item-icon"><i class="fa-solid fa-check"></i></span> <span>Standard 48-Hour Turnaround</span></li>
+              <li><span class="item-icon"><i class="fa-solid fa-check"></i></span> <span>1440 DPI High-Definition Print</span></li>
+              <li><span class="item-icon"><i class="fa-solid fa-check"></i></span> <span>Welded Hem Edge Reinforcement</span></li>
+              <li><span class="item-icon"><i class="fa-solid fa-check"></i></span> <span>Protective Roll Shipping Pack</span></li>
             </ul>
-            <a href="contact.html?package=basic" class="btn btn-outline-primary w-100">Request Quote</a>
+            <a href="contact.html?package=basic" class="btn btn-primary w-100 mt-auto pricing-btn">Request Quote</a>
           </div>
         </div>
 
         <!-- Package 2: Business Promotion Package (Featured) -->
-        <div class="col-lg-3 col-md-6">
-          <div class="pricing-card featured">
+        <div class="col-lg-3 col-md-6 d-flex">
+          <div class="pricing-card featured w-100">
             <h3 class="package-title">Business Promotion</h3>
-            <p class="text-muted small">Designed for grand store openings and retail product launches.</p>
-            <div class="package-price text-primary">
-              $389 <small>/ bundle</small>
+            <p class="package-desc">Designed for grand store openings and retail product launches.</p>
+            <div class="package-price">
+              <span class="price-val">$389</span> <small>/ bundle</small>
             </div>
             <ul class="pricing-features-list">
-              <li><i class="fa-solid fa-check"></i> 2x Outdoor Flex Banners (10x5 ft)</li>
-              <li><i class="fa-solid fa-check"></i> 1x Aluminum Roll-Up Standee (6x3 ft)</li>
-              <li><i class="fa-solid fa-check"></i> 1x One Way Vision Glass Film (6x4 ft)</li>
-              <li><i class="fa-solid fa-check"></i> 440 GSM Heavy-Duty Fabric</li>
-              <li><i class="fa-solid fa-check"></i> Welded Hems + Rust-proof Eyelets</li>
-              <li><i class="fa-solid fa-check"></i> 24-Hour Express Turnaround</li>
-              <li class="text-muted"><i class="fa-solid fa-xmark"></i> Crane Installation</li>
+              <li><span class="item-icon"><i class="fa-solid fa-check"></i></span> <span>2x Outdoor Flex Banners (10x5 ft)</span></li>
+              <li><span class="item-icon"><i class="fa-solid fa-check"></i></span> <span>1x Aluminum Roll-Up Standee (6x3 ft)</span></li>
+              <li><span class="item-icon"><i class="fa-solid fa-check"></i></span> <span>1x One Way Vision Glass Film (6x4 ft)</span></li>
+              <li><span class="item-icon"><i class="fa-solid fa-check"></i></span> <span>440 GSM Heavy-Duty Fabric</span></li>
+              <li><span class="item-icon"><i class="fa-solid fa-check"></i></span> <span>Welded Hems + Rust-proof Eyelets</span></li>
+              <li><span class="item-icon"><i class="fa-solid fa-check"></i></span> <span>24-Hour Express Turnaround</span></li>
+              <li><span class="item-icon"><i class="fa-solid fa-check"></i></span> <span>Free Pre-Press ICC Proofing</span></li>
             </ul>
-            <a href="contact.html?package=business" class="btn btn-primary w-100">Request Quote</a>
+            <a href="contact.html?package=business" class="btn btn-primary w-100 mt-auto pricing-btn">Request Quote</a>
           </div>
         </div>
 
         <!-- Package 3: Event Branding Package -->
-        <div class="col-lg-3 col-md-6">
-          <div class="pricing-card">
+        <div class="col-lg-3 col-md-6 d-flex">
+          <div class="pricing-card w-100">
             <h3 class="package-title">Event Branding</h3>
-            <p class="text-muted small">Complete visual kit for trade shows, expos, conferences, and gala stages.</p>
+            <p class="package-desc">Complete visual kit for trade shows, expos, conferences, and gala stages.</p>
             <div class="package-price">
-              $799 <small>/ bundle</small>
+              <span class="price-val">$799</span> <small>/ bundle</small>
             </div>
             <ul class="pricing-features-list">
-              <li><i class="fa-solid fa-check"></i> 1x Seamless Stage Backdrop (15x8 ft)</li>
-              <li><i class="fa-solid fa-check"></i> 2x Luxury Roll-Up Standees (6x3 ft)</li>
-              <li><i class="fa-solid fa-check"></i> 2x Promotional Teardrop Flags (10 ft)</li>
-              <li><i class="fa-solid fa-check"></i> Non-Reflective Matte Blackout Flex</li>
-              <li><i class="fa-solid fa-check"></i> Padded Canvas Carrying Bags</li>
-              <li><i class="fa-solid fa-check"></i> VIP Same-Day Preflight</li>
-              <li class="text-muted"><i class="fa-solid fa-xmark"></i> Crane Rigging</li>
+              <li><span class="item-icon"><i class="fa-solid fa-check"></i></span> <span>1x Seamless Stage Backdrop (15x8 ft)</span></li>
+              <li><span class="item-icon"><i class="fa-solid fa-check"></i></span> <span>2x Luxury Roll-Up Standees (6x3 ft)</span></li>
+              <li><span class="item-icon"><i class="fa-solid fa-check"></i></span> <span>2x Promotional Teardrop Flags (10 ft)</span></li>
+              <li><span class="item-icon"><i class="fa-solid fa-check"></i></span> <span>Non-Reflective Matte Blackout Flex</span></li>
+              <li><span class="item-icon"><i class="fa-solid fa-check"></i></span> <span>Padded Canvas Carrying Bags</span></li>
+              <li><span class="item-icon"><i class="fa-solid fa-check"></i></span> <span>VIP Same-Day Preflight Check</span></li>
+              <li><span class="item-icon"><i class="fa-solid fa-check"></i></span> <span>Priority Express Freight Transit</span></li>
             </ul>
-            <a href="contact.html?package=event" class="btn btn-outline-primary w-100">Request Quote</a>
+            <a href="contact.html?package=event" class="btn btn-primary w-100 mt-auto pricing-btn">Request Quote</a>
           </div>
         </div>
 
         <!-- Package 4: Custom Enterprise Package -->
-        <div class="col-lg-3 col-md-6">
-          <div class="pricing-card">
+        <div class="col-lg-3 col-md-6 d-flex">
+          <div class="pricing-card w-100">
             <h3 class="package-title">Custom Printing Package</h3>
-            <p class="text-muted small">Tailored for agency networks, nationwide chains, and high-volume rollouts.</p>
+            <p class="package-desc">Tailored for agency networks, nationwide chains, and high-volume rollouts.</p>
             <div class="package-price">
-              Custom <small>/ quote</small>
+              <span class="price-val">Custom</span> <small>/ quote</small>
             </div>
             <ul class="pricing-features-list">
-              <li><i class="fa-solid fa-check"></i> Unlimited Roll Square Footage</li>
-              <li><i class="fa-solid fa-check"></i> 5.0m Continuous Superwide Press</li>
-              <li><i class="fa-solid fa-check"></i> Full Vehicle Fleet Vinyl Wraps</li>
-              <li><i class="fa-solid fa-check"></i> Illuminated LED Glow Signage</li>
-              <li><i class="fa-solid fa-check"></i> Nationwide Multi-City Courier Drops</li>
-              <li><i class="fa-solid fa-check"></i> Licensed Rigging & Crane Install</li>
-              <li><i class="fa-solid fa-check"></i> Dedicated Factory Key Account Mgr</li>
+              <li><span class="item-icon"><i class="fa-solid fa-check"></i></span> <span>Unlimited Roll Square Footage</span></li>
+              <li><span class="item-icon"><i class="fa-solid fa-check"></i></span> <span>5.0m Continuous Superwide Press</span></li>
+              <li><span class="item-icon"><i class="fa-solid fa-check"></i></span> <span>Full Vehicle Fleet Vinyl Wraps</span></li>
+              <li><span class="item-icon"><i class="fa-solid fa-check"></i></span> <span>Illuminated LED Glow Signage</span></li>
+              <li><span class="item-icon"><i class="fa-solid fa-check"></i></span> <span>Nationwide Multi-City Courier Drops</span></li>
+              <li><span class="item-icon"><i class="fa-solid fa-check"></i></span> <span>Licensed Rigging & Crane Install</span></li>
+              <li><span class="item-icon"><i class="fa-solid fa-check"></i></span> <span>Dedicated Factory Key Account Mgr</span></li>
             </ul>
-            <a href="contact.html?package=custom" class="btn btn-secondary w-100">Request Custom Quote</a>
+            <a href="contact.html?package=custom" class="btn btn-primary w-100 mt-auto pricing-btn">Request Quote</a>
           </div>
         </div>
       </div>
@@ -409,7 +446,56 @@
   </section>
 
   <!-- Footer -->
-  <footer class="site-footer">
+
+  <!-- Glowing Neon Wave Divider into CTA Section -->
+  <div class="cosmic-wave-divider wave-section-divider" aria-hidden="true">
+    <svg viewBox="0 0 1440 160" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="wave-crest-multi-all" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#7C3AED"/>
+          <stop offset="35%" stop-color="#8B5CF6"/>
+          <stop offset="65%" stop-color="#EC4899"/>
+          <stop offset="100%" stop-color="#00F5FF"/>
+        </linearGradient>
+        <filter id="wave-neon-glow-all" x="-20%" y="-40%" width="140%" height="180%">
+          <feGaussianBlur stdDeviation="3.0" result="blur"/>
+          <feMerge>
+            <feMergeNode in="blur"/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
+      </defs>
+      <path class="wave-multi-surface-3" d="M 0,80 C 320,135 580,30 880,45 C 1160,60 1340,105 1440,85 L 1440,160 L 0,160 Z"/>
+      <path class="wave-multi-crest-3" d="M 0,80 C 320,135 580,30 880,45 C 1160,60 1340,105 1440,85" stroke="url(#wave-crest-multi-all)" stroke-width="4.5" stroke-linecap="round" filter="url(#wave-neon-glow-all)"/>
+    </svg>
+  </div>
+
+  <!-- Call to Action Banner (Home 1 Signature Model) -->
+  <section class="py-5">
+    <div class="container">
+      <div class="cta-banner animate-on-scroll" data-animate="zoom-in">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <span class="badge-tag badge-accent mb-2">Ready for Massive Impact?</span>
+            <h2>Get Your Free Printing Quote Within 2 Hours.</h2>
+            <p>Upload your design specifications or call our print engineers directly to calculate square footage discounts for bulk commercial rolls.</p>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <div class="cta-banner-actions">
+              <a href="contact.html" class="btn btn-primary btn-lg rounded-pill px-4">
+                <i class="fa-solid fa-file-invoice me-1"></i> Request a Quote
+              </a>
+              <a href="rate-card.html" class="btn btn-outline-light btn-lg rounded-pill px-4">
+                <i class="fa-solid fa-calculator me-1"></i> Price Calculator
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<footer class="site-footer">
     <div class="container">
       <div class="row g-4">
         <div class="col-lg-4 col-md-6">
@@ -604,8 +690,8 @@
         <div class="col-lg-2 col-md-6 col-6">
           <h4 class="footer-title">Navigation</h4>
           <ul class="footer-links">
-            <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Home 1</a></li>
-            <li><a href="home-2.html"><i class="fa-solid fa-angle-right"></i> Home 2</a></li>
+            <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Commercial Printing</a></li>
+            <li><a href="home-2.html"><i class="fa-solid fa-angle-right"></i> Creative Showcase</a></li>
             <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> About Us</a></li>
             <li><a href="products.html"><i class="fa-solid fa-angle-right"></i> Products</a></li>
             <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> Services</a></li>

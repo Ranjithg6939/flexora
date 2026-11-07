@@ -214,8 +214,8 @@
                 Home
               </a>
               <ul class="dropdown-menu" aria-labelledby="homeDropdown">
-                <li><a class="dropdown-item" href="index.html"><i class="fa-solid fa-cube me-2 text-primary"></i> Home 1 – General Printing</a></li>
-                <li><a class="dropdown-item" href="home-2.html"><i class="fa-solid fa-palette me-2 text-primary"></i> Home 2 – Creative Showcase</a></li>
+                <li><a class="dropdown-item" href="index.html">Commercial Printing</a></li>
+                <li><a class="dropdown-item" href="home-2.html">Creative Showcase</a></li>
               </ul>
             </li>
             <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
@@ -244,16 +244,45 @@
     </div>
   </header>
 
-  <!-- Breadcrumbs -->
-  <section class="py-4 bg-white border-bottom" style="background-color: var(--surface) !important;">
-    <div class="container">
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb mb-0 small">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+    <!-- Page Hero Banner (Home 1 Cosmic Style) -->
+  <section class="page-header-home1">
+    <!-- Topographic Constellations Overlay -->
+    <div class="cosmic-constellations" aria-hidden="true">
+      <svg viewBox="0 0 1440 280" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="width: 100%; height: 100%;">
+        <path d="M -40,80 C 240,20 480,120 820,60 C 1120,10 1380,90 1500,50" stroke="rgba(139, 92, 246, 0.22)" stroke-width="1.2" stroke-dasharray="4 6" fill="none"/>
+        <path d="M -20,120 C 260,60 510,160 860,100 C 1160,40 1400,130 1520,90" stroke="rgba(236, 72, 153, 0.18)" stroke-width="1" fill="none"/>
+        <circle cx="180" cy="60" r="2" fill="#FFFFFF" opacity="0.85"/>
+        <circle cx="340" cy="45" r="2.8" fill="#00F5FF" opacity="0.9"/>
+        <circle cx="680" cy="55" r="2.5" fill="#EC4899" opacity="0.9"/>
+        <circle cx="1060" cy="35" r="2.8" fill="#8B5CF6" opacity="0.95"/>
+        <circle cx="1380" cy="50" r="2.5" fill="#00F5FF" opacity="0.9"/>
+      </svg>
+    </div>
+    <div class="container position-relative text-center">
+      <nav aria-label="breadcrumb" class="d-flex justify-content-center">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html"><i class="fa-solid fa-house me-1"></i> Home</a></li>
           <li class="breadcrumb-item"><a href="products.html">Products</a></li>
           <li class="breadcrumb-item active bind-product-name" aria-current="page">Standard Flex Banner Printing</li>
         </ol>
       </nav>
+      <div class="d-flex justify-content-center mb-2">
+        <span class="badge-tag d-inline-flex align-items-center gap-2">
+          <i class="fa-solid fa-cube text-accent"></i> Technical Specifications &amp; Pricing
+        </span>
+      </div>
+      <h1 class="page-title">
+        <span class="bind-product-name highlight">Standard Flex Banner Printing</span>
+      </h1>
+      <p class="page-desc bind-product-desc mx-auto">
+        Commercial-grade flex banners printed with weatherproof UV-solvent inks, high-tension polyester mesh, and reinforced hem finishing.
+      </p>
+      <div class="page-meta-row justify-content-center">
+        <span class="page-meta-item"><i class="fa-solid fa-shield-halved text-success"></i> Weatherproof UV Inks</span>
+        <span class="page-meta-item"><i class="fa-solid fa-stopwatch text-accent"></i> 24-Hr Rush Turnaround</span>
+        <span class="page-meta-item"><i class="fa-solid fa-boxes-stacked text-primary"></i> Bulk Volume Discounts</span>
+        <span class="page-meta-item"><i class="fa-solid fa-truck text-cyan"></i> Freight Dock Shipping</span>
+      </div>
     </div>
   </section>
 
@@ -263,22 +292,30 @@
       <div class="row g-5 align-items-start">
         <!-- Product Image Showcase -->
         <div class="col-lg-6">
-          <div class="rounded-4 p-2 shadow-sm" style="background-color: var(--surface) !important; border: 1px solid var(--border-color);">
-            <img src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80" alt="Flex Printing Product" id="detailProductImage" class="img-fluid rounded-4 w-100" style="max-height: 480px; object-fit: cover;">
+          <div class="product-detail-main-img-box p-2 shadow-sm" style="background-color: var(--surface) !important; border: 1px solid var(--border-color);">
+            <img src="https://images.unsplash.com/photo-1513757378314-e46255f6ed16?auto=format&fit=crop&w=1200&q=80" alt="Flex Banner" id="detailProductImage" class="img-fluid rounded-4 w-100 product-detail-main-img">
           </div>
           <!-- Thumbnail Strip -->
-          <div class="row g-2 mt-2">
+          <div class="row g-2 mt-3" id="detailThumbnailsRow">
             <div class="col-3">
-              <img src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=300&q=80" alt="Thumb 1" class="img-fluid rounded-3 border">
+              <div class="product-thumb-item active">
+                <img src="https://images.unsplash.com/photo-1513757378314-e46255f6ed16?auto=format&fit=crop&w=300&q=80" alt="Thumb 1" class="img-fluid rounded-3 border product-thumb-img">
+              </div>
             </div>
             <div class="col-3">
-              <img src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809?auto=format&fit=crop&w=300&q=80" alt="Thumb 2" class="img-fluid rounded-3 border">
+              <div class="product-thumb-item">
+                <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=300&q=80" alt="Thumb 2" class="img-fluid rounded-3 border product-thumb-img">
+              </div>
             </div>
             <div class="col-3">
-              <img src="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=300&q=80" alt="Thumb 3" class="img-fluid rounded-3 border">
+              <div class="product-thumb-item">
+                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=300&q=80" alt="Thumb 3" class="img-fluid rounded-3 border product-thumb-img">
+              </div>
             </div>
             <div class="col-3">
-              <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=300&q=80" alt="Thumb 4" class="img-fluid rounded-3 border">
+              <div class="product-thumb-item">
+                <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=300&q=80" alt="Thumb 4" class="img-fluid rounded-3 border product-thumb-img">
+              </div>
             </div>
           </div>
         </div>
@@ -286,7 +323,7 @@
         <!-- Product Details Meta -->
         <div class="col-lg-6">
           <span class="badge-tag mb-2 bind-product-category">Flex Banner Printing</span>
-          <h1 class="h2 fw-bold mb-2 bind-product-name">Standard Flex Banner Printing</h1>
+          <h1 id="detailProductName" class="h2 fw-bold mb-2 bind-product-name">Standard Flex Banner Printing</h1>
           <div class="h3 text-primary fw-bold mb-3 bind-product-price">$1.20 / sq.ft</div>
           
           <p class="text-muted lead fs-6 bind-product-desc">
@@ -310,7 +347,7 @@
             </div>
             <div class="d-flex justify-content-between border-bottom pb-2">
               <span class="text-muted"><i class="fa-solid fa-clock text-primary me-2"></i> Turnaround Time:</span>
-              <strong>Same-Day / 24 Hours Express</strong>
+              <strong id="detailProductTurnaround">Same-Day / 24 Hours Express</strong>
             </div>
           </div>
 
@@ -353,63 +390,100 @@
       <div class="tab-content" id="productSpecsContent">
         <!-- Tab 1: Specs -->
         <div class="tab-pane fade show active" id="specs-pane" role="tabpanel">
-          <div class="row g-4">
-            <div class="col-md-6">
-              <h4 class="h5 mb-3">Substrate & Chemical Characteristics</h4>
-              <table class="table table-bordered">
-                <tbody>
-                  <tr>
-                    <th class="bg-light w-40">Weight / Caliper</th>
-                    <td>340 GSM (approx 10 oz/sq.yd) – 510 GSM available</td>
-                  </tr>
-                  <tr>
-                    <th class="bg-light">Base Fabric</th>
-                    <td>High-tenacity 500D x 500D polyester woven yarn</td>
-                  </tr>
-                  <tr>
-                    <th class="bg-light">Ink Compatibility</th>
-                    <td>Eco-Solvent, Hard Solvent, UV-Curable</td>
-                  </tr>
-                  <tr>
-                    <th class="bg-light">Tensile Strength</th>
-                    <td>Warp 1200 N/5cm / Weft 1000 N/5cm (Tear-proof)</td>
-                  </tr>
-                  <tr>
-                    <th class="bg-light">Temperature Range</th>
-                    <td>-20°C to +70°C (-4°F to 158°F)</td>
-                  </tr>
-                </tbody>
-              </table>
+          <div class="row g-4 align-items-stretch">
+            <div class="col-lg-6">
+              <div class="h-100 p-4 rounded-4 border bg-white shadow-sm d-flex flex-column" style="background-color: var(--surface) !important; border-color: rgba(139, 92, 246, 0.22) !important;">
+                <div class="d-flex align-items-center justify-content-between mb-3 pb-2 border-bottom">
+                  <h4 class="h5 fw-bold mb-0 d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-microscope text-primary"></i> Substrate &amp; Chemical Characteristics
+                  </h4>
+                  <span class="badge rounded-pill px-3 py-1" style="background: rgba(124, 58, 237, 0.1); color: #7C3AED; font-weight: 700; font-size: 0.78rem;">Lab Certified</span>
+                </div>
+                <div class="table-responsive flex-grow-1 d-flex flex-column justify-content-center">
+                  <table class="table table-bordered mb-0 specs-custom-table">
+                    <tbody>
+                      <tr>
+                        <th class="spec-label-col">Weight / Caliper</th>
+                        <td class="spec-value-col" id="detailTechWeight">340 GSM (approx 10 oz/sq.yd) – 510 GSM available</td>
+                      </tr>
+                      <tr>
+                        <th class="spec-label-col">Base Fabric</th>
+                        <td class="spec-value-col" id="detailTechBase">High-tenacity 500D x 500D polyester woven yarn</td>
+                      </tr>
+                      <tr>
+                        <th class="spec-label-col">Ink Compatibility</th>
+                        <td class="spec-value-col" id="detailTechInk">Eco-Solvent, Hard Solvent, UV-Curable</td>
+                      </tr>
+                      <tr>
+                        <th class="spec-label-col">Tensile Strength</th>
+                        <td class="spec-value-col" id="detailTechTensile">Warp 1200 N/5cm / Weft 1000 N/5cm (Tear-proof)</td>
+                      </tr>
+                      <tr>
+                        <th class="spec-label-col">Temperature Range</th>
+                        <td class="spec-value-col" id="detailTechTemp">-20°C to +70°C (-4°F to 158°F)</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
-            <div class="col-md-6">
-              <h4 class="h5 mb-3">Recommended Applications</h4>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item bg-transparent"><i class="fa-solid fa-arrow-right text-primary me-2"></i> Outdoor Highway Hoardings & Billboards</li>
-                <li class="list-group-item bg-transparent"><i class="fa-solid fa-arrow-right text-primary me-2"></i> Retail Storefront Sale & Promotional Banners</li>
-                <li class="list-group-item bg-transparent"><i class="fa-solid fa-arrow-right text-primary me-2"></i> Building Scaffolding Wraps & Real Estate Site Signs</li>
-                <li class="list-group-item bg-transparent"><i class="fa-solid fa-arrow-right text-primary me-2"></i> Trade Show Backdrops & Event Stage Wall Facings</li>
-              </ul>
+
+            <div class="col-lg-6">
+              <div class="h-100 p-4 rounded-4 border bg-white shadow-sm d-flex flex-column" style="background-color: var(--surface) !important; border-color: rgba(139, 92, 246, 0.22) !important;">
+                <div class="d-flex align-items-center justify-content-between mb-3 pb-2 border-bottom">
+                  <h4 class="h5 fw-bold mb-0 d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-bullseye text-primary"></i> Recommended Applications
+                  </h4>
+                  <span class="badge rounded-pill px-3 py-1" style="background: rgba(124, 58, 237, 0.1); color: #7C3AED; font-weight: 700; font-size: 0.78rem;">Key Deployments</span>
+                </div>
+                <div class="materials-list-wrapper flex-grow-1 d-flex flex-column justify-content-between" id="detailApplicationsList">
+                  <div class="material-item-row p-3 rounded-3 d-flex align-items-center gap-3">
+                    <div class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width: 34px; height: 34px; background: rgba(124, 58, 237, 0.12); color: #7C3AED;">
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                    <span class="fw-semibold text-dark">Outdoor Highway Hoardings &amp; Billboards</span>
+                  </div>
+                  <div class="material-item-row p-3 rounded-3 d-flex align-items-center gap-3">
+                    <div class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width: 34px; height: 34px; background: rgba(124, 58, 237, 0.12); color: #7C3AED;">
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                    <span class="fw-semibold text-dark">Retail Storefront Sale &amp; Promotional Banners</span>
+                  </div>
+                  <div class="material-item-row p-3 rounded-3 d-flex align-items-center gap-3">
+                    <div class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width: 34px; height: 34px; background: rgba(124, 58, 237, 0.12); color: #7C3AED;">
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                    <span class="fw-semibold text-dark">Building Scaffolding Wraps &amp; Real Estate Site Signs</span>
+                  </div>
+                  <div class="material-item-row p-3 rounded-3 d-flex align-items-center gap-3">
+                    <div class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width: 34px; height: 34px; background: rgba(124, 58, 237, 0.12); color: #7C3AED;">
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                    <span class="fw-semibold text-dark">Trade Show Backdrops &amp; Event Stage Wall Facings</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Tab 2: Finishing -->
         <div class="tab-pane fade" id="finishing-pane" role="tabpanel">
-          <div class="row g-4">
+          <div class="row g-4" id="detailFinishingRow">
             <div class="col-md-4">
-              <div class="p-3 border rounded h-100">
+              <div class="h-100 p-4 border rounded-4 bg-white shadow-sm d-flex flex-column" style="background-color: var(--surface) !important; border-color: rgba(139, 92, 246, 0.22) !important;">
                 <h5 class="fw-bold"><i class="fa-solid fa-ring text-primary me-2"></i> Brass Eyelets / Grommets</h5>
                 <p class="small text-muted mb-0">Rust-proof solid brass eyelets machine-stamped through double-folded hems every 2 feet or at 4 corners for fast rope/zip-tie rigging.</p>
               </div>
             </div>
             <div class="col-md-4">
-              <div class="p-3 border rounded h-100">
+              <div class="h-100 p-4 border rounded-4 bg-white shadow-sm d-flex flex-column" style="background-color: var(--surface) !important; border-color: rgba(139, 92, 246, 0.22) !important;">
                 <h5 class="fw-bold"><i class="fa-solid fa-fire text-primary me-2"></i> Heat-Sealed Welded Hems</h5>
                 <p class="small text-muted mb-0">1.5-inch continuous perimeter heat weld preventing raw thread fraying and drastically enhancing wind resistance.</p>
               </div>
             </div>
             <div class="col-md-4">
-              <div class="p-3 border rounded h-100">
+              <div class="h-100 p-4 border rounded-4 bg-white shadow-sm d-flex flex-column" style="background-color: var(--surface) !important; border-color: rgba(139, 92, 246, 0.22) !important;">
                 <h5 class="fw-bold"><i class="fa-solid fa-tent text-primary me-2"></i> Pole Pockets (Top & Bottom)</h5>
                 <p class="small text-muted mb-0">2-inch to 4-inch sleeve loops stitched or heat-welded along edges to accommodate aluminum pipes, rods, or scaffolding bars.</p>
               </div>
@@ -469,8 +543,7 @@
         <span class="section-subtitle">Complementary Formats</span>
         <h2 class="section-title">Related Printing Solutions</h2>
       </div>
-
-      <div class="row g-4">
+      <div class="row g-4" id="detailRelatedProductsRow">
         <div class="col-lg-4 col-md-6">
           <div class="card-product">
             <div class="product-img-box">
@@ -529,9 +602,58 @@
   </section>
 
   <!-- Footer -->
-  <footer class="site-footer">
+    <!-- Glowing Neon Wave Divider into CTA Section -->
+  <div class="cosmic-wave-divider wave-section-divider" aria-hidden="true">
+    <svg viewBox="0 0 1440 160" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="wave-crest-multi-all" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#7C3AED"/>
+          <stop offset="35%" stop-color="#8B5CF6"/>
+          <stop offset="65%" stop-color="#EC4899"/>
+          <stop offset="100%" stop-color="#00F5FF"/>
+        </linearGradient>
+        <filter id="wave-neon-glow-all" x="-20%" y="-40%" width="140%" height="180%">
+          <feGaussianBlur stdDeviation="3.0" result="blur"/>
+          <feMerge>
+            <feMergeNode in="blur"/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
+      </defs>
+      <path class="wave-multi-surface-3" d="M 0,80 C 320,135 580,30 880,45 C 1160,60 1340,105 1440,85 L 1440,160 L 0,160 Z"/>
+      <path class="wave-multi-crest-3" d="M 0,80 C 320,135 580,30 880,45 C 1160,60 1340,105 1440,85" stroke="url(#wave-crest-multi-all)" stroke-width="4.5" stroke-linecap="round" filter="url(#wave-neon-glow-all)"/>
+    </svg>
+  </div>
+
+  <!-- Call to Action Banner (Home 1 Signature Model) -->
+  <section class="py-5">
+    <div class="container">
+      <div class="cta-banner animate-on-scroll" data-animate="zoom-in">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <span class="badge-tag badge-accent mb-2">Ready for Massive Impact?</span>
+            <h2>Get Your Free Printing Quote Within 2 Hours.</h2>
+            <p>Upload your design specifications or call our print engineers directly to calculate square footage discounts for bulk commercial rolls.</p>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <div class="cta-banner-actions">
+              <a href="contact.html" class="btn btn-primary btn-lg rounded-pill px-4">
+                <i class="fa-solid fa-file-invoice me-1"></i> Request a Quote
+              </a>
+              <a href="rate-card.html" class="btn btn-outline-light btn-lg rounded-pill px-4">
+                <i class="fa-solid fa-calculator me-1"></i> Price Calculator
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<footer class="site-footer">
     <div class="container">
       <div class="row g-4">
+        <!-- Col 1: Brand -->
         <div class="col-lg-4 col-md-6">
           <div class="footer-brand">
             <a class="navbar-brand text-white" href="index.html">
@@ -717,15 +839,24 @@
         <span class="brand-text">FLEX<span class="brand-text-accent">ORA</span><span class="logo-dot">.</span></span>
       </a>
           </div>
-          <p class="footer-text">FLEXORA Industrial Flex & Banner Printing Shop. High-capacity large format printing engineered for durability and true Pantone fidelity.</p>
-          <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>840 Printworks Boulevard, Industrial Area Phase 2, New York, NY 10001</span></div>
-          <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><span>+1 (800) 555-FLEX</span></div>
+          <p class="footer-text">
+            FLEXORA is an industrial flex and banner printing shop engineered for high-volume commercial signage, hoardings, standees, and vinyl applications.
+          </p>
+        
+          <div class="footer-social-links mt-3">
+            <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
         </div>
+
+        <!-- Col 2: Quick Links -->
         <div class="col-lg-2 col-md-6 col-6">
           <h4 class="footer-title">Navigation</h4>
           <ul class="footer-links">
-            <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Home 1</a></li>
-            <li><a href="home-2.html"><i class="fa-solid fa-angle-right"></i> Home 2</a></li>
+            <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Commercial Printing</a></li>
+            <li><a href="home-2.html"><i class="fa-solid fa-angle-right"></i> Creative Showcase</a></li>
             <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> About Us</a></li>
             <li><a href="products.html"><i class="fa-solid fa-angle-right"></i> Products</a></li>
             <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> Services</a></li>
@@ -733,33 +864,42 @@
             <li><a href="contact.html"><i class="fa-solid fa-angle-right"></i> Contact Us</a></li>
           </ul>
         </div>
+
+        <!-- Col 3: Product Types -->
         <div class="col-lg-3 col-md-6 col-6">
-          <h4 class="footer-title">Products</h4>
+          <h4 class="footer-title">Top Products</h4>
           <ul class="footer-links">
-            <li><a href="product-details.html?id=flex-banner"><i class="fa-solid fa-angle-right"></i> Flex Banners</a></li>
-            <li><a href="product-details.html?id=backlit-banner"><i class="fa-solid fa-angle-right"></i> Backlit Flex</a></li>
-            <li><a href="product-details.html?id=rollup-standee"><i class="fa-solid fa-angle-right"></i> Roll-Up Standees</a></li>
-            <li><a href="product-details.html?id=vinyl-printing"><i class="fa-solid fa-angle-right"></i> Cast Vinyl</a></li>
-            <li><a href="product-details.html?id=sunboard-printing"><i class="fa-solid fa-angle-right"></i> Sunboard Sheets</a></li>
+            <li><a href="product-details.html?id=flex-banner"><i class="fa-solid fa-angle-right"></i> Frontlit Flex Banners</a></li>
+            <li><a href="product-details.html?id=backlit-banner"><i class="fa-solid fa-angle-right"></i> Backlit Translucent Flex</a></li>
+            <li><a href="product-details.html?id=rollup-standee"><i class="fa-solid fa-angle-right"></i> Roll-Up Pull Standees</a></li>
+            <li><a href="product-details.html?id=vinyl-printing"><i class="fa-solid fa-angle-right"></i> Self-Adhesive Vinyl</a></li>
+            <li><a href="product-details.html?id=oneway-vision"><i class="fa-solid fa-angle-right"></i> One Way Vision Films</a></li>
+            <li><a href="product-details.html?id=sunboard-printing"><i class="fa-solid fa-angle-right"></i> Sunboard Rigid Sheets</a></li>
+            <li><a href="product-details.html?id=vehicle-graphics"><i class="fa-solid fa-angle-right"></i> Fleet Vehicle Wraps</a></li>
           </ul>
         </div>
+
+        <!-- Col 4: Newsletter & Socials -->
         <div class="col-lg-3 col-md-6">
-          <h4 class="footer-title">Newsletter</h4>
-          <p class="footer-text">Get monthly tips and seasonal bulk discount codes.</p>
+          <h4 class="footer-title">Print Bulletin</h4>
+          <p class="footer-text">Subscribe for monthly trade discounts, new substrate arrivals, and seasonal bulk rate drops.</p>
           <form class="newsletter-form mb-3">
             <div class="input-group">
-              <input type="email" class="form-control" placeholder="Email address..." required>
+              <input type="email" class="form-control" placeholder="Your business email..." required>
               <button class="btn btn-primary" type="submit"><i class="fa-solid fa-paper-plane"></i></button>
             </div>
           </form>
-          <div class="footer-social-links">
-            <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="#" class="social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <div class="footer-contact-item mt-3">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>840 Printworks Boulevard, Industrial Area Phase 2, New York, NY 10001</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>+1 (800) 555-FLEX / +1 (212) 555-0199</span>
           </div>
         </div>
       </div>
+
       </div>
     <!-- Footer Bottom Bar -->
     <div class="footer-bottom">

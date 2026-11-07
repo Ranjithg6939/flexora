@@ -17,9 +17,10 @@
 </head>
 <body>
 
-  <header class="site-header">
+<header class="site-header">
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light">
+        <!-- Logo -->
         <a class="navbar-brand" href="index.html">
         <span class="logo-mark">
           <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="FLEXORA Royal Winged 'F' Emblem">
@@ -203,19 +204,22 @@
         <span class="brand-text">FLEX<span class="brand-text-accent">ORA</span><span class="logo-dot">.</span></span>
       </a>
 
+        <!-- Mobile Toggler -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#flexoraNav" aria-controls="flexoraNav" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fa-solid fa-bars"></i>
         </button>
 
+        <!-- Menu Links -->
         <div class="collapse navbar-collapse" id="flexoraNav">
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <!-- Home Dropdown (Only Home 1 and Home 2) -->
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Home
               </a>
               <ul class="dropdown-menu" aria-labelledby="homeDropdown">
-                <li><a class="dropdown-item" href="index.html"><i class="fa-solid fa-cube me-2 text-primary"></i> Home 1 – General Printing</a></li>
-                <li><a class="dropdown-item" href="home-2.html"><i class="fa-solid fa-palette me-2 text-primary"></i> Home 2 – Creative Showcase</a></li>
+                <li><a class="dropdown-item" href="index.html">Commercial Printing</a></li>
+                <li><a class="dropdown-item" href="home-2.html">Creative Showcase</a></li>
               </ul>
             </li>
             <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
@@ -227,14 +231,17 @@
             <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
           </ul>
 
+          <!-- Nav Right Actions -->
           <div class="nav-actions">
             <!-- RTL / LTR Toggle Button -->
             <button class="rtl-toggle-btn" type="button" aria-label="Toggle RTL layout" title="Toggle RTL / LTR layout">
               <i class="fa-solid fa-right-left"></i> <span class="rtl-text">RTL</span>
             </button>
-            <button class="theme-toggle-btn" type="button" aria-label="Toggle theme">
+            <!-- Dark/Light Mode Switcher -->
+            <button class="theme-toggle-btn" type="button" aria-label="Toggle theme" title="Toggle Light/Dark Theme">
               <i class="fa-solid fa-moon"></i>
             </button>
+            <!-- Get a Quote Button -->
             <a href="contact.html" class="btn btn-primary">
               <i class="fa-solid fa-file-invoice"></i> Get a Quote
             </a>
@@ -244,21 +251,51 @@
     </div>
   </header>
 
-  <!-- Breadcrumb Header -->
-  <section class="py-5 bg-white border-bottom" style="background-color: var(--surface) !important;">
-    <div class="container">
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb mb-2 small">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Services</li>
-        </ol>
-      </nav>
-      <h1 class="display-5 fw-bold mb-2">Our Printing Services</h1>
-      <p class="text-muted lead mb-0">From grand scale highway hoardings to intricate vinyl window graphics and certified on-site rigging.</p>
+  <!-- Hero Section: Services (Centered Editorial Luxury Style) -->
+  <section class="hero-about-center" id="services-hero">
+    <!-- Topographic Constellations Overlay -->
+    <div class="cosmic-constellations" aria-hidden="true">
+      <svg viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="width: 100%; height: 100%;">
+        <path d="M -40,80 C 240,20 480,120 820,60 C 1120,10 1380,90 1500,50" stroke="rgba(139, 92, 246, 0.22)" stroke-width="1.2" stroke-dasharray="4 6" fill="none"/>
+        <path d="M -20,120 C 260,60 510,160 860,100 C 1160,40 1400,130 1520,90" stroke="rgba(236, 72, 153, 0.18)" stroke-width="1" fill="none"/>
+        <circle cx="180" cy="60" r="2" fill="#FFFFFF" opacity="0.85"/>
+        <circle cx="340" cy="45" r="2.8" fill="#00F5FF" opacity="0.9"/>
+        <circle cx="680" cy="55" r="2.5" fill="#EC4899" opacity="0.9"/>
+        <circle cx="1060" cy="35" r="2.8" fill="#8B5CF6" opacity="0.95"/>
+        <circle cx="1380" cy="50" r="2.5" fill="#00F5FF" opacity="0.9"/>
+      </svg>
+    </div>
+    <div class="container position-relative animate-on-scroll" data-animate="fade-up">
+      <!-- Breadcrumb -->
+      <div class="breadcrumb-wrap">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html"><i class="fa-solid fa-house me-1"></i> Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Services</li>
+          </ol>
+        </nav>
+      </div>
+
+      <!-- Screenshot-Style Centered Pill Badge -->
+      <div class="mb-3">
+        <span class="hero-editorial-pill">
+          <i class="fa-solid fa-screwdriver-wrench"></i> FULL LIFECYCLE MANUFACTURING
+        </span>
+      </div>
+
+      <!-- Hero Title -->
+      <h1 class="hero-title">
+        Precision Pre-Press to <span class="highlight">Monumental Rigging</span>
+      </h1>
+
+      <!-- Subtitle / Lead -->
+      <p class="hero-desc">
+        We don't just roll and print. FLEXORA delivers end-to-end industrial execution: ICC color profiling, cold UV flatbed curing, automated grommet slitting, and licensed structural crane rigging.
+      </p>
     </div>
   </section>
 
-  <!-- 10 Services Grid Section -->
+<!-- 12 Services Grid Section -->
   <section class="py-5">
     <div class="container py-3">
       <div class="row g-4">
@@ -354,11 +391,31 @@
 
         <!-- Service 10: Installation Services -->
         <div class="col-lg-4 col-md-6">
-          <div class="card-service" style="border-color: var(--primary);">
-            <div class="service-icon-wrap" style="background-color: var(--primary); color: #fff;"><i class="fa-solid fa-helmet-safety"></i></div>
+          <div class="card-service">
+            <div class="service-icon-wrap"><i class="fa-solid fa-helmet-safety"></i></div>
             <h3 class="service-title">Installation Services</h3>
             <p class="service-text">Certified rigging, boom lift crane operators, and professional installers for rooftop billboards, building wraps, and retail fit-outs.</p>
-            <a href="service-details.html?service=installation" class="service-link text-primary">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="service-details.html?service=installation" class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Service 11: Vehicle Fleet Branding -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card-service">
+            <div class="service-icon-wrap"><i class="fa-solid fa-van-shuttle"></i></div>
+            <h3 class="service-title">Vehicle Fleet Branding</h3>
+            <p class="service-text">Complete vinyl wrap solutions for delivery vans, trucks, and company fleets with premium 3M cast vinyl and UV protective overlaminates.</p>
+            <a href="service-details.html?service=vehicle-wrap" class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Service 12: CNC Routing & Finishing -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card-service">
+            <div class="service-icon-wrap"><i class="fa-solid fa-ruler-combined"></i></div>
+            <h3 class="service-title">CNC Routing &amp; Finishing</h3>
+            <p class="service-text">Computerized high-precision contour routing, diamond flame edge polishing, and custom shape carving for acrylic, ACP sheets, and foam boards.</p>
+            <a href="service-details.html?service=cnc-cutting" class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
       </div>
@@ -384,7 +441,56 @@
   </section>
 
   <!-- Footer -->
-  <footer class="site-footer">
+
+  <!-- Glowing Neon Wave Divider into CTA Section -->
+  <div class="cosmic-wave-divider wave-section-divider" aria-hidden="true">
+    <svg viewBox="0 0 1440 160" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="wave-crest-multi-all" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#7C3AED"/>
+          <stop offset="35%" stop-color="#8B5CF6"/>
+          <stop offset="65%" stop-color="#EC4899"/>
+          <stop offset="100%" stop-color="#00F5FF"/>
+        </linearGradient>
+        <filter id="wave-neon-glow-all" x="-20%" y="-40%" width="140%" height="180%">
+          <feGaussianBlur stdDeviation="3.0" result="blur"/>
+          <feMerge>
+            <feMergeNode in="blur"/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
+      </defs>
+      <path class="wave-multi-surface-3" d="M 0,80 C 320,135 580,30 880,45 C 1160,60 1340,105 1440,85 L 1440,160 L 0,160 Z"/>
+      <path class="wave-multi-crest-3" d="M 0,80 C 320,135 580,30 880,45 C 1160,60 1340,105 1440,85" stroke="url(#wave-crest-multi-all)" stroke-width="4.5" stroke-linecap="round" filter="url(#wave-neon-glow-all)"/>
+    </svg>
+  </div>
+
+  <!-- Call to Action Banner (Home 1 Signature Model) -->
+  <section class="py-5">
+    <div class="container">
+      <div class="cta-banner animate-on-scroll" data-animate="zoom-in">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <span class="badge-tag badge-accent mb-2">Ready for Massive Impact?</span>
+            <h2>Get Your Free Printing Quote Within 2 Hours.</h2>
+            <p>Upload your design specifications or call our print engineers directly to calculate square footage discounts for bulk commercial rolls.</p>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <div class="cta-banner-actions">
+              <a href="contact.html" class="btn btn-primary btn-lg rounded-pill px-4">
+                <i class="fa-solid fa-file-invoice me-1"></i> Request a Quote
+              </a>
+              <a href="rate-card.html" class="btn btn-outline-light btn-lg rounded-pill px-4">
+                <i class="fa-solid fa-calculator me-1"></i> Price Calculator
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<footer class="site-footer">
     <div class="container">
       <div class="row g-4">
         <div class="col-lg-4 col-md-6">
@@ -579,8 +685,8 @@
         <div class="col-lg-2 col-md-6 col-6">
           <h4 class="footer-title">Navigation</h4>
           <ul class="footer-links">
-            <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Home 1</a></li>
-            <li><a href="home-2.html"><i class="fa-solid fa-angle-right"></i> Home 2</a></li>
+            <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Commercial Printing</a></li>
+            <li><a href="home-2.html"><i class="fa-solid fa-angle-right"></i> Creative Showcase</a></li>
             <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> About Us</a></li>
             <li><a href="products.html"><i class="fa-solid fa-angle-right"></i> Products</a></li>
             <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> Services</a></li>

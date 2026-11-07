@@ -17,9 +17,10 @@
 </head>
 <body>
 
-  <header class="site-header">
+<header class="site-header">
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light">
+        <!-- Logo -->
         <a class="navbar-brand" href="index.html">
         <span class="logo-mark">
           <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="FLEXORA Royal Winged 'F' Emblem">
@@ -203,19 +204,22 @@
         <span class="brand-text">FLEX<span class="brand-text-accent">ORA</span><span class="logo-dot">.</span></span>
       </a>
 
+        <!-- Mobile Toggler -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#flexoraNav" aria-controls="flexoraNav" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fa-solid fa-bars"></i>
         </button>
 
+        <!-- Menu Links -->
         <div class="collapse navbar-collapse" id="flexoraNav">
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <!-- Home Dropdown (Only Home 1 and Home 2) -->
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Home
               </a>
               <ul class="dropdown-menu" aria-labelledby="homeDropdown">
-                <li><a class="dropdown-item" href="index.html"><i class="fa-solid fa-cube me-2 text-primary"></i> Home 1 – General Printing</a></li>
-                <li><a class="dropdown-item" href="home-2.html"><i class="fa-solid fa-palette me-2 text-primary"></i> Home 2 – Creative Showcase</a></li>
+                <li><a class="dropdown-item" href="index.html">Commercial Printing</a></li>
+                <li><a class="dropdown-item" href="home-2.html">Creative Showcase</a></li>
               </ul>
             </li>
             <li class="nav-item"><a class="nav-link active" href="about.html">About Us</a></li>
@@ -227,14 +231,17 @@
             <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
           </ul>
 
+          <!-- Nav Right Actions -->
           <div class="nav-actions">
             <!-- RTL / LTR Toggle Button -->
             <button class="rtl-toggle-btn" type="button" aria-label="Toggle RTL layout" title="Toggle RTL / LTR layout">
               <i class="fa-solid fa-right-left"></i> <span class="rtl-text">RTL</span>
             </button>
-            <button class="theme-toggle-btn" type="button" aria-label="Toggle theme">
+            <!-- Dark/Light Mode Switcher -->
+            <button class="theme-toggle-btn" type="button" aria-label="Toggle theme" title="Toggle Light/Dark Theme">
               <i class="fa-solid fa-moon"></i>
             </button>
+            <!-- Get a Quote Button -->
             <a href="contact.html" class="btn btn-primary">
               <i class="fa-solid fa-file-invoice"></i> Get a Quote
             </a>
@@ -244,21 +251,51 @@
     </div>
   </header>
 
-  <!-- Page Breadcrumb Header -->
-  <section class="py-5 bg-white border-bottom" style="background-color: var(--surface) !important;">
-    <div class="container">
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb mb-2 small">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item active" aria-current="page">About Us</li>
-        </ol>
-      </nav>
-      <h1 class="display-5 fw-bold mb-2">Pioneering Industrial Large Format Printing</h1>
-      <p class="text-muted lead mb-0">Engineered with high-speed Japanese printing engines and master finishing craft.</p>
+  <!-- Hero Section: About Us (Centered Editorial Luxury Style) -->
+  <section class="hero-about-center" id="about-hero">
+    <!-- Topographic Constellations Overlay -->
+    <div class="cosmic-constellations" aria-hidden="true">
+      <svg viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="width: 100%; height: 100%;">
+        <path d="M -40,80 C 240,20 480,120 820,60 C 1120,10 1380,90 1500,50" stroke="rgba(139, 92, 246, 0.22)" stroke-width="1.2" stroke-dasharray="4 6" fill="none"/>
+        <path d="M -20,120 C 260,60 510,160 860,100 C 1160,40 1400,130 1520,90" stroke="rgba(236, 72, 153, 0.18)" stroke-width="1" fill="none"/>
+        <circle cx="180" cy="60" r="2" fill="#FFFFFF" opacity="0.85"/>
+        <circle cx="340" cy="45" r="2.8" fill="#00F5FF" opacity="0.9"/>
+        <circle cx="680" cy="55" r="2.5" fill="#EC4899" opacity="0.9"/>
+        <circle cx="1060" cy="35" r="2.8" fill="#8B5CF6" opacity="0.95"/>
+        <circle cx="1380" cy="50" r="2.5" fill="#00F5FF" opacity="0.9"/>
+      </svg>
+    </div>
+    <div class="container position-relative animate-on-scroll" data-animate="fade-up">
+      <!-- Breadcrumb -->
+      <div class="breadcrumb-wrap">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html"><i class="fa-solid fa-house me-1"></i> Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">About Us</li>
+          </ol>
+        </nav>
+      </div>
+
+      <!-- Screenshot-Style Centered Pill Badge -->
+      <div class="mb-3">
+        <span class="hero-editorial-pill">
+          <i class="fa-solid fa-industry"></i> INDUSTRIAL PRINT HERITAGE SINCE 2012
+        </span>
+      </div>
+
+      <!-- Hero Title -->
+      <h1 class="hero-title">
+        Pioneering the Era of <span class="highlight">Colossal Scale</span> Printing
+      </h1>
+
+      <!-- Subtitle / Lead -->
+      <p class="hero-desc">
+        Over a decade of scaling from an artisanal wide-format workshop into an industrial titan operating 14 continuous high-speed engines across 25,000 sq.ft of climate-controlled pressroom.
+      </p>
     </div>
   </section>
 
-  <!-- Introduction & Our Story -->
+<!-- Introduction & Our Story -->
   <section class="py-5">
     <div class="container py-4">
       <div class="row align-items-center g-5">
@@ -413,39 +450,189 @@
       </div>
 
       <div class="timeline">
+        <!-- Milestone 1 (2012): Left Content, Right Image -->
         <div class="timeline-item">
           <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-year">2012</div>
-            <h4 class="h5">Shop Inception</h4>
-            <p class="text-muted small mb-0">Launched with two 3.2m solvent printers catering to local retail shopfronts and event banners.</p>
+          <div class="timeline-side timeline-content-side animate-on-scroll" data-animate="fade-right">
+            <div class="timeline-card">
+              <span class="timeline-badge"><i class="fa-solid fa-flag"></i> Inception</span>
+              <div class="timeline-year">2012</div>
+              <h4 class="h5">Shop Inception &amp; Commercial Press</h4>
+              <p class="timeline-card-desc">
+                Founded as a specialized large-format printing workshop in New York with two high-speed Japanese solvent roll presses, establishing unprecedented turnaround benchmarks for metropolitan retailers, marketing agencies, and local event banners.
+              </p>
+              <ul class="timeline-card-list">
+                <li><i class="fa-solid fa-circle-check"></i> <span>Dual 3.2m continuous solvent roll-to-roll printing engines.</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span>Calibrated Pantone color management profiles for multi-branch retail.</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span>First guaranteed 24-hour turnaround for urgent commercial signage.</span></li>
+              </ul>
+              <div class="timeline-chips-row">
+                <span class="milestone-chip"><i class="fa-solid fa-gauge-high text-primary"></i> 5,000 sq.ft/day</span>
+                <span class="milestone-chip"><i class="fa-solid fa-users text-primary"></i> 8 Press Technicians</span>
+                <span class="milestone-chip"><i class="fa-solid fa-award text-primary"></i> 440 GSM Flex</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-side timeline-image-side animate-on-scroll" data-animate="fade-left">
+            <div class="timeline-img-card">
+              <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=700&q=80" alt="2012 Shop Inception - 3.2m Solvent Press" loading="lazy">
+              <div class="timeline-img-tag"><i class="fa-solid fa-print me-1"></i> First Solvent Printers</div>
+            </div>
           </div>
         </div>
 
+        <!-- Milestone 2 (2015): Left Content, Right Image -->
         <div class="timeline-item">
           <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-year">2016</div>
-            <h4 class="h5">UV Flatbed Expansion</h4>
-            <p class="text-muted small mb-0">Commissioned our first industrial Ricoh UV flatbed to offer direct rigid sunboard and acrylic printing.</p>
+          <div class="timeline-side timeline-content-side animate-on-scroll" data-animate="fade-right">
+            <div class="timeline-card">
+              <span class="timeline-badge"><i class="fa-solid fa-chart-line"></i> Expansion</span>
+              <div class="timeline-year">2015</div>
+              <h4 class="h5">Highway Billboard &amp; Mega Hoardings</h4>
+              <p class="timeline-card-desc">
+                Scaled operations into interstate outdoor advertising networks, manufacturing heavy-duty 510 GSM blackout flex banners reinforced with industrial perimeter seatbelt webbing engineered to withstand 80 MPH sustained storm crosswinds.
+              </p>
+              <ul class="timeline-card-list">
+                <li><i class="fa-solid fa-circle-check"></i> <span>Seamless RF heat-welded seams replacing weak sewing thread lines.</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span>3-year anti-fade UV pigment warranty against severe weather.</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span>Contracted as official print provider for 120+ interstate billboards.</span></li>
+              </ul>
+              <div class="timeline-chips-row">
+                <span class="milestone-chip"><i class="fa-solid fa-bolt text-primary"></i> 18,000 sq.ft/day</span>
+                <span class="milestone-chip"><i class="fa-solid fa-wind text-primary"></i> 80 MPH Wind Tested</span>
+                <span class="milestone-chip"><i class="fa-solid fa-road text-primary"></i> 120+ Billboard Sites</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-side timeline-image-side animate-on-scroll" data-animate="fade-left">
+            <div class="timeline-img-card">
+              <img src="https://images.unsplash.com/photo-1513757378314-e46255f6ed16?auto=format&fit=crop&w=700&q=80" alt="2015 Highway Billboard Flex Division" loading="lazy">
+              <div class="timeline-img-tag"><i class="fa-solid fa-rectangle-ad me-1"></i> Outdoor Hoarding Division</div>
+            </div>
           </div>
         </div>
 
+        <!-- Milestone 3 (2018): Left Content, Right Image -->
         <div class="timeline-item">
           <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-year">2020</div>
-            <h4 class="h5">Automated Finishing Plant</h4>
-            <p class="text-muted small mb-0">Installed robotic high-speed eyelet stamping and radio-frequency seam welding lines, increasing daily capacity to 30,000 sq.ft.</p>
+          <div class="timeline-side timeline-content-side animate-on-scroll" data-animate="fade-right">
+            <div class="timeline-card">
+              <span class="timeline-badge"><i class="fa-solid fa-microchip"></i> Technology</span>
+              <div class="timeline-year">2018</div>
+              <h4 class="h5">Industrial UV Flatbed Cleanroom</h4>
+              <p class="timeline-card-desc">
+                Pioneered direct-to-substrate digital printing with Japanese Ricoh Gen6 industrial UV flatbeds, enabling millimeter-accurate printing directly onto rigid Sunboard, acrylic sheets, foam PVC, and architectural ACP panels without vinyl mounting.
+              </p>
+              <ul class="timeline-card-list">
+                <li><i class="fa-solid fa-circle-check"></i> <span>2400 DPI micro-piezo printheads delivering photographic clarity.</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span>Cold LED lamp curing with instant polymerization &amp; zero VOC odor.</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span>Automated CNC oscillating flatbed cutter for intricate contour shapes.</span></li>
+              </ul>
+              <div class="timeline-chips-row">
+                <span class="milestone-chip"><i class="fa-solid fa-bullseye text-primary"></i> 2400 DPI Precision</span>
+                <span class="milestone-chip"><i class="fa-solid fa-layer-group text-primary"></i> 20+ Rigid Substrates</span>
+                <span class="milestone-chip"><i class="fa-solid fa-leaf text-primary"></i> 0% VOC Eco-Cured</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-side timeline-image-side animate-on-scroll" data-animate="fade-left">
+            <div class="timeline-img-card">
+              <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=700&q=80" alt="2018 Industrial Ricoh Gen6 UV Flatbed Cleanroom" loading="lazy">
+              <div class="timeline-img-tag"><i class="fa-solid fa-shapes me-1"></i> Ricoh Gen6 UV Flatbed</div>
+            </div>
           </div>
         </div>
 
+        <!-- Milestone 4 (2021): Left Content, Right Image -->
         <div class="timeline-item">
           <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-year">2024 - 2026</div>
-            <h4 class="h5">5.0 Meter SuperWide Press & National Dispatch</h4>
-            <p class="text-muted small mb-0">Expanded to 5.0m continuous roll printing platforms and same-day dispatch partnerships across the eastern seaboard.</p>
+          <div class="timeline-side timeline-content-side animate-on-scroll" data-animate="fade-right">
+            <div class="timeline-card">
+              <span class="timeline-badge"><i class="fa-solid fa-robot"></i> Automation</span>
+              <div class="timeline-year">2021</div>
+              <h4 class="h5">Automated Post-Press Finishing Plant</h4>
+              <p class="timeline-card-desc">
+                Constructed a 25,000 sq.ft temperature-controlled industrial print facility housing high-frequency seam welders, automated dual-edge laser slitting lines, and robotic pneumatic eyelet stamping lines capable of punching 120 grommets per minute.
+              </p>
+              <ul class="timeline-card-list">
+                <li><i class="fa-solid fa-circle-check"></i> <span>Automated pneumatic grommet stamping at 120 eyelets per minute.</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span>High-frequency electromagnetic RF welding for watertight hems.</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span>Strict spectrophotometer color validation under Delta-E &lt; 1.5.</span></li>
+              </ul>
+              <div class="timeline-chips-row">
+                <span class="milestone-chip"><i class="fa-solid fa-industry text-primary"></i> 32,000 sq.ft/day</span>
+                <span class="milestone-chip"><i class="fa-solid fa-certificate text-primary"></i> ISO 9001 Certified</span>
+                <span class="milestone-chip"><i class="fa-solid fa-stopwatch text-primary"></i> 120 Eyelets/min</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-side timeline-image-side animate-on-scroll" data-animate="fade-left">
+            <div class="timeline-img-card">
+              <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=700&q=80" alt="2021 Automated Post-Press Finishing Plant" loading="lazy">
+              <div class="timeline-img-tag"><i class="fa-solid fa-gears me-1"></i> Robotic Finishing Plant</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Milestone 5 (2023): Left Content, Right Image -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-side timeline-content-side animate-on-scroll" data-animate="fade-right">
+            <div class="timeline-card">
+              <span class="timeline-badge"><i class="fa-solid fa-van-shuttle"></i> Fleet Graphics</span>
+              <div class="timeline-year">2023</div>
+              <h4 class="h5">Commercial Fleet &amp; Cast Vinyl Division</h4>
+              <p class="timeline-card-desc">
+                Inaugurated dedicated vehicle graphics bays equipped with 3M and Avery Dennison certified wrap applicators. Utilizing cast vinyl films with micro-air-release channels, delivering bubble-free full wraps for commercial delivery fleets and vans.
+              </p>
+              <ul class="timeline-card-list">
+                <li><i class="fa-solid fa-circle-check"></i> <span>Ultra-conformable cast vinyl with cold gloss and satin UV overlaminates.</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span>Computerized vehicle templating software for 2,000+ transit models.</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span>5-year clean peel warranty without OEM automotive paint damage.</span></li>
+              </ul>
+              <div class="timeline-chips-row">
+                <span class="milestone-chip"><i class="fa-solid fa-truck-fast text-primary"></i> 350+ Fleet Vans Wrapped</span>
+                <span class="milestone-chip"><i class="fa-solid fa-shield text-primary"></i> 5-Year Lamination</span>
+                <span class="milestone-chip"><i class="fa-solid fa-star text-primary"></i> 3M &amp; Avery Certified</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-side timeline-image-side animate-on-scroll" data-animate="fade-left">
+            <div class="timeline-img-card">
+              <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=700&q=80" alt="2023 Commercial Fleet & Vehicle Vinyl Wrap Division" loading="lazy">
+              <div class="timeline-img-tag"><i class="fa-solid fa-car-side me-1"></i> Fleet Vehicle Wraps</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Milestone 6 (2025 - 2026): Left Content, Right Image -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-side timeline-content-side animate-on-scroll" data-animate="fade-right">
+            <div class="timeline-card">
+              <span class="timeline-badge"><i class="fa-solid fa-truck-ramp-box"></i> SuperWide Press</span>
+              <div class="timeline-year">2025 - 2026</div>
+              <h4 class="h5">5.0 Meter SuperWide &amp; Nationwide Logistics</h4>
+              <p class="timeline-card-desc">
+                Commissioned flagship EFI VUTEk 5.0-meter continuous roll platforms capable of seamless monumental flex printing without splicing, integrated with automated logistics dispatch guaranteeing next-day dock delivery across 38 distribution hubs.
+              </p>
+              <ul class="timeline-card-list">
+                <li><i class="fa-solid fa-circle-check"></i> <span>5.0m continuous roll printing platforms without welded vertical joints.</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span>Automated barcode tracking from raster processing to cargo loading.</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span>Continuous round-the-clock 24/7 printing shifts exceeding 45K sq.ft daily.</span></li>
+              </ul>
+              <div class="timeline-chips-row">
+                <span class="milestone-chip"><i class="fa-solid fa-ruler-combined text-primary"></i> 5.0m Seamless Roll</span>
+                <span class="milestone-chip"><i class="fa-solid fa-cubes-stacked text-primary"></i> 45,000+ sq.ft/day</span>
+                <span class="milestone-chip"><i class="fa-solid fa-map-location-dot text-primary"></i> 38 Dispatch Hubs</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-side timeline-image-side animate-on-scroll" data-animate="fade-left">
+            <div class="timeline-img-card">
+              <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=700&q=80" alt="2025 - 2026 5.0m SuperWide Press & Nationwide Dispatch" loading="lazy">
+              <div class="timeline-img-tag"><i class="fa-solid fa-truck-plane me-1"></i> 5.0m SuperWide &amp; Logistics</div>
+            </div>
           </div>
         </div>
       </div>
@@ -518,26 +705,55 @@
     </div>
   </section>
 
-  <!-- CTA -->
+  <!-- Glowing Neon Wave Divider into CTA Section -->
+  <div class="cosmic-wave-divider wave-section-divider" aria-hidden="true">
+    <svg viewBox="0 0 1440 160" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="wave-crest-multi-all" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#7C3AED"/>
+          <stop offset="35%" stop-color="#8B5CF6"/>
+          <stop offset="65%" stop-color="#EC4899"/>
+          <stop offset="100%" stop-color="#00F5FF"/>
+        </linearGradient>
+        <filter id="wave-neon-glow-all" x="-20%" y="-40%" width="140%" height="180%">
+          <feGaussianBlur stdDeviation="3.0" result="blur"/>
+          <feMerge>
+            <feMergeNode in="blur"/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
+      </defs>
+      <path class="wave-multi-surface-3" d="M 0,80 C 320,135 580,30 880,45 C 1160,60 1340,105 1440,85 L 1440,160 L 0,160 Z"/>
+      <path class="wave-multi-crest-3" d="M 0,80 C 320,135 580,30 880,45 C 1160,60 1340,105 1440,85" stroke="url(#wave-crest-multi-all)" stroke-width="4.5" stroke-linecap="round" filter="url(#wave-neon-glow-all)"/>
+    </svg>
+  </div>
+
+  <!-- Call to Action Banner (Home 1 Signature Model) -->
   <section class="py-5">
     <div class="container">
-      <div class="cta-banner">
+      <div class="cta-banner animate-on-scroll" data-animate="zoom-in">
         <div class="row align-items-center">
           <div class="col-lg-8">
-            <span class="badge-tag badge-accent mb-2">Visit Our Factory</span>
-            <h2>Schedule a Press Room Tour or Request a Sample Kit</h2>
-            <p>Experience our substrate swatch book including 340 GSM flex, backlit translucent film, cast vinyl, and rigid board samples shipped directly to your agency.</p>
+            <span class="badge-tag badge-accent mb-2">Ready for Massive Impact?</span>
+            <h2>Get Your Free Printing Quote Within 2 Hours.</h2>
+            <p>Upload your design specifications or call our print engineers directly to calculate square footage discounts for bulk commercial rolls.</p>
           </div>
           <div class="col-lg-4 text-lg-end">
-            <a href="contact.html" class="btn btn-primary btn-lg">Request Sample Swatch Kit</a>
+            <div class="cta-banner-actions">
+              <a href="contact.html" class="btn btn-primary btn-lg rounded-pill px-4">
+                <i class="fa-solid fa-file-invoice me-1"></i> Request a Quote
+              </a>
+              <a href="rate-card.html" class="btn btn-outline-light btn-lg rounded-pill px-4">
+                <i class="fa-solid fa-calculator me-1"></i> Price Calculator
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="site-footer">
+<footer class="site-footer">
     <div class="container">
       <div class="row g-4">
         <div class="col-lg-4 col-md-6">
@@ -732,8 +948,8 @@
         <div class="col-lg-2 col-md-6 col-6">
           <h4 class="footer-title">Navigation</h4>
           <ul class="footer-links">
-            <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Home 1</a></li>
-            <li><a href="home-2.html"><i class="fa-solid fa-angle-right"></i> Home 2</a></li>
+            <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Commercial Printing</a></li>
+            <li><a href="home-2.html"><i class="fa-solid fa-angle-right"></i> Creative Showcase</a></li>
             <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> About Us</a></li>
             <li><a href="products.html"><i class="fa-solid fa-angle-right"></i> Products</a></li>
             <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> Services</a></li>

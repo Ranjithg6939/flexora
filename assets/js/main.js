@@ -722,19 +722,23 @@
     setInterval(updateTimer, 1000);
   }
 
-  // --- 6. Blog Search & Category Filter ---
+  // --- 6. Blog Search, Category Filter & Interactive Pagination ---
   function initBlogFilter() {
-    const blogItems = document.querySelectorAll('.blog-list-item');
+    const blogItems = Array.from(document.querySelectorAll('.blog-list-item'));
     const filterBtns = document.querySelectorAll('.blog-filter-btn');
     const searchInput = document.getElementById('blogSearchInput');
+    const paginationNav = document.getElementById('blogPaginationNav') || document.querySelector('nav[aria-label="Blog Pagination"]');
+    const paginationUl = document.getElementById('blogPagination') || (paginationNav ? paginationNav.querySelector('.pagination') : null);
 
     if (!blogItems.length) return;
 
+    const itemsPerPage = 3;
+    let currentPage = 1;
     let activeCategory = 'all';
     let searchQuery = '';
 
-    function filterBlog() {
-      blogItems.forEach(item => {
+    function getMatchingItems() {
+      return blogItems.filter(item => {
         const itemCat = item.getAttribute('data-category') || '';
         const title = item.querySelector('.blog-card-title')?.textContent.toLowerCase() || '';
         const excerpt = item.querySelector('.blog-excerpt')?.textContent.toLowerCase() || '';
@@ -742,12 +746,114 @@
         const matchesCat = (activeCategory === 'all' || itemCat === activeCategory);
         const matchesSearch = (!searchQuery || title.includes(searchQuery) || excerpt.includes(searchQuery));
 
-        if (matchesCat && matchesSearch) {
-          item.style.display = 'block';
-        } else {
-          item.style.display = 'none';
-        }
+        return matchesCat && matchesSearch;
       });
+    }
+
+    function renderPagination(totalItems) {
+      if (!paginationUl) return;
+
+      const totalPages = Math.ceil(totalItems / itemsPerPage);
+
+      if (totalPages <= 1) {
+        if (paginationNav) paginationNav.style.display = totalItems === 0 ? 'none' : 'none';
+        return;
+      }
+
+      if (paginationNav) paginationNav.style.display = 'block';
+
+      if (currentPage > totalPages) currentPage = totalPages;
+      if (currentPage < 1) currentPage = 1;
+
+      let html = '';
+
+      // Prev Button
+      const isPrevDisabled = currentPage === 1;
+      html += `<li class="page-item ${isPrevDisabled ? 'disabled' : ''}">
+        <a class="page-link" href="#" data-page="${currentPage - 1}" aria-label="Previous Page"><i class="fa-solid fa-chevron-left"></i></a>
+      </li>`;
+
+      // Page Number Buttons
+      for (let p = 1; p <= totalPages; p++) {
+        const isActive = p === currentPage;
+        html += `<li class="page-item ${isActive ? 'active' : ''}">
+          <a class="page-link" href="#" data-page="${p}">${p}</a>
+        </li>`;
+      }
+
+      // Next Button
+      const isNextDisabled = currentPage === totalPages;
+      html += `<li class="page-item ${isNextDisabled ? 'disabled' : ''}">
+        <a class="page-link" href="#" data-page="${currentPage + 1}" aria-label="Next Page"><i class="fa-solid fa-chevron-right"></i></a>
+      </li>`;
+
+      paginationUl.innerHTML = html;
+
+      // Attach click events to pagination links
+      paginationUl.querySelectorAll('.page-link').forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const targetPage = parseInt(link.getAttribute('data-page'), 10);
+          if (targetPage && targetPage !== currentPage && targetPage >= 1 && targetPage <= totalPages) {
+            currentPage = targetPage;
+            updateBlogView(true);
+          }
+        });
+      });
+    }
+
+    function updateBlogView(shouldScroll = false) {
+      const matchingItems = getMatchingItems();
+      const totalMatching = matchingItems.length;
+      const totalPages = Math.ceil(totalMatching / itemsPerPage) || 1;
+
+      if (currentPage > totalPages) currentPage = totalPages;
+      if (currentPage < 1) currentPage = 1;
+
+      const startIndex = (currentPage - 1) * itemsPerPage;
+      const endIndex = startIndex + itemsPerPage;
+
+      // Hide all items
+      blogItems.forEach(item => {
+        item.style.display = 'none';
+      });
+
+      // Show current page items
+      matchingItems.slice(startIndex, endIndex).forEach(item => {
+        item.style.display = 'block';
+      });
+
+      renderPagination(totalMatching);
+
+      // Handle "No articles found" message
+      let emptyMsg = document.getElementById('blogEmptyState');
+      if (totalMatching === 0) {
+        if (!emptyMsg) {
+          emptyMsg = document.createElement('div');
+          emptyMsg.id = 'blogEmptyState';
+          emptyMsg.className = 'col-12 text-center py-5';
+          emptyMsg.innerHTML = `
+            <div class="empty-icon mb-3"><i class="fa-solid fa-newspaper text-muted fa-3x"></i></div>
+            <h4 class="text-secondary fw-bold">No Printing Articles Found</h4>
+            <p class="text-muted">Try clearing your search query or selecting a different category filter.</p>
+          `;
+          const container = document.getElementById('blogCardsContainer');
+          if (container) container.appendChild(emptyMsg);
+        } else {
+          emptyMsg.style.display = 'block';
+        }
+      } else if (emptyMsg) {
+        emptyMsg.style.display = 'none';
+      }
+
+      if (shouldScroll) {
+        const grid = document.getElementById('blogCardsContainer');
+        if (grid) {
+          const rect = grid.getBoundingClientRect();
+          const targetY = window.pageYOffset + rect.top - 100;
+          window.scrollTo({ top: targetY, behavior: 'smooth' });
+        }
+      }
     }
 
     filterBtns.forEach(btn => {
@@ -756,16 +862,21 @@
         filterBtns.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
         activeCategory = btn.getAttribute('data-filter') || 'all';
-        filterBlog();
+        currentPage = 1;
+        updateBlogView();
       });
     });
 
     if (searchInput) {
       searchInput.addEventListener('input', (e) => {
         searchQuery = e.target.value.toLowerCase().trim();
-        filterBlog();
+        currentPage = 1;
+        updateBlogView();
       });
     }
+
+    // Initialize with active view
+    updateBlogView();
   }
 
   // --- 7. Testimonial Carousel / Card Rotator ---
@@ -821,9 +932,22 @@
       '.pricing-card', 
       '.gallery-item', 
       '.timeline-card', 
+      '.timeline-img-card',
       '.team-card',
+      '.blog-card',
+      '.testimonial-card',
       '.service-feature-card',
-      '.section-header'
+      '.section-header',
+      '.stat-card',
+      '.stat-item',
+      '.feature-box',
+      '.curved-gallery-card',
+      '.rate-card-table',
+      '.hero-quote-cockpit',
+      '.contact-hub-card',
+      '.accordion-item',
+      '.specs-table-wrapper',
+      '.cta-banner'
     ];
 
     autoAnimateSelectors.forEach(sel => {
@@ -840,7 +964,7 @@
       });
     });
 
-    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+    const animatedElements = document.querySelectorAll('.animate-on-scroll:not(.is-observed)');
     if (!animatedElements.length) return;
 
     if ('IntersectionObserver' in window) {
@@ -852,16 +976,28 @@
           }
         });
       }, {
-        threshold: 0.08,
-        rootMargin: '0px 0px -30px 0px'
+        threshold: 0.05,
+        rootMargin: '0px 0px -20px 0px'
       });
 
-      animatedElements.forEach(el => observer.observe(el));
+      animatedElements.forEach(el => {
+        el.classList.add('is-observed');
+        // If element is already in the viewport, immediately animate it
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          el.classList.add('is-animated');
+        } else {
+          observer.observe(el);
+        }
+      });
     } else {
       // Fallback for older browsers
       animatedElements.forEach(el => el.classList.add('is-animated'));
     }
   }
+
+  // Expose to window for dynamic page content (e.g. Products catalog, filter tabs)
+  window.initScrollAnimations = initScrollAnimations;
 
   // --- 9. Dynamic Number Counter Animation ---
   function initCounterAnimations() {

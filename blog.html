@@ -17,9 +17,10 @@
 </head>
 <body>
 
-  <header class="site-header">
+<header class="site-header">
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light">
+        <!-- Logo -->
         <a class="navbar-brand" href="index.html">
         <span class="logo-mark">
           <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="FLEXORA Royal Winged 'F' Emblem">
@@ -203,19 +204,22 @@
         <span class="brand-text">FLEX<span class="brand-text-accent">ORA</span><span class="logo-dot">.</span></span>
       </a>
 
+        <!-- Mobile Toggler -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#flexoraNav" aria-controls="flexoraNav" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fa-solid fa-bars"></i>
         </button>
 
+        <!-- Menu Links -->
         <div class="collapse navbar-collapse" id="flexoraNav">
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <!-- Home Dropdown (Only Home 1 and Home 2) -->
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Home
               </a>
               <ul class="dropdown-menu" aria-labelledby="homeDropdown">
-                <li><a class="dropdown-item" href="index.html"><i class="fa-solid fa-cube me-2 text-primary"></i> Home 1 – General Printing</a></li>
-                <li><a class="dropdown-item" href="home-2.html"><i class="fa-solid fa-palette me-2 text-primary"></i> Home 2 – Creative Showcase</a></li>
+                <li><a class="dropdown-item" href="index.html">Commercial Printing</a></li>
+                <li><a class="dropdown-item" href="home-2.html">Creative Showcase</a></li>
               </ul>
             </li>
             <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
@@ -227,14 +231,17 @@
             <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
           </ul>
 
+          <!-- Nav Right Actions -->
           <div class="nav-actions">
             <!-- RTL / LTR Toggle Button -->
             <button class="rtl-toggle-btn" type="button" aria-label="Toggle RTL layout" title="Toggle RTL / LTR layout">
               <i class="fa-solid fa-right-left"></i> <span class="rtl-text">RTL</span>
             </button>
-            <button class="theme-toggle-btn" type="button" aria-label="Toggle theme">
+            <!-- Dark/Light Mode Switcher -->
+            <button class="theme-toggle-btn" type="button" aria-label="Toggle theme" title="Toggle Light/Dark Theme">
               <i class="fa-solid fa-moon"></i>
             </button>
+            <!-- Get a Quote Button -->
             <a href="contact.html" class="btn btn-primary">
               <i class="fa-solid fa-file-invoice"></i> Get a Quote
             </a>
@@ -244,21 +251,51 @@
     </div>
   </header>
 
-  <!-- Breadcrumbs -->
-  <section class="py-5 bg-white border-bottom" style="background-color: var(--surface) !important;">
-    <div class="container">
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb mb-2 small">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Blog</li>
-        </ol>
-      </nav>
-      <h1 class="display-5 fw-bold mb-2">Printing Insights & Guides</h1>
-      <p class="text-muted lead mb-0">Expert guides on banner materials, prepress color workflows, large-format billboard engineering, and advertising ideas.</p>
+  <!-- Hero Section: Blog (Centered Editorial Luxury Style) -->
+  <section class="hero-about-center" id="blog-hero">
+    <!-- Topographic Constellations Overlay -->
+    <div class="cosmic-constellations" aria-hidden="true">
+      <svg viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="width: 100%; height: 100%;">
+        <path d="M -40,80 C 240,20 480,120 820,60 C 1120,10 1380,90 1500,50" stroke="rgba(139, 92, 246, 0.22)" stroke-width="1.2" stroke-dasharray="4 6" fill="none"/>
+        <path d="M -20,120 C 260,60 510,160 860,100 C 1160,40 1400,130 1520,90" stroke="rgba(236, 72, 153, 0.18)" stroke-width="1" fill="none"/>
+        <circle cx="180" cy="60" r="2" fill="#FFFFFF" opacity="0.85"/>
+        <circle cx="340" cy="45" r="2.8" fill="#00F5FF" opacity="0.9"/>
+        <circle cx="680" cy="55" r="2.5" fill="#EC4899" opacity="0.9"/>
+        <circle cx="1060" cy="35" r="2.8" fill="#8B5CF6" opacity="0.95"/>
+        <circle cx="1380" cy="50" r="2.5" fill="#00F5FF" opacity="0.9"/>
+      </svg>
+    </div>
+    <div class="container position-relative animate-on-scroll" data-animate="fade-up">
+      <!-- Breadcrumb -->
+      <div class="breadcrumb-wrap">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html"><i class="fa-solid fa-house me-1"></i> Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Blog</li>
+          </ol>
+        </nav>
+      </div>
+
+      <!-- Screenshot-Style Centered Pill Badge -->
+      <div class="mb-3">
+        <span class="hero-editorial-pill">
+          <i class="fa-solid fa-newspaper"></i> PRINT ENGINEERING KNOWLEDGE BASE
+        </span>
+      </div>
+
+      <!-- Hero Title -->
+      <h1 class="hero-title">
+        Technical Insights from the <span class="highlight">Press Room Floor</span>
+      </h1>
+
+      <!-- Subtitle / Lead -->
+      <p class="hero-desc">
+        Field guides, prepress optimization strategies, substrate durability comparisons, and industry technical articles authored by veteran pressmen and color science engineers.
+      </p>
     </div>
   </section>
 
-  <!-- Featured Article Hero Banner -->
+<!-- Featured Article Hero Banner -->
   <section class="py-5">
     <div class="container">
       <div class="card border-0 rounded-4 overflow-hidden shadow-sm" style="background-color: var(--surface) !important; border: 1px solid var(--border-color) !important;">
@@ -288,25 +325,30 @@
   <section class="py-5 bg-white" style="background-color: var(--surface) !important;">
     <div class="container">
       
-      <!-- Search & Filters -->
-      <div class="row g-3 align-items-center mb-4">
-        <div class="col-md-5">
-          <div class="input-group">
-            <span class="input-group-text bg-white border-end-0" style="background-color: var(--surface) !important; border-color: var(--border-color);">
-              <i class="fa-solid fa-magnifying-glass text-muted"></i>
-            </span>
-            <input type="text" id="blogSearchInput" class="form-control border-start-0" placeholder="Search printing guides, topics, or materials...">
+      <!-- Centered Search Cockpit & Filter Suite -->
+      <div class="blog-search-filter-wrap mb-5">
+        <!-- Centered Search Bar -->
+        <div class="row justify-content-center mb-4">
+          <div class="col-lg-8 col-md-10 col-12">
+            <div class="product-search-cockpit">
+              <div class="input-group input-group-lg search-input-wrap">
+                <span class="input-group-text search-icon-box">
+                  <i class="fa-solid fa-magnifying-glass text-primary"></i>
+                </span>
+                <input type="text" id="blogSearchInput" class="form-control product-search-input" placeholder="Search across printing guides, topics, or materials (e.g. Prepress, UV Inks, Mesh, Backlit)..." aria-label="Search blog guides">
+              </div>
+            </div>
           </div>
         </div>
-        <div class="col-md-7">
-          <div class="filter-btn-group justify-content-md-end mb-0">
-            <button class="filter-btn blog-filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn blog-filter-btn" data-filter="tips">Printing Tips</button>
-            <button class="filter-btn blog-filter-btn" data-filter="design">Banner Design</button>
-            <button class="filter-btn blog-filter-btn" data-filter="tech">Printing Technology</button>
-            <button class="filter-btn blog-filter-btn" data-filter="marketing">Advertising</button>
-            <button class="filter-btn blog-filter-btn" data-filter="materials">Material Guides</button>
-          </div>
+
+        <!-- Centered Filter Options with Perfect Alignment -->
+        <div class="filter-btn-group justify-content-center mb-0">
+          <button class="filter-btn blog-filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn blog-filter-btn" data-filter="tips">Printing Tips</button>
+          <button class="filter-btn blog-filter-btn" data-filter="design">Banner Design</button>
+          <button class="filter-btn blog-filter-btn" data-filter="tech">Printing Technology</button>
+          <button class="filter-btn blog-filter-btn" data-filter="marketing">Advertising</button>
+          <button class="filter-btn blog-filter-btn" data-filter="materials">Material Guides</button>
         </div>
       </div>
 
@@ -444,23 +486,138 @@
             </div>
           </div>
         </div>
+
+        <!-- Post 7: Printing Tips -->
+        <div class="col-lg-4 col-md-6 blog-list-item" data-category="tips">
+          <div class="blog-card">
+            <div class="blog-img-wrap">
+              <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=700&q=80" alt="RF Seam Welding" loading="lazy">
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-meta">
+                <span><i class="fa-regular fa-folder me-1 text-primary"></i> Printing Tips</span>
+                <span><i class="fa-regular fa-clock me-1"></i> 5 min</span>
+              </div>
+              <h3 class="blog-card-title">
+                <a href="blog-details.html">RF Seam Welding vs. Thermal Hemming: Maximizing Tensile Wind Resistance</a>
+              </h3>
+              <p class="blog-excerpt">
+                Why radio-frequency molecular bonding prevents billboard tear-outs and banner pocket failures during high-gale storm conditions.
+              </p>
+              <a href="blog-details.html" class="fw-bold small text-primary">Read More &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Post 8: Printing Technology -->
+        <div class="col-lg-4 col-md-6 blog-list-item" data-category="tech">
+          <div class="blog-card">
+            <div class="blog-img-wrap">
+              <img src="https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=700&q=80" alt="Piezo Printhead Calibration" loading="lazy">
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-meta">
+                <span><i class="fa-regular fa-folder me-1 text-primary"></i> Printing Technology</span>
+                <span><i class="fa-regular fa-clock me-1"></i> 7 min</span>
+              </div>
+              <h3 class="blog-card-title">
+                <a href="blog-details.html">Piezoelectric Printheads: Calibrating Variable Micro-Droplets for Razor Sharpness</a>
+              </h3>
+              <p class="blog-excerpt">
+                An engineering breakdown of greyscale piezo firing frequencies, nozzle clogging prevention, and color banding mitigation on superwide rolls.
+              </p>
+              <a href="blog-details.html" class="fw-bold small text-primary">Read More &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Post 9: Material Guides -->
+        <div class="col-lg-4 col-md-6 blog-list-item" data-category="materials">
+          <div class="blog-card">
+            <div class="blog-img-wrap">
+              <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=700&q=80" alt="Backlit Translucent Fabric" loading="lazy">
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-meta">
+                <span><i class="fa-regular fa-folder me-1 text-primary"></i> Material Guides</span>
+                <span><i class="fa-regular fa-clock me-1"></i> 6 min</span>
+              </div>
+              <h3 class="blog-card-title">
+                <a href="blog-details.html">Backlit vs. Frontlit Substrates: Selecting Opacity &amp; Yarn Density for Lightboxes</a>
+              </h3>
+              <p class="blog-excerpt">
+                How light transmission ratios and diffusion coatings eliminate hotspotting while boosting color saturation in illuminated airport displays.
+              </p>
+              <a href="blog-details.html" class="fw-bold small text-primary">Read More &rarr;</a>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- Pagination -->
-      <nav class="mt-5" aria-label="Blog Pagination">
-        <ul class="pagination justify-content-center">
-          <li class="page-item disabled"><a class="page-link" href="#"><i class="fa-solid fa-chevron-left"></i></a></li>
-          <li class="page-item active"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item"><a class="page-link" href="#"><i class="fa-solid fa-chevron-right"></i></a></li>
+      <nav class="mt-5" aria-label="Blog Pagination" id="blogPaginationNav">
+        <ul class="pagination justify-content-center" id="blogPagination">
+          <li class="page-item disabled"><a class="page-link" href="#" data-page="0"><i class="fa-solid fa-chevron-left"></i></a></li>
+          <li class="page-item active"><a class="page-link" href="#" data-page="1">1</a></li>
+          <li class="page-item"><a class="page-link" href="#" data-page="2">2</a></li>
+          <li class="page-item"><a class="page-link" href="#" data-page="3">3</a></li>
+          <li class="page-item"><a class="page-link" href="#" data-page="2"><i class="fa-solid fa-chevron-right"></i></a></li>
         </ul>
       </nav>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="site-footer">
+
+  <!-- Glowing Neon Wave Divider into CTA Section -->
+  <div class="cosmic-wave-divider wave-section-divider" aria-hidden="true">
+    <svg viewBox="0 0 1440 160" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="wave-crest-multi-all" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#7C3AED"/>
+          <stop offset="35%" stop-color="#8B5CF6"/>
+          <stop offset="65%" stop-color="#EC4899"/>
+          <stop offset="100%" stop-color="#00F5FF"/>
+        </linearGradient>
+        <filter id="wave-neon-glow-all" x="-20%" y="-40%" width="140%" height="180%">
+          <feGaussianBlur stdDeviation="3.0" result="blur"/>
+          <feMerge>
+            <feMergeNode in="blur"/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
+      </defs>
+      <path class="wave-multi-surface-3" d="M 0,80 C 320,135 580,30 880,45 C 1160,60 1340,105 1440,85 L 1440,160 L 0,160 Z"/>
+      <path class="wave-multi-crest-3" d="M 0,80 C 320,135 580,30 880,45 C 1160,60 1340,105 1440,85" stroke="url(#wave-crest-multi-all)" stroke-width="4.5" stroke-linecap="round" filter="url(#wave-neon-glow-all)"/>
+    </svg>
+  </div>
+
+  <!-- Call to Action Banner (Home 1 Signature Model) -->
+  <section class="py-5">
+    <div class="container">
+      <div class="cta-banner animate-on-scroll" data-animate="zoom-in">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <span class="badge-tag badge-accent mb-2">Ready for Massive Impact?</span>
+            <h2>Get Your Free Printing Quote Within 2 Hours.</h2>
+            <p>Upload your design specifications or call our print engineers directly to calculate square footage discounts for bulk commercial rolls.</p>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <div class="cta-banner-actions">
+              <a href="contact.html" class="btn btn-primary btn-lg rounded-pill px-4">
+                <i class="fa-solid fa-file-invoice me-1"></i> Request a Quote
+              </a>
+              <a href="rate-card.html" class="btn btn-outline-light btn-lg rounded-pill px-4">
+                <i class="fa-solid fa-calculator me-1"></i> Price Calculator
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<footer class="site-footer">
     <div class="container">
       <div class="row g-4">
         <div class="col-lg-4 col-md-6">
@@ -655,8 +812,8 @@
         <div class="col-lg-2 col-md-6 col-6">
           <h4 class="footer-title">Navigation</h4>
           <ul class="footer-links">
-            <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Home 1</a></li>
-            <li><a href="home-2.html"><i class="fa-solid fa-angle-right"></i> Home 2</a></li>
+            <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Commercial Printing</a></li>
+            <li><a href="home-2.html"><i class="fa-solid fa-angle-right"></i> Creative Showcase</a></li>
             <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> About Us</a></li>
             <li><a href="products.html"><i class="fa-solid fa-angle-right"></i> Products</a></li>
             <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> Services</a></li>

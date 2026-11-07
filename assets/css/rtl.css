@@ -44,6 +44,24 @@
   margin-left: 0.5rem !important;
 }
 
+[dir="rtl"] .product-meta > span:first-child,
+[dir="rtl"] .product-meta .product-meta-sizes {
+  text-align: right !important;
+}
+
+[dir="rtl"] .product-meta .product-meta-sizes strong,
+[dir="rtl"] .product-meta strong:not(.text-primary):not(.product-meta-price) {
+  margin-right: 0 !important;
+  margin-left: 0.25rem !important;
+}
+
+[dir="rtl"] .product-meta .text-primary,
+[dir="rtl"] .product-meta .product-meta-price {
+  text-align: left !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
+
 /* --- Icons with Directionality --- */
 [dir="rtl"] .fa-angle-right,
 [dir="rtl"] .fa-arrow-right,
