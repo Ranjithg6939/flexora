@@ -223,8 +223,8 @@
               </ul>
             </li>
             <li class="nav-item"><a class="nav-link active" href="about.html">About Us</a></li>
-            <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
             <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
             <li class="nav-item"><a class="nav-link" href="rate-card.html">Rate Card</a></li>
             <li class="nav-item"><a class="nav-link" href="pricing.html">Packages</a></li>
             <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
@@ -296,22 +296,25 @@
   </section>
 
 <!-- Introduction & Our Story -->
-  <section class="py-5">
+  <section class="py-5 story-section">
     <div class="container py-4">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-6">
-          <span class="badge-tag"><i class="fa-solid fa-flag"></i> Our Story & Heritage</span>
-          <h2 class="section-title">Built on Precision, Heavy-Duty Machinery & Speed</h2>
-          <p class="text-muted">
-            Founded in 2012, FLEXORA began with a single wide-format solvent printer and an uncompromising vision: eliminate blurry, washed-out outdoor hoardings and deliver vivid, commercial-grade flex prints at true factory-direct wholesale pricing.
-          </p>
-          <p class="text-muted">
-            Today, our 25,000 sq.ft temperature-controlled industrial print facility houses over 14 wide-format and UV flatbed printing machines. We process over 45,000 square feet of flex, vinyl, and rigid board substrates every day for Fortune 500 brands, advertising agencies, and local enterprises alike.
-          </p>
-          <div class="row g-3 mt-3">
+      <div class="row align-items-stretch g-4 g-xl-5">
+        <div class="col-lg-6 d-flex flex-column justify-content-between">
+          <div>
+            <span class="badge-tag mb-3"><i class="fa-solid fa-flag"></i> Our Story &amp; Heritage</span>
+            <h2 class="section-title mb-3">Built on Precision, Heavy-Duty Machinery &amp; Speed</h2>
+            <p class="text-muted mb-3">
+              Founded in 2012, FLEXORA began with a single wide-format solvent printer and an uncompromising vision: eliminate blurry, washed-out outdoor hoardings and deliver vivid, commercial-grade flex prints at true factory-direct wholesale pricing.
+            </p>
+            <p class="text-muted mb-0">
+              Today, our 25,000 sq.ft temperature-controlled industrial print facility houses over 14 wide-format and UV flatbed printing machines. We process over 45,000 square feet of flex, vinyl, and rigid board substrates every day for Fortune 500 brands, advertising agencies, and local enterprises alike.
+            </p>
+          </div>
+
+          <div class="row g-3 mt-4">
             <div class="col-sm-6">
-              <div class="d-flex align-items-center gap-3 p-3 border rounded bg-white" style="background-color: var(--surface) !important;">
-                <i class="fa-solid fa-truck-ramp-box fa-2x text-primary"></i>
+              <div class="story-stat-card d-flex align-items-center gap-3">
+                <i class="fa-solid fa-truck-ramp-box fa-2x text-primary flex-shrink-0"></i>
                 <div>
                   <h6 class="mb-0 fw-bold">45,000+ Sq.Ft</h6>
                   <small class="text-muted">Daily Output Capacity</small>
@@ -319,8 +322,8 @@
               </div>
             </div>
             <div class="col-sm-6">
-              <div class="d-flex align-items-center gap-3 p-3 border rounded bg-white" style="background-color: var(--surface) !important;">
-                <i class="fa-solid fa-award fa-2x text-primary"></i>
+              <div class="story-stat-card d-flex align-items-center gap-3">
+                <i class="fa-solid fa-award fa-2x text-primary flex-shrink-0"></i>
                 <div>
                   <h6 class="mb-0 fw-bold">ISO 9001:2015</h6>
                   <small class="text-muted">Certified Press Room</small>
@@ -329,13 +332,10 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-6">
-          <div class="position-relative">
-            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1000&q=80" alt="FLEXORA Printing Facility" class="img-fluid rounded shadow border">
-            <div class="p-3 bg-dark text-white rounded position-absolute bottom-0 start-0 m-3 border border-secondary d-none d-sm-block">
-              <span class="text-warning small text-uppercase fw-bold">Continuous Production</span>
-              <p class="small mb-0">24/7 Multi-shift Press Operation</p>
-            </div>
+
+        <div class="col-lg-6 d-flex flex-column">
+          <div class="story-visual-card">
+            <img src="assets/images/about/built-on-precision-heavy-duty-machinery.jpg" alt="FLEXORA Wide-Format Industrial Solvent Printer - Built on Precision, Heavy-Duty Machinery &amp; Speed" loading="lazy">
           </div>
         </div>
       </div>
@@ -450,10 +450,16 @@
       </div>
 
       <div class="timeline">
-        <!-- Milestone 1 (2012): Left Content, Right Image -->
+        <!-- Milestone 1 (2012): Left Image, Right Content -->
         <div class="timeline-item">
           <div class="timeline-dot"></div>
-          <div class="timeline-side timeline-content-side animate-on-scroll" data-animate="fade-right">
+          <div class="timeline-side timeline-image-side animate-on-scroll" data-animate="fade-right">
+            <div class="timeline-img-card">
+              <img src="assets/images/about/2012-shop-inception-solvent-press.jpg" alt="2012 Shop Inception - 3.2m Continuous Solvent Press" loading="lazy">
+              <div class="timeline-img-tag"><i class="fa-solid fa-print me-1"></i> First Solvent Printers</div>
+            </div>
+          </div>
+          <div class="timeline-side timeline-content-side animate-on-scroll" data-animate="fade-left">
             <div class="timeline-card">
               <span class="timeline-badge"><i class="fa-solid fa-flag"></i> Inception</span>
               <div class="timeline-year">2012</div>
@@ -471,12 +477,6 @@
                 <span class="milestone-chip"><i class="fa-solid fa-users text-primary"></i> 8 Press Technicians</span>
                 <span class="milestone-chip"><i class="fa-solid fa-award text-primary"></i> 440 GSM Flex</span>
               </div>
-            </div>
-          </div>
-          <div class="timeline-side timeline-image-side animate-on-scroll" data-animate="fade-left">
-            <div class="timeline-img-card">
-              <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=700&q=80" alt="2012 Shop Inception - 3.2m Solvent Press" loading="lazy">
-              <div class="timeline-img-tag"><i class="fa-solid fa-print me-1"></i> First Solvent Printers</div>
             </div>
           </div>
         </div>
@@ -506,16 +506,22 @@
           </div>
           <div class="timeline-side timeline-image-side animate-on-scroll" data-animate="fade-left">
             <div class="timeline-img-card">
-              <img src="https://images.unsplash.com/photo-1513757378314-e46255f6ed16?auto=format&fit=crop&w=700&q=80" alt="2015 Highway Billboard Flex Division" loading="lazy">
+              <img src="assets/images/about/2015-highway-billboard-mega-hoardings.jpg" alt="2015 Highway Billboard &amp; Mega Hoardings" loading="lazy">
               <div class="timeline-img-tag"><i class="fa-solid fa-rectangle-ad me-1"></i> Outdoor Hoarding Division</div>
             </div>
           </div>
         </div>
 
-        <!-- Milestone 3 (2018): Left Content, Right Image -->
+        <!-- Milestone 3 (2018): Left Image, Right Content -->
         <div class="timeline-item">
           <div class="timeline-dot"></div>
-          <div class="timeline-side timeline-content-side animate-on-scroll" data-animate="fade-right">
+          <div class="timeline-side timeline-image-side animate-on-scroll" data-animate="fade-right">
+            <div class="timeline-img-card">
+              <img src="assets/images/about/2018-industrial-uv-flatbed-cleanroom.jpg" alt="2018 Industrial Ricoh Gen6 UV Flatbed Cleanroom" loading="lazy">
+              <div class="timeline-img-tag"><i class="fa-solid fa-shapes me-1"></i> Ricoh Gen6 UV Flatbed</div>
+            </div>
+          </div>
+          <div class="timeline-side timeline-content-side animate-on-scroll" data-animate="fade-left">
             <div class="timeline-card">
               <span class="timeline-badge"><i class="fa-solid fa-microchip"></i> Technology</span>
               <div class="timeline-year">2018</div>
@@ -533,12 +539,6 @@
                 <span class="milestone-chip"><i class="fa-solid fa-layer-group text-primary"></i> 20+ Rigid Substrates</span>
                 <span class="milestone-chip"><i class="fa-solid fa-leaf text-primary"></i> 0% VOC Eco-Cured</span>
               </div>
-            </div>
-          </div>
-          <div class="timeline-side timeline-image-side animate-on-scroll" data-animate="fade-left">
-            <div class="timeline-img-card">
-              <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=700&q=80" alt="2018 Industrial Ricoh Gen6 UV Flatbed Cleanroom" loading="lazy">
-              <div class="timeline-img-tag"><i class="fa-solid fa-shapes me-1"></i> Ricoh Gen6 UV Flatbed</div>
             </div>
           </div>
         </div>
@@ -568,16 +568,22 @@
           </div>
           <div class="timeline-side timeline-image-side animate-on-scroll" data-animate="fade-left">
             <div class="timeline-img-card">
-              <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=700&q=80" alt="2021 Automated Post-Press Finishing Plant" loading="lazy">
+              <img src="assets/images/about/2021-automated-post-press-finishing-plant.jpg" alt="2021 Automated Post-Press Finishing Plant" loading="lazy">
               <div class="timeline-img-tag"><i class="fa-solid fa-gears me-1"></i> Robotic Finishing Plant</div>
             </div>
           </div>
         </div>
 
-        <!-- Milestone 5 (2023): Left Content, Right Image -->
+        <!-- Milestone 5 (2023): Left Image, Right Content -->
         <div class="timeline-item">
           <div class="timeline-dot"></div>
-          <div class="timeline-side timeline-content-side animate-on-scroll" data-animate="fade-right">
+          <div class="timeline-side timeline-image-side animate-on-scroll" data-animate="fade-right">
+            <div class="timeline-img-card">
+              <img src="assets/images/about/2023-commercial-fleet-cast-vinyl-division.jpg" alt="2023 Commercial Fleet &amp; Vehicle Vinyl Wrap Division" loading="lazy">
+              <div class="timeline-img-tag"><i class="fa-solid fa-car-side me-1"></i> Fleet Vehicle Wraps</div>
+            </div>
+          </div>
+          <div class="timeline-side timeline-content-side animate-on-scroll" data-animate="fade-left">
             <div class="timeline-card">
               <span class="timeline-badge"><i class="fa-solid fa-van-shuttle"></i> Fleet Graphics</span>
               <div class="timeline-year">2023</div>
@@ -595,12 +601,6 @@
                 <span class="milestone-chip"><i class="fa-solid fa-shield text-primary"></i> 5-Year Lamination</span>
                 <span class="milestone-chip"><i class="fa-solid fa-star text-primary"></i> 3M &amp; Avery Certified</span>
               </div>
-            </div>
-          </div>
-          <div class="timeline-side timeline-image-side animate-on-scroll" data-animate="fade-left">
-            <div class="timeline-img-card">
-              <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=700&q=80" alt="2023 Commercial Fleet & Vehicle Vinyl Wrap Division" loading="lazy">
-              <div class="timeline-img-tag"><i class="fa-solid fa-car-side me-1"></i> Fleet Vehicle Wraps</div>
             </div>
           </div>
         </div>
@@ -630,7 +630,7 @@
           </div>
           <div class="timeline-side timeline-image-side animate-on-scroll" data-animate="fade-left">
             <div class="timeline-img-card">
-              <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=700&q=80" alt="2025 - 2026 5.0m SuperWide Press & Nationwide Dispatch" loading="lazy">
+              <img src="assets/images/about/2025-2026-superwide-press-nationwide-logistics.jpg" alt="2025 - 2026 5.0m SuperWide Press &amp; Nationwide Logistics Hub" loading="lazy">
               <div class="timeline-img-tag"><i class="fa-solid fa-truck-plane me-1"></i> 5.0m SuperWide &amp; Logistics</div>
             </div>
           </div>
@@ -653,7 +653,7 @@
         <div class="col-lg-3 col-md-6">
           <div class="team-card">
             <div class="team-img-wrap">
-              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Elena Rostova">
+              <img src="assets/images/team/elena-rostova.jpg" alt="Elena Rostova - Head of Prepress &amp; Color Science" loading="lazy">
             </div>
             <div class="team-content">
               <h4>Elena Rostova</h4>
@@ -666,7 +666,7 @@
         <div class="col-lg-3 col-md-6">
           <div class="team-card">
             <div class="team-img-wrap">
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="Marcus Thorne">
+              <img src="assets/images/team/marcus-thorne.jpg" alt="Marcus Thorne - Plant Production Director" loading="lazy">
             </div>
             <div class="team-content">
               <h4>Marcus Thorne</h4>
@@ -679,7 +679,7 @@
         <div class="col-lg-3 col-md-6">
           <div class="team-card">
             <div class="team-img-wrap">
-              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80" alt="Kavita Nair">
+              <img src="assets/images/team/kavita-nair.jpg" alt="Kavita Nair - Quality &amp; Finishing Specialist" loading="lazy">
             </div>
             <div class="team-content">
               <h4>Kavita Nair</h4>
@@ -692,7 +692,7 @@
         <div class="col-lg-3 col-md-6">
           <div class="team-card">
             <div class="team-img-wrap">
-              <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80" alt="Carlos Mendez">
+              <img src="assets/images/team/carlos-mendez.jpg" alt="Carlos Mendez - Installation Operations Lead" loading="lazy">
             </div>
             <div class="team-content">
               <h4>Carlos Mendez</h4>
@@ -756,6 +756,7 @@
 <footer class="site-footer">
     <div class="container">
       <div class="row g-4">
+        <!-- Col 1: Brand -->
         <div class="col-lg-4 col-md-6">
           <div class="footer-brand">
             <a class="navbar-brand text-white" href="index.html">
@@ -941,38 +942,53 @@
         <span class="brand-text">FLEX<span class="brand-text-accent">ORA</span><span class="logo-dot">.</span></span>
       </a>
           </div>
-          <p class="footer-text">FLEXORA Industrial Flex & Banner Printing Shop. High-capacity large format printing engineered for durability and true Pantone fidelity.</p>
-          <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>840 Printworks Boulevard, Industrial Area Phase 2, New York, NY 10001</span></div>
-          <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><span>+1 (800) 555-FLEX</span></div>
+          <p class="footer-text">
+            FLEXORA is an industrial flex and banner printing shop engineered for high-volume commercial signage, hoardings, standees, and vinyl applications.
+          </p>
+        
+          <div class="footer-social-links mt-3">
+            <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
         </div>
+
+        <!-- Col 2: Quick Links -->
         <div class="col-lg-2 col-md-6 col-6">
           <h4 class="footer-title">Navigation</h4>
           <ul class="footer-links">
             <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Commercial Printing</a></li>
             <li><a href="home-2.html"><i class="fa-solid fa-angle-right"></i> Creative Showcase</a></li>
             <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> About Us</a></li>
-            <li><a href="products.html"><i class="fa-solid fa-angle-right"></i> Products</a></li>
-            <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> Services</a></li>
+            <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> Services</a></li><li><a href="products.html"><i class="fa-solid fa-angle-right"></i> Products</a></li>
+            
             <li><a href="rate-card.html"><i class="fa-solid fa-angle-right"></i> Rate Card</a></li>
             <li><a href="contact.html"><i class="fa-solid fa-angle-right"></i> Contact Us</a></li>
           </ul>
         </div>
+
+        <!-- Col 3: Product Types -->
         <div class="col-lg-3 col-md-6 col-6">
           <h4 class="footer-title">Top Products</h4>
           <ul class="footer-links">
-            <li><a href="product-details.html?id=flex-banner"><i class="fa-solid fa-angle-right"></i> Flex Banners</a></li>
-            <li><a href="product-details.html?id=backlit-banner"><i class="fa-solid fa-angle-right"></i> Backlit Flex</a></li>
-            <li><a href="product-details.html?id=rollup-standee"><i class="fa-solid fa-angle-right"></i> Roll-Up Standees</a></li>
-            <li><a href="product-details.html?id=vinyl-printing"><i class="fa-solid fa-angle-right"></i> Cast Vinyl</a></li>
-            <li><a href="product-details.html?id=sunboard-printing"><i class="fa-solid fa-angle-right"></i> Sunboard Sheets</a></li>
+            <li><a href="product-details.html?id=flex-banner"><i class="fa-solid fa-angle-right"></i> Frontlit Flex Banners</a></li>
+            <li><a href="product-details.html?id=backlit-banner"><i class="fa-solid fa-angle-right"></i> Backlit Translucent Flex</a></li>
+            <li><a href="product-details.html?id=rollup-standee"><i class="fa-solid fa-angle-right"></i> Roll-Up Pull Standees</a></li>
+            <li><a href="product-details.html?id=vinyl-printing"><i class="fa-solid fa-angle-right"></i> Self-Adhesive Vinyl</a></li>
+            <li><a href="product-details.html?id=oneway-vision"><i class="fa-solid fa-angle-right"></i> One Way Vision Films</a></li>
+            <li><a href="product-details.html?id=sunboard-printing"><i class="fa-solid fa-angle-right"></i> Sunboard Rigid Sheets</a></li>
+            <li><a href="product-details.html?id=vehicle-graphics"><i class="fa-solid fa-angle-right"></i> Fleet Vehicle Wraps</a></li>
           </ul>
         </div>
+
+        <!-- Col 4: Newsletter & Socials -->
         <div class="col-lg-3 col-md-6">
           <h4 class="footer-title">Print Bulletin</h4>
-          <p class="footer-text">Subscribe for monthly trade discounts and seasonal bulk drops.</p>
-          <form class="newsletter-form mb-3">
+          <p class="footer-text">Subscribe for monthly trade discounts, new substrate arrivals, and seasonal bulk rate drops.</p>
+          <form class="newsletter-form mb-3" novalidate>
             <div class="input-group">
-              <input type="email" class="form-control" placeholder="Email address..." required>
+              <input type="email" class="form-control" placeholder="Your business email..." required>
               <button class="btn btn-primary" type="submit"><i class="fa-solid fa-paper-plane"></i></button>
             </div>
           </form>
@@ -986,6 +1002,7 @@
           </div>
         </div>
       </div>
+
       </div>
     <!-- Footer Bottom Bar -->
     <div class="footer-bottom">

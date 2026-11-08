@@ -266,3 +266,27 @@
 [dir="rtl"] .hero-home-1 .hero-trust-row {
   justify-content: flex-start;
 }
+
+/* --- Client Marquee Showcase in RTL --- */
+[dir="rtl"] .client-marquee-track {
+  animation: clientMarqueeScrollRTL 28s linear infinite;
+}
+
+@keyframes clientMarqueeScrollRTL {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(100% / 3));
+  }
+}
+
+/* --- Featured Blog Card in RTL --- */
+[dir="rtl"] .featured-guide-content {
+  text-align: right !important;
+  align-items: flex-start !important;
+}
+
+[dir="rtl"] .featured-guide-cta .fa-arrow-right {
+  transform: rotate(180deg);
+}

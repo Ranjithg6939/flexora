@@ -223,8 +223,8 @@
               </ul>
             </li>
             <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-            <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
             <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
             <li class="nav-item"><a class="nav-link active" href="rate-card.html">Rate Card</a></li>
             <li class="nav-item"><a class="nav-link" href="pricing.html">Packages</a></li>
             <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
@@ -449,7 +449,7 @@
             <h3 class="h4 fw-bold mb-1">Instant Price Calculator</h3>
             <p class="text-muted small mb-4">Select product, enter dimensions (width × height), choose quantity, and inspect live estimates instantly.</p>
 
-            <form id="priceCalculatorForm">
+            <form id="priceCalculatorForm" novalidate>
               <!-- Product Select -->
               <div class="mb-3">
                 <label for="calcProduct" class="form-label">Select Product & Media:</label>
@@ -479,8 +479,8 @@
                 <div class="col-4">
                   <label for="calcUnit" class="form-label">Unit:</label>
                   <select id="calcUnit" class="form-select">
-                    <option value="feet" selected>Feet (ft)</option>
-                    <option value="inches">Inches (in)</option>
+                    <option value="feet" selected>Feet</option>
+                    <option value="inches">Inches</option>
                   </select>
                 </div>
               </div>
@@ -614,6 +614,7 @@
 <footer class="site-footer">
     <div class="container">
       <div class="row g-4">
+        <!-- Col 1: Brand -->
         <div class="col-lg-4 col-md-6">
           <div class="footer-brand">
             <a class="navbar-brand text-white" href="index.html">
@@ -799,38 +800,53 @@
         <span class="brand-text">FLEX<span class="brand-text-accent">ORA</span><span class="logo-dot">.</span></span>
       </a>
           </div>
-          <p class="footer-text">FLEXORA Industrial Flex & Banner Printing Shop. High-capacity large format printing engineered for durability and true Pantone fidelity.</p>
-          <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>840 Printworks Boulevard, Industrial Area Phase 2, New York, NY 10001</span></div>
-          <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><span>+1 (800) 555-FLEX</span></div>
+          <p class="footer-text">
+            FLEXORA is an industrial flex and banner printing shop engineered for high-volume commercial signage, hoardings, standees, and vinyl applications.
+          </p>
+        
+          <div class="footer-social-links mt-3">
+            <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
         </div>
+
+        <!-- Col 2: Quick Links -->
         <div class="col-lg-2 col-md-6 col-6">
           <h4 class="footer-title">Navigation</h4>
           <ul class="footer-links">
             <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Commercial Printing</a></li>
             <li><a href="home-2.html"><i class="fa-solid fa-angle-right"></i> Creative Showcase</a></li>
             <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> About Us</a></li>
-            <li><a href="products.html"><i class="fa-solid fa-angle-right"></i> Products</a></li>
-            <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> Services</a></li>
+            <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> Services</a></li><li><a href="products.html"><i class="fa-solid fa-angle-right"></i> Products</a></li>
+            
             <li><a href="rate-card.html"><i class="fa-solid fa-angle-right"></i> Rate Card</a></li>
             <li><a href="contact.html"><i class="fa-solid fa-angle-right"></i> Contact Us</a></li>
           </ul>
         </div>
+
+        <!-- Col 3: Product Types -->
         <div class="col-lg-3 col-md-6 col-6">
           <h4 class="footer-title">Top Products</h4>
           <ul class="footer-links">
-            <li><a href="product-details.html?id=flex-banner"><i class="fa-solid fa-angle-right"></i> Flex Banners</a></li>
-            <li><a href="product-details.html?id=backlit-banner"><i class="fa-solid fa-angle-right"></i> Backlit Flex</a></li>
-            <li><a href="product-details.html?id=rollup-standee"><i class="fa-solid fa-angle-right"></i> Roll-Up Standees</a></li>
-            <li><a href="product-details.html?id=vinyl-printing"><i class="fa-solid fa-angle-right"></i> Cast Vinyl</a></li>
-            <li><a href="product-details.html?id=sunboard-printing"><i class="fa-solid fa-angle-right"></i> Sunboard Sheets</a></li>
+            <li><a href="product-details.html?id=flex-banner"><i class="fa-solid fa-angle-right"></i> Frontlit Flex Banners</a></li>
+            <li><a href="product-details.html?id=backlit-banner"><i class="fa-solid fa-angle-right"></i> Backlit Translucent Flex</a></li>
+            <li><a href="product-details.html?id=rollup-standee"><i class="fa-solid fa-angle-right"></i> Roll-Up Pull Standees</a></li>
+            <li><a href="product-details.html?id=vinyl-printing"><i class="fa-solid fa-angle-right"></i> Self-Adhesive Vinyl</a></li>
+            <li><a href="product-details.html?id=oneway-vision"><i class="fa-solid fa-angle-right"></i> One Way Vision Films</a></li>
+            <li><a href="product-details.html?id=sunboard-printing"><i class="fa-solid fa-angle-right"></i> Sunboard Rigid Sheets</a></li>
+            <li><a href="product-details.html?id=vehicle-graphics"><i class="fa-solid fa-angle-right"></i> Fleet Vehicle Wraps</a></li>
           </ul>
         </div>
+
+        <!-- Col 4: Newsletter & Socials -->
         <div class="col-lg-3 col-md-6">
           <h4 class="footer-title">Print Bulletin</h4>
-          <p class="footer-text">Subscribe for monthly printing updates and wholesale trade rates.</p>
-          <form class="newsletter-form mb-3">
+          <p class="footer-text">Subscribe for monthly trade discounts, new substrate arrivals, and seasonal bulk rate drops.</p>
+          <form class="newsletter-form mb-3" novalidate>
             <div class="input-group">
-              <input type="email" class="form-control" placeholder="Email address..." required>
+              <input type="email" class="form-control" placeholder="Your business email..." required>
               <button class="btn btn-primary" type="submit"><i class="fa-solid fa-paper-plane"></i></button>
             </div>
           </form>
@@ -844,6 +860,7 @@
           </div>
         </div>
       </div>
+
       </div>
     <!-- Footer Bottom Bar -->
     <div class="footer-bottom">

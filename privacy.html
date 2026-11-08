@@ -199,13 +199,49 @@
         </span>
         <span class="brand-text">FLEX<span class="brand-text-accent">ORA</span><span class="logo-dot">.</span></span>
       </a>
-        <div class="d-flex align-items-center gap-3 ms-auto">
-          <!-- RTL / LTR Toggle Button -->
+        
+        <!-- Mobile Toggler -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#flexoraNav" aria-controls="flexoraNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- Menu Links -->
+        <div class="collapse navbar-collapse" id="flexoraNav">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <!-- Home Dropdown (Only Home 1 and Home 2) -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="homeDropdown">
+                <li><a class="dropdown-item" href="index.html">Commercial Printing</a></li>
+                <li><a class="dropdown-item" href="home-2.html">Creative Showcase</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+            <li class="nav-item"><a class="nav-link" href="rate-card.html">Rate Card</a></li>
+            <li class="nav-item"><a class="nav-link" href="pricing.html">Packages</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+          </ul>
+
+          <!-- Nav Right Actions -->
+          <div class="nav-actions">
+            <!-- RTL / LTR Toggle Button -->
             <button class="rtl-toggle-btn" type="button" aria-label="Toggle RTL layout" title="Toggle RTL / LTR layout">
               <i class="fa-solid fa-right-left"></i> <span class="rtl-text">RTL</span>
             </button>
-            <button class="theme-toggle-btn" type="button" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
-          <a href="index.html" class="btn btn-outline-primary btn-sm"><i class="fa-solid fa-house me-1"></i> Home</a>
+            <!-- Dark/Light Mode Switcher -->
+            <button class="theme-toggle-btn" type="button" aria-label="Toggle theme" title="Toggle Light/Dark Theme">
+              <i class="fa-solid fa-moon"></i>
+            </button>
+            <!-- Get a Quote Button -->
+            <a href="contact.html" class="btn btn-primary">
+              <i class="fa-solid fa-file-invoice"></i> Get a Quote
+            </a>
+          </div>
         </div>
       </nav>
     </div>
@@ -524,8 +560,8 @@
             <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Commercial Printing</a></li>
             <li><a href="home-2.html"><i class="fa-solid fa-angle-right"></i> Creative Showcase</a></li>
             <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> About Us</a></li>
-            <li><a href="products.html"><i class="fa-solid fa-angle-right"></i> Products</a></li>
-            <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> Services</a></li>
+            <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> Services</a></li><li><a href="products.html"><i class="fa-solid fa-angle-right"></i> Products</a></li>
+            
             <li><a href="rate-card.html"><i class="fa-solid fa-angle-right"></i> Rate Card</a></li>
             <li><a href="contact.html"><i class="fa-solid fa-angle-right"></i> Contact Us</a></li>
           </ul>
@@ -549,7 +585,7 @@
         <div class="col-lg-3 col-md-6">
           <h4 class="footer-title">Print Bulletin</h4>
           <p class="footer-text">Subscribe for monthly trade discounts, new substrate arrivals, and seasonal bulk rate drops.</p>
-          <form class="newsletter-form mb-3">
+          <form class="newsletter-form mb-3" novalidate>
             <div class="input-group">
               <input type="email" class="form-control" placeholder="Your business email..." required>
               <button class="btn btn-primary" type="submit"><i class="fa-solid fa-paper-plane"></i></button>

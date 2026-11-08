@@ -21,13 +21,19 @@
 
     // Highlight active link based on URL
     const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+    const activeMapping = {
+      'service-details.html': 'services.html',
+      'product-details.html': 'products.html',
+      'blog-details.html': 'blog.html'
+    };
+    const targetPath = activeMapping[currentPath] || currentPath;
     const navLinks = document.querySelectorAll('.navbar-nav .nav-link, .dropdown-item');
 
     navLinks.forEach(link => {
       const href = link.getAttribute('href');
       if (href) {
         const linkPath = href.split('?')[0];
-        if (linkPath === currentPath) {
+        if (linkPath === targetPath || (targetPath === 'index.html' && linkPath === 'index.html')) {
           link.classList.add('active');
           // If in dropdown, also highlight parent dropdown toggle
           const parentDropdown = link.closest('.dropdown');
@@ -41,6 +47,116 @@
 
     // Initialize the smooth sliding active button indicator & scaling
     initNavbarSlidingPill();
+
+    // Initialize Mobile Hamburger Menu Interactions (Touch, Backdrop, Escape)
+    initMobileNavbar();
+  }
+
+  function initMobileNavbar() {
+    const toggler = document.querySelector('.navbar-toggler');
+    const collapseEl = document.getElementById('flexoraNav');
+    if (!toggler || !collapseEl) return;
+
+    // 1. Create or connect Backdrop Overlay
+    let backdrop = document.querySelector('.mobile-nav-backdrop');
+    if (!backdrop) {
+      backdrop = document.createElement('div');
+      backdrop.className = 'mobile-nav-backdrop';
+      backdrop.setAttribute('aria-hidden', 'true');
+      document.body.appendChild(backdrop);
+    }
+
+    // 2. Create or connect Drawer Header with Close Button
+    let drawerHeader = collapseEl.querySelector('.mobile-drawer-header');
+    if (!drawerHeader) {
+      drawerHeader = document.createElement('div');
+      drawerHeader.className = 'mobile-drawer-header d-lg-none';
+      drawerHeader.innerHTML = `
+        <div class="drawer-brand d-flex align-items-center gap-2">
+          <span class="brand-text">FLEX<span class="brand-text-accent">ORA</span><span class="logo-dot">.</span></span>
+        </div>
+        <button type="button" class="btn-close-drawer" aria-label="Close menu" title="Close menu">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      `;
+      collapseEl.insertBefore(drawerHeader, collapseEl.firstChild);
+    }
+
+    const closeBtn = drawerHeader.querySelector('.btn-close-drawer');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        closeMenu();
+      });
+    }
+
+    // Clicking backdrop closes menu
+    backdrop.addEventListener('click', () => {
+      closeMenu();
+    });
+
+    function isMenuOpen() {
+      return collapseEl.classList.contains('show');
+    }
+
+    function closeMenu() {
+      if (isMenuOpen()) {
+        if (window.bootstrap && window.bootstrap.Collapse) {
+          const bsCollapse = bootstrap.Collapse.getInstance(collapseEl) || new bootstrap.Collapse(collapseEl, { toggle: false });
+          bsCollapse.hide();
+        } else {
+          collapseEl.classList.remove('show');
+          toggler.setAttribute('aria-expanded', 'false');
+        }
+        document.body.classList.remove('nav-open');
+        toggler.classList.remove('is-active');
+      }
+    }
+
+    // Toggle event listeners for body scroll lock
+    collapseEl.addEventListener('show.bs.collapse', () => {
+      document.body.classList.add('nav-open');
+      toggler.classList.add('is-active');
+    });
+
+    collapseEl.addEventListener('hide.bs.collapse', () => {
+      document.body.classList.remove('nav-open');
+      toggler.classList.remove('is-active');
+    });
+
+    // 1. Close menu after clicking any navigation link, dropdown item, or CTA button
+    const navClickables = collapseEl.querySelectorAll('.nav-link:not(.dropdown-toggle), .dropdown-item, .nav-actions .btn');
+    navClickables.forEach(item => {
+      item.addEventListener('click', () => {
+        if (window.innerWidth <= 991.98) {
+          setTimeout(closeMenu, 180);
+        }
+      });
+    });
+
+    // 2. Close on outside click
+    document.addEventListener('click', (e) => {
+      if (window.innerWidth <= 991.98 && isMenuOpen()) {
+        const isClickInside = collapseEl.contains(e.target) || toggler.contains(e.target);
+        if (!isClickInside) {
+          closeMenu();
+        }
+      }
+    });
+
+    // 3. Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && isMenuOpen()) {
+        closeMenu();
+      }
+    });
+
+    // 4. Close automatically when screen is resized above 991.98px
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 992 && isMenuOpen()) {
+        closeMenu();
+      }
+    });
   }
 
   function initNavbarSlidingPill() {
@@ -59,11 +175,13 @@
     const navLinks = navContainer.querySelectorAll(':scope > .nav-item > .nav-link');
 
     function updatePill(targetLink, animate = true) {
-      if (!targetLink) {
+      if (!targetLink || window.innerWidth <= 991.98) {
         pill.style.opacity = '0';
+        navContainer.classList.remove('has-sliding-pill');
         return;
       }
 
+      navContainer.classList.add('has-sliding-pill');
       const navItem = targetLink.closest('.nav-item') || targetLink;
 
       // Exact layout coordinates (unaffected by hover/active CSS scale transforms)
@@ -97,11 +215,16 @@
     let activeLink = navContainer.querySelector(':scope > .nav-item > .nav-link.active') || navLinks[0];
     if (activeLink) {
       setTimeout(() => {
-        updatePill(activeLink, false);
-        navContainer.classList.add('has-sliding-pill');
-        requestAnimationFrame(() => {
-          pill.style.transition = '';
-        });
+        if (window.innerWidth > 991.98) {
+          updatePill(activeLink, false);
+          navContainer.classList.add('has-sliding-pill');
+          requestAnimationFrame(() => {
+            pill.style.transition = '';
+          });
+        } else {
+          pill.style.opacity = '0';
+          navContainer.classList.remove('has-sliding-pill');
+        }
       }, 70);
     }
 
@@ -123,7 +246,13 @@
     // Window resize handler
     window.addEventListener('resize', () => {
       const currentActive = navContainer.querySelector(':scope > .nav-item > .nav-link.active');
-      if (currentActive) updatePill(currentActive, false);
+      if (window.innerWidth <= 991.98) {
+        pill.style.opacity = '0';
+        navContainer.classList.remove('has-sliding-pill');
+      } else if (currentActive) {
+        navContainer.classList.add('has-sliding-pill');
+        updatePill(currentActive, false);
+      }
     });
 
     // Ensure layout accuracy after fonts load
@@ -634,10 +763,19 @@
   // --- 4. Before / After Comparison Slider ---
   function initBeforeAfterSlider() {
     const containers = document.querySelectorAll('.before-after-container');
+    if (!containers.length) return;
+
     containers.forEach(container => {
       const afterLayer = container.querySelector('.after-layer');
       const handle = container.querySelector('.slider-handle');
+      const afterImg = afterLayer ? afterLayer.querySelector('img') : null;
       if (!afterLayer || !handle) return;
+
+      function syncImageWidth() {
+        if (afterImg) {
+          afterImg.style.width = container.offsetWidth + 'px';
+        }
+      }
 
       let isDragging = false;
 
@@ -648,8 +786,8 @@
         if (offset > rect.width) offset = rect.width;
 
         const percentage = (offset / rect.width) * 100;
-        afterLayer.style.width = `${percentage}%`;
-        handle.style.left = `${percentage}%`;
+        afterLayer.style.width = percentage + '%';
+        handle.style.left = percentage + '%';
       }
 
       function onMouseMove(e) {
@@ -664,7 +802,10 @@
         }
       }
 
-      handle.addEventListener('mousedown', () => isDragging = true);
+      handle.addEventListener('mousedown', (e) => {
+        e.preventDefault();
+        isDragging = true;
+      });
       container.addEventListener('mousedown', (e) => {
         isDragging = true;
         updateSlider(e.clientX);
@@ -674,13 +815,24 @@
       window.addEventListener('mousemove', onMouseMove);
 
       // Touch support
-      handle.addEventListener('touchstart', () => isDragging = true);
+      handle.addEventListener('touchstart', () => {
+        isDragging = true;
+      }, { passive: true });
       container.addEventListener('touchstart', (e) => {
         isDragging = true;
         if (e.touches && e.touches[0]) updateSlider(e.touches[0].clientX);
-      });
+      }, { passive: true });
       window.addEventListener('touchend', () => isDragging = false);
-      window.addEventListener('touchmove', onTouchMove);
+      window.addEventListener('touchmove', onTouchMove, { passive: true });
+
+      // Keep image width strictly synchronized on resize and layout changes
+      window.addEventListener('resize', syncImageWidth);
+      if (window.ResizeObserver) {
+        new ResizeObserver(syncImageWidth).observe(container);
+      }
+      syncImageWidth();
+      setTimeout(syncImageWidth, 100);
+      setTimeout(syncImageWidth, 500);
     });
   }
 
@@ -729,6 +881,7 @@
     const searchInput = document.getElementById('blogSearchInput');
     const paginationNav = document.getElementById('blogPaginationNav') || document.querySelector('nav[aria-label="Blog Pagination"]');
     const paginationUl = document.getElementById('blogPagination') || (paginationNav ? paginationNav.querySelector('.pagination') : null);
+    const featuredCard = document.querySelector('.featured-blog-card');
 
     if (!blogItems.length) return;
 
@@ -748,6 +901,13 @@
 
         return matchesCat && matchesSearch;
       });
+    }
+
+    function checkFeaturedMatches() {
+      if (!featuredCard) return false;
+      if (!searchQuery) return true;
+      const featText = featuredCard.textContent.toLowerCase();
+      return featText.includes(searchQuery);
     }
 
     function renderPagination(totalItems) {
@@ -823,11 +983,22 @@
         item.style.display = 'block';
       });
 
+      // Handle Featured Guide visibility during search / filtering
+      const featMatches = checkFeaturedMatches();
+      if (featuredCard) {
+        if (searchQuery) {
+          featuredCard.style.display = featMatches ? 'block' : 'none';
+        } else {
+          featuredCard.style.display = (activeCategory === 'all' || activeCategory === 'materials') ? 'block' : 'none';
+        }
+      }
+
       renderPagination(totalMatching);
 
       // Handle "No articles found" message
       let emptyMsg = document.getElementById('blogEmptyState');
-      if (totalMatching === 0) {
+      const hasAnyVisibleContent = totalMatching > 0 || (searchQuery && featMatches);
+      if (!hasAnyVisibleContent) {
         if (!emptyMsg) {
           emptyMsg = document.createElement('div');
           emptyMsg.id = 'blogEmptyState';
@@ -873,6 +1044,43 @@
         currentPage = 1;
         updateBlogView();
       });
+    }
+
+    // Parse URL query parameters if present (e.g. from sidebar links or search)
+    try {
+      const urlParams = new URLSearchParams(window.location.search);
+      const paramCategory = urlParams.get('category');
+      const paramSearch = urlParams.get('search');
+
+      if (paramSearch) {
+        searchQuery = paramSearch.toLowerCase().trim();
+        if (searchInput) {
+          searchInput.value = paramSearch;
+        }
+      }
+
+      if (paramCategory) {
+        const matchingBtn = Array.from(filterBtns).find(btn => btn.getAttribute('data-filter') === paramCategory);
+        if (matchingBtn) {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          matchingBtn.classList.add('active');
+          activeCategory = paramCategory;
+        }
+      }
+
+      // If loaded with a category filter or search query from sidebar, smooth-scroll to articles
+      if (paramCategory || paramSearch) {
+        setTimeout(() => {
+          const grid = document.getElementById('blogCardsContainer') || document.querySelector('.blog-search-filter-wrap');
+          if (grid) {
+            const rect = grid.getBoundingClientRect();
+            const targetY = window.pageYOffset + rect.top - 120;
+            window.scrollTo({ top: Math.max(0, targetY), behavior: 'smooth' });
+          }
+        }, 120);
+      }
+    } catch (err) {
+      console.warn('URL parameter parsing error:', err);
     }
 
     // Initialize with active view
@@ -952,6 +1160,10 @@
 
     autoAnimateSelectors.forEach(sel => {
       document.querySelectorAll(sel).forEach((el, index) => {
+        // Prevent double/nested animation if an ancestor is already marked to animate on scroll
+        if (el.closest('.animate-on-scroll') && !el.classList.contains('animate-on-scroll')) {
+          return;
+        }
         if (!el.classList.contains('animate-on-scroll')) {
           el.classList.add('animate-on-scroll');
           if (!el.hasAttribute('data-animate')) {
@@ -1001,7 +1213,7 @@
 
   // --- 9. Dynamic Number Counter Animation ---
   function initCounterAnimations() {
-    const counterElements = document.querySelectorAll('.stat-number');
+    const counterElements = document.querySelectorAll('.stat-number, .industrial-stat-num');
     if (!counterElements.length) return;
 
     const observer = new IntersectionObserver((entries) => {
@@ -1020,13 +1232,19 @@
       const originalText = el.textContent.trim();
       el.classList.add('counting');
 
-      // Check for formats like "45K+", "14+", "99.8%", "1,800+"
+      // Check for formats like "45K+", "14+", "99.8%", "1,800+", "10.5 FT", "1440 DPI", "3 Yrs"
       if (originalText.includes('K+')) {
         const target = parseFloat(originalText);
         runCount(el, 0, target, 1600, val => Math.round(val) + 'K+');
       } else if (originalText.includes('%')) {
         const target = parseFloat(originalText);
         runCount(el, 0, target, 1600, val => val.toFixed(1) + '%');
+      } else if (originalText.includes('FT')) {
+        const target = parseFloat(originalText);
+        runCount(el, 0, target, 1400, val => val.toFixed(1) + ' FT');
+      } else if (originalText.includes('DPI')) {
+        const target = parseInt(originalText.replace(/[^0-9]/g, ''), 10);
+        runCount(el, 0, target, 1600, val => Math.round(val) + ' DPI');
       } else if (originalText.includes('+')) {
         const target = parseInt(originalText.replace(/[^0-9]/g, ''), 10);
         runCount(el, 0, target, 1800, val => Math.round(val).toLocaleString() + '+');
@@ -1069,12 +1287,13 @@
     const dotsContainer = document.getElementById('curvedDots');
     const btnPrev = document.getElementById('curvedPrev');
     const btnNext = document.getElementById('curvedNext');
+    const apertureWrap = document.querySelector('.curved-aperture-wrap');
 
     const realCount = originalCards.length;
     if (realCount === 0) return;
 
-    // Clone 3 cards at each end for a seamless infinite loop
-    const CLONES_COUNT = 3;
+    // Use full cycle clones (realCount) on each side so we can NEVER run out of cards!
+    const CLONES_COUNT = realCount; // 6 clones on each side
     const prependClones = [];
     const appendClones = [];
 
@@ -1092,8 +1311,9 @@
     appendClones.forEach(c => track.appendChild(c));
 
     const allCards = Array.from(track.querySelectorAll('.curved-gallery-card'));
-    let currentIndex = CLONES_COUNT + 2; // Default focused card: Commercial Fleet Decals (index 2)
+    let currentIndex = CLONES_COUNT + 2; // Default focused card: Commercial Fleet Decals (canonical index 2)
     let isTransitioning = false;
+    let transitionTimeout = null;
 
     // Build interactive dots for the original canonical projects
     if (dotsContainer) {
@@ -1105,12 +1325,13 @@
         dot.setAttribute('aria-label', 'Go to project ' + (idx + 1));
         dot.setAttribute('tabindex', '0');
         dot.addEventListener('click', () => {
-          if (isTransitioning) return;
+          resetAutoPlay();
           goTo(idx + CLONES_COUNT);
         });
         dot.addEventListener('keydown', (e) => {
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault();
+            resetAutoPlay();
             goTo(idx + CLONES_COUNT);
           }
         });
@@ -1169,6 +1390,10 @@
 
     function updatePosition(animate = true) {
       const stageWidth = stage.offsetWidth;
+      // Clamp index safely so currentCard is NEVER undefined
+      if (currentIndex < 0) currentIndex = 0;
+      if (currentIndex >= allCards.length) currentIndex = allCards.length - 1;
+
       const currentCard = allCards[currentIndex];
       if (!currentCard) return;
 
@@ -1187,48 +1412,87 @@
       updateCardsState();
     }
 
+    function checkWrap() {
+      // If we moved into append clones (>= CLONES_COUNT + realCount)
+      if (currentIndex >= CLONES_COUNT + realCount) {
+        currentIndex = currentIndex - realCount;
+        updatePosition(false);
+      }
+      // If we moved into prepend clones (< CLONES_COUNT)
+      else if (currentIndex < CLONES_COUNT) {
+        currentIndex = currentIndex + realCount;
+        updatePosition(false);
+      }
+    }
+
     function goTo(newIndex, animate = true) {
-      if (isTransitioning && animate) return;
+      clearTimeout(transitionTimeout);
+
+      // Safe circular wrap if index is out of bounds
+      if (newIndex < 0) {
+        currentIndex = currentIndex + realCount;
+        updatePosition(false);
+        void track.offsetWidth; // force reflow
+        newIndex = currentIndex - 1;
+      } else if (newIndex >= allCards.length) {
+        currentIndex = currentIndex - realCount;
+        updatePosition(false);
+        void track.offsetWidth; // force reflow
+        newIndex = currentIndex + 1;
+      }
+
       currentIndex = newIndex;
-      if (animate) isTransitioning = true;
+
+      if (animate) {
+        isTransitioning = true;
+        // Guaranteed unlock fallback timeout (prevents freeze even if transitionend is missed)
+        transitionTimeout = setTimeout(() => {
+          isTransitioning = false;
+          checkWrap();
+        }, 650);
+      } else {
+        isTransitioning = false;
+      }
+
       updatePosition(animate);
     }
 
     // Seamless infinite wrap-around on transition end
     track.addEventListener('transitionend', (e) => {
-      if (e.target !== track || e.propertyName !== 'transform') return;
+      if (e.target !== track) return;
+      if (e.propertyName !== 'transform' && !e.propertyName.includes('transform')) return;
+      clearTimeout(transitionTimeout);
       isTransitioning = false;
-
-      // Wrap append clones
-      if (currentIndex >= CLONES_COUNT + realCount) {
-        currentIndex = currentIndex - realCount;
-        updatePosition(false);
-        requestAnimationFrame(() => {
-          track.style.transition = '';
-        });
-      }
-      // Wrap prepend clones
-      else if (currentIndex < CLONES_COUNT) {
-        currentIndex = currentIndex + realCount;
-        updatePosition(false);
-        requestAnimationFrame(() => {
-          track.style.transition = '';
-        });
-      }
+      checkWrap();
     });
 
-    // Arrow button controls
-    if (btnPrev) btnPrev.addEventListener('click', () => goTo(currentIndex - 1));
-    if (btnNext) btnNext.addEventListener('click', () => goTo(currentIndex + 1));
+    // Arrow button controls with stopPropagation and autoPlay reset
+    if (btnPrev) {
+      btnPrev.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        resetAutoPlay();
+        goTo(currentIndex - 1);
+      });
+    }
+
+    if (btnNext) {
+      btnNext.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        resetAutoPlay();
+        goTo(currentIndex + 1);
+      });
+    }
 
     // Card interactions:
     // If a side card is clicked, slide it into the center.
-    // If the center card is clicked, allow lightbox trigger to fire!
     allCards.forEach((card, idx) => {
       card.addEventListener('click', (e) => {
-        if (idx !== currentIndex && !isTransitioning) {
+        if (idx !== currentIndex) {
           e.preventDefault();
           e.stopPropagation();
+          resetAutoPlay();
           goTo(idx);
         }
       });
@@ -1240,7 +1504,6 @@
     let movedX = 0;
 
     stage.addEventListener('mousedown', (e) => {
-      if (isTransitioning) return;
       isDragging = true;
       startX = e.clientX;
       movedX = 0;
@@ -1255,14 +1518,15 @@
       if (!isDragging) return;
       isDragging = false;
       if (movedX > 45) {
+        resetAutoPlay();
         goTo(currentIndex - 1);
       } else if (movedX < -45) {
+        resetAutoPlay();
         goTo(currentIndex + 1);
       }
     });
 
     stage.addEventListener('touchstart', (e) => {
-      if (isTransitioning) return;
       startX = e.touches[0].clientX;
       movedX = 0;
     }, { passive: true });
@@ -1273,8 +1537,10 @@
 
     stage.addEventListener('touchend', () => {
       if (movedX > 40) {
+        resetAutoPlay();
         goTo(currentIndex - 1);
       } else if (movedX < -40) {
+        resetAutoPlay();
         goTo(currentIndex + 1);
       }
     });
@@ -1283,20 +1549,29 @@
     stage.addEventListener('keydown', (e) => {
       if (e.key === 'ArrowLeft') {
         e.preventDefault();
+        resetAutoPlay();
         goTo(currentIndex - 1);
       } else if (e.key === 'ArrowRight') {
         e.preventDefault();
+        resetAutoPlay();
         goTo(currentIndex + 1);
       }
     });
 
-    // Auto-play timer (slides smoothly every 4.5 seconds, pauses on hover/drag)
-    let autoInterval = setInterval(() => goTo(currentIndex + 1), 4500);
-    stage.addEventListener('mouseenter', () => clearInterval(autoInterval));
-    stage.addEventListener('mouseleave', () => {
+    // Auto-play timer (slides smoothly every 4.5 seconds, pauses on hover)
+    let autoInterval = null;
+    function resetAutoPlay() {
       clearInterval(autoInterval);
-      autoInterval = setInterval(() => goTo(currentIndex + 1), 4500);
-    });
+      autoInterval = setInterval(() => {
+        goTo(currentIndex + 1);
+      }, 4500);
+    }
+    resetAutoPlay();
+
+    if (apertureWrap) {
+      apertureWrap.addEventListener('mouseenter', () => clearInterval(autoInterval));
+      apertureWrap.addEventListener('mouseleave', () => resetAutoPlay());
+    }
 
     // Resize handler to recalculate center alignment fluidly
     window.addEventListener('resize', () => updatePosition(false));
@@ -1304,13 +1579,24 @@
     // Initial positioning
     setTimeout(() => {
       updatePosition(false);
-      requestAnimationFrame(() => {
-        track.style.transition = '';
-      });
     }, 80);
   }
 
   // Initialize all on DOM ready
+  // --- Sidebar Search Form Enhancement ---
+  function initSidebarSearch() {
+    const searchForms = document.querySelectorAll('.sidebar-search-form');
+    searchForms.forEach(form => {
+      form.addEventListener('submit', (e) => {
+        const input = form.querySelector('input[name="search"]');
+        if (input && !input.value.trim()) {
+          e.preventDefault();
+          input.focus();
+        }
+      });
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', () => {
     initNavigation();
     initBackToTop();
@@ -1320,6 +1606,7 @@
     initBeforeAfterSlider();
     initCountdown();
     initBlogFilter();
+    initSidebarSearch();
     initTestimonialSlider();
     initScrollAnimations();
     initCounterAnimations();

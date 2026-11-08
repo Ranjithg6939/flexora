@@ -219,8 +219,8 @@
               </ul>
             </li>
             <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-            <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
             <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
             <li class="nav-item"><a class="nav-link" href="rate-card.html">Rate Card</a></li>
             <li class="nav-item"><a class="nav-link" href="pricing.html">Packages</a></li>
             <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
@@ -263,71 +263,71 @@
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html"><i class="fa-solid fa-house me-1"></i> Home</a></li>
           <li class="breadcrumb-item"><a href="blog.html">Blog</a></li>
-          <li class="breadcrumb-item active" aria-current="page">GSM &amp; Weight Guide</li>
+          <li class="breadcrumb-item active" id="blogDetailBreadcrumb" aria-current="page">GSM &amp; Weight Guide</li>
         </ol>
       </nav>
       <div class="d-flex justify-content-center mb-2">
-        <span class="badge-tag d-inline-flex align-items-center gap-2">
+        <span class="badge-tag d-inline-flex align-items-center gap-2" id="blogDetailTopBadge">
           <i class="fa-solid fa-book-open text-accent"></i> Deep-Dive Technical Guide
         </span>
       </div>
-      <h1 class="page-title">
+      <h1 class="page-title" id="blogDetailPageTitle">
         Understanding <span class="highlight">Flex GSM Weights</span>: 280 to 510 GSM
       </h1>
-      <p class="page-desc mx-auto">
+      <p class="page-desc mx-auto" id="blogDetailPageDesc">
         The ultimate engineer's guide to substrate weights, yarn weave density, blackout coatings, and wind-load calculations for outdoor hoardings.
       </p>
       <div class="page-meta-row justify-content-center">
-        <span class="page-meta-item"><i class="fa-solid fa-calendar-days text-success"></i> Published: March 2026</span>
-        <span class="page-meta-item"><i class="fa-solid fa-user-pen text-accent"></i> By Elena Rostova</span>
-        <span class="page-meta-item"><i class="fa-solid fa-clock text-primary"></i> 8 Min Read</span>
-        <span class="page-meta-item"><i class="fa-solid fa-tag text-cyan"></i> Flex Materials</span>
+        <span class="page-meta-item" id="blogDetailPubDate"><i class="fa-solid fa-calendar-days text-success"></i> Published: March 2026</span>
+        <span class="page-meta-item" id="blogDetailAuthor"><i class="fa-solid fa-user-pen text-accent"></i> By Elena Rostova</span>
+        <span class="page-meta-item" id="blogDetailReadTime"><i class="fa-solid fa-clock text-primary"></i> 8 Min Read</span>
+        <span class="page-meta-item" id="blogDetailCategory"><i class="fa-solid fa-tag text-cyan"></i> Flex Materials</span>
       </div>
     </div>
   </section>
 
   <!-- Main Article & Sidebar -->
-  <section class="py-5">
+  <section class="blog-details-section py-5">
     <div class="container">
-      <div class="row g-5">
+      <div class="row g-4 g-lg-5 blog-details-layout blog-layout">
         
         <!-- Article Content -->
-        <div class="col-lg-8">
+        <div class="col-lg-8 blog-main-col blog-left-content">
           <article>
-            <span class="badge-tag mb-2">Material Science</span>
-            <h1 class="display-6 fw-bold mb-3">The Ultimate GSM & Weight Guide: Choosing The Right Flex Banner Material for Extreme Weather</h1>
+            <span class="badge-tag mb-2" id="blogDetailArticleBadge">Material Science</span>
+            <h1 class="display-6 fw-bold mb-3" id="blogDetailArticleTitle">The Ultimate GSM & Weight Guide: Choosing The Right Flex Banner Material for Extreme Weather</h1>
             
             <div class="d-flex align-items-center gap-3 py-3 border-top border-bottom mb-4 text-muted small flex-wrap">
               <div class="d-flex align-items-center gap-2">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&q=80" alt="Marcus Thorne" class="rounded-circle" width="36" height="36">
-                <span>By <strong>Marcus Thorne</strong>, Production Director</span>
+                <img id="blogDetailAuthorAvatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&q=80" alt="Marcus Thorne" class="rounded-circle" width="36" height="36">
+                <span id="blogDetailArticleAuthor">By <strong>Marcus Thorne</strong>, Production Director</span>
               </div>
               <span>&bull;</span>
-              <span><i class="fa-regular fa-calendar me-1"></i> March 28, 2026</span>
+              <span id="blogDetailArticleDate"><i class="fa-regular fa-calendar me-1"></i> March 28, 2026</span>
               <span>&bull;</span>
-              <span><i class="fa-regular fa-clock me-1"></i> 8 min read</span>
+              <span id="blogDetailArticleReadTime"><i class="fa-regular fa-clock me-1"></i> 8 min read</span>
             </div>
 
             <!-- Featured Image -->
             <div class="mb-4">
-              <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80" alt="Flex banner printing machine" class="img-fluid rounded-4 shadow-sm w-100">
-              <small class="text-muted d-block mt-2 text-center fst-italic">Figure 1: Automated high-speed roll printing of 440 GSM blackout flex at the FLEXORA facility.</small>
+              <img id="blogDetailFeaturedImg" src="assets/images/blog/ultimate-gsm-weight-guide-flex-banner.jpg" alt="Rolled heavy-duty 440 GSM flex banner material with reinforced welded hems and brass eyelets" class="img-fluid rounded-4 shadow-sm w-100" style="max-height: 520px; width: 100%; aspect-ratio: 16 / 9; object-fit: cover;">
+              <small id="blogDetailFeaturedCaption" class="text-muted d-block mt-2 text-center fst-italic">Figure 1: Commercial-grade 440 GSM heavy-duty flex substrate with heat-welded perimeter hems and brass mounting eyelets.</small>
             </div>
 
             <!-- Table of Contents -->
-            <div class="p-4 rounded-4 shadow-sm mb-4" style="background-color: var(--surface) !important; border: 1px solid var(--border-color);">
+            <div class="blog-toc-card p-4 rounded-4 shadow-sm mb-4">
               <h5 class="fw-bold mb-3"><i class="fa-solid fa-list-ul text-primary me-2"></i> Table of Contents</h5>
-              <ul class="list-unstyled mb-0 d-flex flex-column gap-2 small">
-                <li><a href="#section-1" class="text-decoration-none">1. What Does GSM Actually Measure in Flex Printing?</a></li>
-                <li><a href="#section-2" class="text-decoration-none">2. Comparing 280 GSM, 340 GSM & 440 GSM Substrates</a></li>
-                <li><a href="#section-3" class="text-decoration-none">3. Frontlit vs. Backlit vs. Blackout Flex Core Structure</a></li>
-                <li><a href="#section-4" class="text-decoration-none">4. How Welded Hems & Brass Eyelets Double Wind Resistance</a></li>
-                <li><a href="#section-5" class="text-decoration-none">5. The Verdict: Recommended Specs by Application</a></li>
+              <ul class="list-unstyled mb-0 d-flex flex-column gap-2" id="blogDetailTocList">
+                <li><a href="#section-1" class="toc-link">1. What Does GSM Actually Measure in Flex Printing?</a></li>
+                <li><a href="#section-2" class="toc-link">2. Comparing 280 GSM, 340 GSM & 440 GSM Substrates</a></li>
+                <li><a href="#section-3" class="toc-link">3. Frontlit vs. Backlit vs. Blackout Flex Core Structure</a></li>
+                <li><a href="#section-4" class="toc-link">4. How Welded Hems & Brass Eyelets Double Wind Resistance</a></li>
+                <li><a href="#section-5" class="toc-link">5. The Verdict: Recommended Specs by Application</a></li>
               </ul>
             </div>
 
             <!-- Body Paragraphs -->
-            <div class="article-body">
+            <div class="article-body" id="blogDetailArticleBody">
               <h3 id="section-1" class="h4 fw-bold mt-4 mb-3">1. What Does GSM Actually Measure in Flex Printing?</h3>
               <p>
                 In the commercial printing trade, <strong>GSM</strong> stands for <em>Grams per Square Meter</em>. It represents the total mass of both the internal polyester scrim (the reinforcing fabric skeleton) and the top/bottom PVC coatings combined.
@@ -410,29 +410,29 @@
             </div>
 
             <!-- Social Share Bar -->
-            <div class="d-flex align-items-center justify-content-between p-3 border rounded bg-white mt-5" style="background-color: var(--surface) !important;">
+            <div class="blog-share-bar d-flex flex-wrap align-items-center justify-content-between gap-3 p-3 p-md-4 border rounded-4 shadow-sm mt-5" style="background-color: var(--surface) !important; border-color: var(--border-color) !important;">
               <span class="fw-bold small text-secondary"><i class="fa-solid fa-share-nodes me-2"></i> Share This Guide:</span>
-              <div class="d-flex gap-2">
+              <div class="d-flex flex-wrap align-items-center gap-2">
                 <a href="#" class="social-btn" aria-label="Share on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
                 <a href="#" class="social-btn" aria-label="Share on Twitter"><i class="fa-brands fa-twitter"></i></a>
                 <a href="#" class="social-btn" aria-label="Share on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                <button type="button" class="btn btn-sm btn-outline-primary" onclick="showToast('Article link copied to clipboard!', 'success')"><i class="fa-solid fa-link me-1"></i> Copy Link</button>
+                <button type="button" class="btn btn-sm btn-outline-primary rounded-pill px-3" onclick="showToast('Article link copied to clipboard!', 'success')"><i class="fa-solid fa-link me-1"></i> Copy Link</button>
               </div>
             </div>
 
             <!-- Related Articles -->
             <div class="mt-5">
               <h4 class="h5 fw-bold mb-4">Related Technical Articles</h4>
-              <div class="row g-3">
+              <div class="row g-3" id="blogDetailRelatedContainer">
                 <div class="col-md-6">
-                  <div class="p-3 border rounded bg-white h-100" style="background-color: var(--surface) !important;">
+                  <div class="p-3 border rounded-4 shadow-sm h-100" style="background-color: var(--surface) !important; border-color: var(--border-color) !important;">
                     <span class="badge-tag mb-1">Prepress</span>
                     <h5 class="h6 fw-bold"><a href="blog-details.html" class="text-secondary text-decoration-none">5 Prepress Checklist Items to Avoid Muddy Colors on Flex</a></h5>
                     <small class="text-muted">Avoid RGB to CMYK color conversion pitfalls.</small>
                   </div>
                 </div>
                 <div class="col-md-6">
-                  <div class="p-3 border rounded bg-white h-100" style="background-color: var(--surface) !important;">
+                  <div class="p-3 border rounded-4 shadow-sm h-100" style="background-color: var(--surface) !important; border-color: var(--border-color) !important;">
                     <span class="badge-tag mb-1">Technology</span>
                     <h5 class="h6 fw-bold"><a href="blog-details.html" class="text-secondary text-decoration-none">UV Curable Inks vs. Eco-Solvent: Outdoor Comparison</a></h5>
                     <small class="text-muted">A scientific look at pigment polymers.</small>
@@ -444,65 +444,113 @@
         </div>
 
         <!-- Sidebar Widgets -->
-        <div class="col-lg-4">
-          <!-- Widget 1: Search -->
-          <div class="sidebar-widget">
-            <h4 class="widget-title">Search Articles</h4>
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Search guides (e.g. GSM, Prepress)...">
-              <button class="btn btn-primary" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <div class="col-lg-4 blog-sidebar-col right-sidebar">
+          <aside class="sidebar-sticky-wrapper" aria-label="Blog Sidebar">
+            <!-- Widget 1: Search -->
+            <div class="sidebar-widget position-relative">
+              <h4 class="widget-title">Search Articles</h4>
+              <form class="sidebar-search-form" action="blog.html" method="GET" novalidate>
+                <div class="input-group">
+                  <input type="text" name="search" id="sidebarSearchInput" class="form-control" placeholder="Search guides (e.g. GSM, Prepress)..." aria-label="Search guides" autocomplete="off" required>
+                  <button class="btn btn-primary" type="submit" aria-label="Search articles"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+              </form>
+              <!-- Live Search Results Dropdown -->
+              <div id="sidebarSearchResults" class="sidebar-search-dropdown shadow-lg d-none"></div>
             </div>
-          </div>
 
-          <!-- Widget 2: Categories -->
-          <div class="sidebar-widget">
-            <h4 class="widget-title">Blog Categories</h4>
-            <ul class="widget-categories">
-              <li><a href="blog.html">Printing Tips</a> <span class="badge bg-light text-dark">14</span></li>
-              <li><a href="blog.html">Banner Design & Layout</a> <span class="badge bg-light text-dark">9</span></li>
-              <li><a href="blog.html">Printing Technology</a> <span class="badge bg-light text-dark">11</span></li>
-              <li><a href="blog.html">Business Advertising</a> <span class="badge bg-light text-dark">8</span></li>
-              <li><a href="blog.html">Marketing Ideas</a> <span class="badge bg-light text-dark">12</span></li>
-              <li><a href="blog.html">Material & GSM Guides</a> <span class="badge bg-light text-dark">7</span></li>
-            </ul>
-          </div>
+            <!-- Widget 2: Categories -->
+            <div class="sidebar-widget">
+              <h4 class="widget-title">Blog Categories</h4>
+              <ul class="widget-categories" id="blogSidebarCategories">
+                <li class="widget-cat-item">
+                  <a href="blog.html?category=tips" class="widget-cat-link">
+                    <span class="widget-cat-name">
+                      <i class="fa-solid fa-lightbulb"></i>
+                      <span>Printing Tips</span>
+                    </span>
+                    <span class="badge">3</span>
+                  </a>
+                </li>
+                <li class="widget-cat-item">
+                  <a href="blog.html?category=design" class="widget-cat-link">
+                    <span class="widget-cat-name">
+                      <i class="fa-solid fa-palette"></i>
+                      <span>Banner Design &amp; Layout</span>
+                    </span>
+                    <span class="badge">3</span>
+                  </a>
+                </li>
+                <li class="widget-cat-item">
+                  <a href="blog.html?category=tech" class="widget-cat-link">
+                    <span class="widget-cat-name">
+                      <i class="fa-solid fa-microchip"></i>
+                      <span>Printing Technology</span>
+                    </span>
+                    <span class="badge">3</span>
+                  </a>
+                </li>
+                <li class="widget-cat-item">
+                  <a href="blog.html?category=marketing" class="widget-cat-link">
+                    <span class="widget-cat-name">
+                      <i class="fa-solid fa-chart-line"></i>
+                      <span>Business Advertising &amp; Ideas</span>
+                    </span>
+                    <span class="badge">3</span>
+                  </a>
+                </li>
+                <li class="widget-cat-item">
+                  <a href="blog.html?category=materials" class="widget-cat-link">
+                    <span class="widget-cat-name">
+                      <i class="fa-solid fa-layer-group"></i>
+                      <span>Material &amp; GSM Guides</span>
+                    </span>
+                    <span class="badge">4</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
 
-          <!-- Widget 3: Quick Rate Estimate -->
-          <div class="sidebar-widget bg-dark text-white border-0" style="background-color: var(--secondary) !important;">
-            <h4 class="text-white widget-title border-warning">Instant Price Check</h4>
-            <p class="small text-white-50">Need fast calculations for your upcoming billboard or roll-up standee project?</p>
-            <a href="rate-card.html#calculator" class="btn btn-accent btn-sm w-100 py-2">
-              <i class="fa-solid fa-calculator me-1"></i> Open Online Calculator
-            </a>
-          </div>
-
-          <!-- Widget 4: Recent Posts -->
-          <div class="sidebar-widget">
-            <h4 class="widget-title">Recent Articles</h4>
-            <div class="d-flex flex-column gap-3">
-              <div class="d-flex gap-3 align-items-center">
-                <img src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809?auto=format&fit=crop&w=120&q=80" alt="Thumb" class="rounded" width="60" height="60" style="object-fit: cover;">
-                <div>
-                  <h6 class="mb-1 small fw-bold"><a href="blog-details.html" class="text-secondary text-decoration-none">Avoid Muddy Colors on Flex Prints</a></h6>
-                  <small class="text-muted">March 22, 2026</small>
-                </div>
+            <!-- Widget 3: Quick Rate Estimate -->
+            <div class="sidebar-widget widget-cta text-white border-0">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="badge bg-warning text-dark fw-bold px-2 py-1"><i class="fa-solid fa-bolt me-1"></i> Quick Tool</span>
               </div>
-              <div class="d-flex gap-3 align-items-center">
-                <img src="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=120&q=80" alt="Thumb" class="rounded" width="60" height="60" style="object-fit: cover;">
-                <div>
-                  <h6 class="mb-1 small fw-bold"><a href="blog-details.html" class="text-secondary text-decoration-none">Billboard Typography & Visual Hierarchy</a></h6>
-                  <small class="text-muted">March 15, 2026</small>
-                </div>
-              </div>
-              <div class="d-flex gap-3 align-items-center">
-                <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=120&q=80" alt="Thumb" class="rounded" width="60" height="60" style="object-fit: cover;">
-                <div>
-                  <h6 class="mb-1 small fw-bold"><a href="blog-details.html" class="text-secondary text-decoration-none">Backlit Signage Converts 34% More</a></h6>
-                  <small class="text-muted">March 10, 2026</small>
-                </div>
+              <h4 class="text-white widget-title border-warning">Instant Price Check</h4>
+              <p class="small text-white-50">Need fast calculations for your upcoming billboard or roll-up standee project?</p>
+              <a href="rate-card.html#calculator" class="btn btn-accent btn-sm w-100 py-2">
+                <i class="fa-solid fa-calculator me-1"></i> Open Online Calculator
+              </a>
+            </div>
+
+            <!-- Widget 4: Recent Posts -->
+            <div class="sidebar-widget">
+              <h4 class="widget-title">Recent Articles</h4>
+              <div class="d-flex flex-column gap-3">
+                <a href="blog-details.html?post=prepress-color-checklist" class="recent-article-item text-decoration-none">
+                  <img src="assets/images/blog/prepress-color-workflow-avoid-muddy-colors.png" alt="Avoid Muddy Colors" class="rounded" width="60" height="60" style="object-fit: cover;">
+                  <div class="flex-grow-1">
+                    <h6 class="mb-1 small fw-bold recent-article-title">Avoid Muddy Colors on Flex Prints</h6>
+                    <small class="text-muted"><i class="fa-regular fa-calendar-days me-1"></i> March 22, 2026</small>
+                  </div>
+                </a>
+                <a href="blog-details.html?post=billboard-typography" class="recent-article-item text-decoration-none">
+                  <img src="assets/images/blog/billboard-typography-highway-legibility.jpg" alt="Billboard Typography" class="rounded" width="60" height="60" style="object-fit: cover;">
+                  <div class="flex-grow-1">
+                    <h6 class="mb-1 small fw-bold recent-article-title">Billboard Typography & Visual Hierarchy</h6>
+                    <small class="text-muted"><i class="fa-regular fa-calendar-days me-1"></i> March 15, 2026</small>
+                  </div>
+                </a>
+                <a href="blog-details.html?post=illuminated-backlit-signs" class="recent-article-item text-decoration-none">
+                  <img src="assets/images/blog/illuminated-backlit-signs-retail-footfall.jpg" alt="Backlit Signage" class="rounded" width="60" height="60" style="object-fit: cover;">
+                  <div class="flex-grow-1">
+                    <h6 class="mb-1 small fw-bold recent-article-title">Backlit Signage Converts 34% More</h6>
+                    <small class="text-muted"><i class="fa-regular fa-calendar-days me-1"></i> March 10, 2026</small>
+                  </div>
+                </a>
               </div>
             </div>
-          </div>
+          </aside>
         </div>
       </div>
     </div>
@@ -765,8 +813,8 @@
             <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Commercial Printing</a></li>
             <li><a href="home-2.html"><i class="fa-solid fa-angle-right"></i> Creative Showcase</a></li>
             <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> About Us</a></li>
-            <li><a href="products.html"><i class="fa-solid fa-angle-right"></i> Products</a></li>
-            <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> Services</a></li>
+            <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> Services</a></li><li><a href="products.html"><i class="fa-solid fa-angle-right"></i> Products</a></li>
+            
             <li><a href="rate-card.html"><i class="fa-solid fa-angle-right"></i> Rate Card</a></li>
             <li><a href="contact.html"><i class="fa-solid fa-angle-right"></i> Contact Us</a></li>
           </ul>
@@ -790,7 +838,7 @@
         <div class="col-lg-3 col-md-6">
           <h4 class="footer-title">Print Bulletin</h4>
           <p class="footer-text">Subscribe for monthly trade discounts, new substrate arrivals, and seasonal bulk rate drops.</p>
-          <form class="newsletter-form mb-3">
+          <form class="newsletter-form mb-3" novalidate>
             <div class="input-group">
               <input type="email" class="form-control" placeholder="Your business email..." required>
               <button class="btn btn-primary" type="submit"><i class="fa-solid fa-paper-plane"></i></button>
@@ -820,5 +868,6 @@
   <script src="assets/js/theme.js"></script>
   <script src="assets/js/forms.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/blog.js"></script>
 </body>
 </html>

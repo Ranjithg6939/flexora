@@ -101,6 +101,21 @@
       }
     }
 
+    // Prevent quote submission with invalid dimensions
+    if (quoteBtn) {
+      quoteBtn.addEventListener('click', (e) => {
+        const w = parseFloat(widthInput.value) || 0;
+        const h = parseFloat(heightInput.value) || 0;
+        const q = parseInt(qtyInput.value, 10) || 0;
+        if (w < 0.5 || w > 100 || h < 0.5 || h > 100 || q < 1) {
+          e.preventDefault();
+          if (typeof window.showToast === 'function') {
+            window.showToast('Please specify valid banner dimensions (0.5 - 100 ft) and quantity before requesting a quote.', 'error');
+          }
+        }
+      });
+    }
+
     // Attach listeners
     [productSelect, widthInput, heightInput, unitSelect, qtyInput].forEach(elem => {
       if (elem) elem.addEventListener('input', calculate);

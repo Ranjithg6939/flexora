@@ -223,8 +223,8 @@
               </ul>
             </li>
             <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-            <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
             <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
             <li class="nav-item"><a class="nav-link" href="rate-card.html">Rate Card</a></li>
             <li class="nav-item"><a class="nav-link" href="pricing.html">Packages</a></li>
             <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
@@ -301,7 +301,7 @@
       <div class="row g-4 mb-5">
         <!-- Address Card -->
         <div class="col-lg-3 col-md-6">
-          <div class="p-4 border rounded bg-white h-100 shadow-sm animate-on-scroll delay-100" data-animate="fade-up" style="background-color: var(--surface) !important;">
+          <div class="contact-info-card p-4 border h-100 shadow-sm animate-on-scroll delay-100" data-animate="fade-up" style="background-color: var(--surface) !important;">
             <div class="stat-icon mb-3"><i class="fa-solid fa-location-dot"></i></div>
             <h4 class="h5 fw-bold mb-1">Press Room Address</h4>
             <p class="text-muted small mb-0">840 Printworks Boulevard, Industrial Area Phase 2, New York, NY 10001</p>
@@ -310,7 +310,7 @@
 
         <!-- Phone Card -->
         <div class="col-lg-3 col-md-6">
-          <div class="p-4 border rounded bg-white h-100 shadow-sm animate-on-scroll delay-200" data-animate="fade-up" style="background-color: var(--surface) !important;">
+          <div class="contact-info-card p-4 border h-100 shadow-sm animate-on-scroll delay-200" data-animate="fade-up" style="background-color: var(--surface) !important;">
             <div class="stat-icon mb-3"><i class="fa-solid fa-phone"></i></div>
             <h4 class="h5 fw-bold mb-1">Direct Production Lines</h4>
             <p class="text-muted small mb-1"><strong>Toll-Free:</strong> +1 (800) 555-FLEX</p>
@@ -320,7 +320,7 @@
 
         <!-- Email Card -->
         <div class="col-lg-3 col-md-6">
-          <div class="p-4 border rounded bg-white h-100 shadow-sm animate-on-scroll delay-300" data-animate="fade-up" style="background-color: var(--surface) !important;">
+          <div class="contact-info-card p-4 border h-100 shadow-sm animate-on-scroll delay-300" data-animate="fade-up" style="background-color: var(--surface) !important;">
             <div class="stat-icon mb-3"><i class="fa-solid fa-envelope"></i></div>
             <h4 class="h5 fw-bold mb-1">Email Inquiries</h4>
             <p class="text-muted small mb-1"><strong>Orders:</strong> orders@flexora-print.com</p>
@@ -330,7 +330,7 @@
 
         <!-- Working Hours Card -->
         <div class="col-lg-3 col-md-6">
-          <div class="p-4 border rounded bg-white h-100 shadow-sm animate-on-scroll delay-400" data-animate="fade-up" style="background-color: var(--surface) !important;">
+          <div class="contact-info-card p-4 border h-100 shadow-sm animate-on-scroll delay-400" data-animate="fade-up" style="background-color: var(--surface) !important;">
             <div class="stat-icon mb-3"><i class="fa-solid fa-clock"></i></div>
             <h4 class="h5 fw-bold mb-1">Operating Hours</h4>
             <p class="text-muted small mb-1"><strong>Mon - Sat:</strong> 8:00 AM – 8:00 PM</p>
@@ -339,11 +339,10 @@
         </div>
       </div>
 
-      <!-- Main Form & Google Maps Placeholder Layout -->
-      <div class="row g-5">
-        <!-- Order Enquiry Form (11 Mandatory Fields) -->
-        <div class="col-lg-7 animate-on-scroll" data-animate="fade-right">
-          <div class="p-4 p-md-5 border rounded bg-white shadow-sm" style="background-color: var(--surface) !important;">
+      <!-- Custom Printing Order Enquiry Form Section (Centered & Perfectly Aligned) -->
+      <div class="row justify-content-center mb-5">
+        <div class="col-xl-9 col-lg-10 animate-on-scroll" data-animate="fade-up">
+          <div class="order-enquiry-card p-4 p-md-5 border rounded-4 bg-white shadow-sm" style="background-color: var(--surface) !important;">
             <div class="d-flex align-items-center gap-2 mb-2">
               <span class="badge-tag"><i class="fa-solid fa-file-invoice"></i> Official Order Desk</span>
             </div>
@@ -351,7 +350,7 @@
             <p class="text-muted small mb-4">Complete this form to receive a binding commercial quotation with volume discounts.</p>
 
             <form id="orderEnquiryForm" novalidate>
-              <div class="row g-3">
+              <div class="row g-4">
                 <!-- 1. Customer Name -->
                 <div class="col-md-6">
                   <label for="orderName" class="form-label">1. Customer / Company Name <span class="text-danger">*</span></label>
@@ -365,13 +364,13 @@
                 </div>
 
                 <!-- 3. Email Address -->
-                <div class="col-md-12">
+                <div class="col-md-6">
                   <label for="orderEmail" class="form-label">3. Email Address <span class="text-danger">*</span></label>
                   <input type="email" id="orderEmail" class="form-control" placeholder="e.g. purchasing@yourcompany.com" required>
                 </div>
 
                 <!-- 4. Product Category -->
-                <div class="col-md-12">
+                <div class="col-md-6">
                   <label for="orderProduct" class="form-label">4. Product Category <span class="text-danger">*</span></label>
                   <select id="orderProduct" class="form-select" required>
                     <option value="" disabled selected>Select printing category...</option>
@@ -400,13 +399,11 @@
                   <input type="number" id="orderHeight" class="form-control" placeholder="e.g. 4" min="1" step="0.5" required>
                 </div>
 
-                <!-- 7. Quantity -->
+                <!-- 7. Quantity & 8. Material Selection -->
                 <div class="col-md-6">
                   <label for="orderQty" class="form-label">7. Order Quantity (Pieces) <span class="text-danger">*</span></label>
                   <input type="number" id="orderQty" class="form-control" value="1" min="1" required>
                 </div>
-
-                <!-- 8. Material Selection -->
                 <div class="col-md-6">
                   <label for="orderMaterial" class="form-label">8. Material Selection <span class="text-danger">*</span></label>
                   <select id="orderMaterial" class="form-select" required>
@@ -422,13 +419,13 @@
                 </div>
 
                 <!-- 9. Required Delivery Date -->
-                <div class="col-md-12">
+                <div class="col-12">
                   <label for="orderDate" class="form-label">9. Required Delivery Date <span class="text-danger">*</span></label>
                   <input type="date" id="orderDate" class="form-control" required>
                 </div>
 
                 <!-- 10. Upload Design File -->
-                <div class="col-md-12">
+                <div class="col-12">
                   <label class="form-label">10. Upload Design File (PDF, AI, PSD, TIFF, JPG)</label>
                   <div class="upload-dropzone position-relative" onclick="document.getElementById('orderFile').click()">
                     <i class="fa-solid fa-cloud-arrow-up"></i>
@@ -441,13 +438,13 @@
                 </div>
 
                 <!-- 11. Additional Requirements -->
-                <div class="col-md-12">
+                <div class="col-12">
                   <label for="orderNotes" class="form-label">11. Additional Requirements & Finishing Instructions</label>
                   <textarea id="orderNotes" class="form-control" rows="3" placeholder="Specify brass eyelet spacing (e.g. every 2 ft), welded hems, pole pockets, wind slits, on-site installation, or destination address..."></textarea>
                 </div>
 
-                <div class="col-md-12 mt-4">
-                  <button type="submit" class="btn btn-primary btn-lg w-100 py-3">
+                <div class="col-12 mt-4">
+                  <button type="submit" class="btn btn-primary btn-lg w-100 py-3 btn-submit-order">
                     <i class="fa-solid fa-paper-plane me-2"></i> Submit Printing Order Enquiry
                   </button>
                   <small class="text-muted d-block text-center mt-2">
@@ -458,46 +455,55 @@
             </form>
           </div>
         </div>
+      </div>
 
-        <!-- Google Maps & Facility Information -->
-        <div class="col-lg-5 animate-on-scroll" data-animate="fade-left">
-          <div class="p-4 border rounded bg-white shadow-sm mb-4" style="background-color: var(--surface) !important;">
-            <h4 class="h5 fw-bold mb-3"><i class="fa-solid fa-map-location-dot text-primary me-2"></i> Factory Press Room Location</h4>
-            
-            <!-- Google Maps Embed Placeholder -->
-            <div class="ratio ratio-4x3 rounded overflow-hidden border mb-3">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830869428!2d-74.119763973046!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1655000000000!5m2!1sen!2sus" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade"
-                title="FLEXORA Facility Map">
-              </iframe>
+      <!-- Facility Location & General Inquiry (Under Form Section - Balanced Width) -->
+      <div class="row justify-content-center animate-on-scroll" data-animate="fade-up">
+        <div class="col-xl-9 col-lg-10">
+          <div class="row g-4">
+            <!-- Google Maps & Facility Information -->
+            <div class="col-md-6">
+              <div class="p-4 border rounded-4 bg-white shadow-sm h-100" style="background-color: var(--surface) !important;">
+                <h4 class="h5 fw-bold mb-3"><i class="fa-solid fa-map-location-dot text-primary me-2"></i> Factory Press Room Location</h4>
+                
+                <!-- Google Maps Embed Placeholder -->
+                <div class="ratio ratio-16x9 rounded overflow-hidden border mb-3">
+                  <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830869428!2d-74.119763973046!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1655000000000!5m2!1sen!2sus" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="FLEXORA Facility Map">
+                  </iframe>
+                </div>
+
+                <div class="small text-muted">
+                  <strong>Loading Dock Instructions:</strong> Heavy commercial transport trucks and couriers can access Loading Bay #4 on Printworks Boulevard between 8:00 AM and 7:00 PM.
+                </div>
+              </div>
             </div>
 
-            <div class="small text-muted">
-              <strong>Loading Dock Instructions:</strong> Heavy commercial transport trucks and couriers can access Loading Bay #4 on Printworks Boulevard between 8:00 AM and 7:00 PM.
+            <!-- General Quick Contact Box -->
+            <div class="col-md-6">
+              <div class="p-4 border rounded-4 bg-white shadow-sm h-100 d-flex flex-column" style="background-color: var(--surface) !important;">
+                <h4 class="h5 fw-bold mb-2">Have a General Question?</h4>
+                <p class="text-muted small mb-3">Not ready for a formal quote? Send a quick message to our reception team.</p>
+
+                <form id="generalContactForm" novalidate class="flex-grow-1 d-flex flex-column">
+                  <div class="mb-3">
+                    <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                  </div>
+                  <div class="mb-3">
+                    <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                  </div>
+                  <div class="mb-3 flex-grow-1">
+                    <textarea name="message" class="form-control h-100" style="min-height: 120px;" placeholder="How can we assist your printing project?" required></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-secondary w-100 py-2">Send Message</button>
+                </form>
+              </div>
             </div>
-          </div>
-
-          <!-- General Quick Contact Box -->
-          <div class="p-4 border rounded bg-white shadow-sm" style="background-color: var(--surface) !important;">
-            <h4 class="h5 fw-bold mb-2">Have a General Question?</h4>
-            <p class="text-muted small mb-3">Not ready for a formal quote? Send a quick message to our reception team.</p>
-
-            <form id="generalContactForm" novalidate>
-              <div class="mb-3">
-                <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-              </div>
-              <div class="mb-3">
-                <input type="email" name="email" class="form-control" placeholder="Your Email" required>
-              </div>
-              <div class="mb-3">
-                <textarea name="message" class="form-control" rows="3" placeholder="How can we assist your printing project?" required></textarea>
-              </div>
-              <button type="submit" class="btn btn-secondary w-100">Send Message</button>
-            </form>
           </div>
         </div>
       </div>
@@ -557,6 +563,7 @@
 <footer class="site-footer">
     <div class="container">
       <div class="row g-4">
+        <!-- Col 1: Brand -->
         <div class="col-lg-4 col-md-6">
           <div class="footer-brand">
             <a class="navbar-brand text-white" href="index.html">
@@ -742,38 +749,53 @@
         <span class="brand-text">FLEX<span class="brand-text-accent">ORA</span><span class="logo-dot">.</span></span>
       </a>
           </div>
-          <p class="footer-text">FLEXORA Industrial Flex & Banner Printing Shop. Precision wide-format flex printing, backlit displays, and nationwide dispatch.</p>
-          <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>840 Printworks Boulevard, Industrial Area Phase 2, New York, NY 10001</span></div>
-          <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><span>+1 (800) 555-FLEX</span></div>
+          <p class="footer-text">
+            FLEXORA is an industrial flex and banner printing shop engineered for high-volume commercial signage, hoardings, standees, and vinyl applications.
+          </p>
+        
+          <div class="footer-social-links mt-3">
+            <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
         </div>
+
+        <!-- Col 2: Quick Links -->
         <div class="col-lg-2 col-md-6 col-6">
           <h4 class="footer-title">Navigation</h4>
           <ul class="footer-links">
             <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Commercial Printing</a></li>
             <li><a href="home-2.html"><i class="fa-solid fa-angle-right"></i> Creative Showcase</a></li>
             <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> About Us</a></li>
-            <li><a href="products.html"><i class="fa-solid fa-angle-right"></i> Products</a></li>
-            <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> Services</a></li>
+            <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> Services</a></li><li><a href="products.html"><i class="fa-solid fa-angle-right"></i> Products</a></li>
+            
             <li><a href="rate-card.html"><i class="fa-solid fa-angle-right"></i> Rate Card</a></li>
             <li><a href="contact.html"><i class="fa-solid fa-angle-right"></i> Contact Us</a></li>
           </ul>
         </div>
+
+        <!-- Col 3: Product Types -->
         <div class="col-lg-3 col-md-6 col-6">
           <h4 class="footer-title">Top Products</h4>
           <ul class="footer-links">
-            <li><a href="product-details.html?id=flex-banner"><i class="fa-solid fa-angle-right"></i> Flex Banners</a></li>
-            <li><a href="product-details.html?id=backlit-banner"><i class="fa-solid fa-angle-right"></i> Backlit Flex</a></li>
-            <li><a href="product-details.html?id=rollup-standee"><i class="fa-solid fa-angle-right"></i> Roll-Up Standees</a></li>
-            <li><a href="product-details.html?id=vinyl-printing"><i class="fa-solid fa-angle-right"></i> Cast Vinyl</a></li>
-            <li><a href="product-details.html?id=sunboard-printing"><i class="fa-solid fa-angle-right"></i> Sunboard Sheets</a></li>
+            <li><a href="product-details.html?id=flex-banner"><i class="fa-solid fa-angle-right"></i> Frontlit Flex Banners</a></li>
+            <li><a href="product-details.html?id=backlit-banner"><i class="fa-solid fa-angle-right"></i> Backlit Translucent Flex</a></li>
+            <li><a href="product-details.html?id=rollup-standee"><i class="fa-solid fa-angle-right"></i> Roll-Up Pull Standees</a></li>
+            <li><a href="product-details.html?id=vinyl-printing"><i class="fa-solid fa-angle-right"></i> Self-Adhesive Vinyl</a></li>
+            <li><a href="product-details.html?id=oneway-vision"><i class="fa-solid fa-angle-right"></i> One Way Vision Films</a></li>
+            <li><a href="product-details.html?id=sunboard-printing"><i class="fa-solid fa-angle-right"></i> Sunboard Rigid Sheets</a></li>
+            <li><a href="product-details.html?id=vehicle-graphics"><i class="fa-solid fa-angle-right"></i> Fleet Vehicle Wraps</a></li>
           </ul>
         </div>
+
+        <!-- Col 4: Newsletter & Socials -->
         <div class="col-lg-3 col-md-6">
           <h4 class="footer-title">Print Bulletin</h4>
-          <p class="footer-text">Subscribe for monthly printing updates and wholesale trade rates.</p>
-          <form class="newsletter-form mb-3">
+          <p class="footer-text">Subscribe for monthly trade discounts, new substrate arrivals, and seasonal bulk rate drops.</p>
+          <form class="newsletter-form mb-3" novalidate>
             <div class="input-group">
-              <input type="email" class="form-control" placeholder="Email address..." required>
+              <input type="email" class="form-control" placeholder="Your business email..." required>
               <button class="btn btn-primary" type="submit"><i class="fa-solid fa-paper-plane"></i></button>
             </div>
           </form>
@@ -787,6 +809,7 @@
           </div>
         </div>
       </div>
+
       </div>
     <!-- Footer Bottom Bar -->
     <div class="footer-bottom">

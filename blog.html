@@ -223,8 +223,8 @@
               </ul>
             </li>
             <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-            <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
             <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
             <li class="nav-item"><a class="nav-link" href="rate-card.html">Rate Card</a></li>
             <li class="nav-item"><a class="nav-link" href="pricing.html">Packages</a></li>
             <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
@@ -295,26 +295,50 @@
     </div>
   </section>
 
-<!-- Featured Article Hero Banner -->
-  <section class="py-5">
+  <!-- Featured Article Hero Banner -->
+  <section class="py-4 py-md-5">
     <div class="container">
-      <div class="card border-0 rounded-4 overflow-hidden shadow-sm" style="background-color: var(--surface) !important; border: 1px solid var(--border-color) !important;">
-        <div class="row g-0 align-items-center">
-          <div class="col-lg-7">
-            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80" alt="Featured Article" class="img-fluid w-100" style="min-height: 380px; object-fit: cover;">
-          </div>
-          <div class="col-lg-5 p-4 p-md-5">
-            <span class="badge-tag mb-2">Featured Guide</span>
-            <div class="small text-muted mb-2"><i class="fa-regular fa-calendar me-1"></i> March 28, 2026 &bull; 8 min read</div>
-            <h2 class="h3 fw-bold mb-3">
-              <a href="blog-details.html" class="text-secondary text-decoration-none">
-                The Ultimate GSM & Weight Guide: Choosing The Right Flex Banner Material for Extreme Weather
+      <div class="card border-0 rounded-4 overflow-hidden shadow-sm featured-blog-card" id="featuredGuideCard">
+        <div class="row g-0 align-items-stretch">
+          <div class="col-lg-5 col-md-5">
+            <div class="featured-banner-img-wrap">
+              <a href="blog-details.html?post=gsm-weight-guide" class="d-block h-100 w-100" aria-label="Read Full Guide: The Ultimate GSM & Weight Guide">
+                <img src="assets/images/blog/ultimate-gsm-weight-guide-flex-banner.jpg" alt="The Ultimate GSM & Weight Guide: Choosing The Right Flex Banner Material for Extreme Weather" class="featured-banner-img" loading="eager">
               </a>
-            </h2>
-            <p class="text-muted mb-4">
-              Comparing 280 GSM, 340 GSM standard frontlit, and 440 GSM blackout flex. Learn how wind load shear forces and UV exposure determine banner longevity.
-            </p>
-            <a href="blog-details.html" class="btn btn-primary">Read Full Guide <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-7 col-md-7">
+            <div class="featured-guide-content">
+              <!-- Meta Row with Perfect Horizontal & Vertical Alignment -->
+              <div class="featured-guide-meta">
+                <span class="badge-tag badge-primary-tag">
+                  <i class="fa-solid fa-star"></i> Featured Guide
+                </span>
+                <span class="featured-guide-meta-item">
+                  <i class="fa-regular fa-calendar text-primary"></i> March 28, 2026
+                </span>
+                <span class="featured-guide-meta-item">
+                  <i class="fa-regular fa-clock text-primary"></i> 8 min read
+                </span>
+              </div>
+              
+              <h2 class="featured-guide-title">
+                <a href="blog-details.html?post=gsm-weight-guide">
+                  The Ultimate GSM &amp; Weight Guide: Choosing The Right Flex Banner Material for Extreme Weather
+                </a>
+              </h2>
+              
+              <p class="featured-guide-desc">
+                Comparing 280 GSM, 340 GSM standard frontlit, and 440 GSM blackout flex. Learn how wind load shear forces and UV exposure determine banner longevity.
+              </p>
+              
+              <div class="featured-guide-cta">
+                <a href="blog-details.html?post=gsm-weight-guide" class="btn btn-primary d-inline-flex align-items-center gap-2">
+                  <span>Read Full Guide</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -359,7 +383,9 @@
         <div class="col-lg-4 col-md-6 blog-list-item" data-category="tips">
           <div class="blog-card">
             <div class="blog-img-wrap">
-              <img src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809?auto=format&fit=crop&w=700&q=80" alt="Prepress Color Workflow" loading="lazy">
+              <a href="blog-details.html?post=prepress-color-checklist" class="blog-img-link d-block">
+                <img src="assets/images/blog/prepress-color-workflow-avoid-muddy-colors.png" alt="5 Crucial Prepress Checklist Items to Avoid Muddy Colors on Large Flex Prints" loading="lazy">
+              </a>
             </div>
             <div class="blog-card-body">
               <div class="blog-meta">
@@ -367,12 +393,12 @@
                 <span><i class="fa-regular fa-clock me-1"></i> 5 min</span>
               </div>
               <h3 class="blog-card-title">
-                <a href="blog-details.html">5 Crucial Prepress Checklist Items to Avoid Muddy Colors on Large Flex Prints</a>
+                <a href="blog-details.html?post=prepress-color-checklist">5 Crucial Prepress Checklist Items to Avoid Muddy Colors on Large Flex Prints</a>
               </h3>
               <p class="blog-excerpt">
                 Why converting RGB to CMYK color profiles, embedding vector fonts, and setting correct overprint limits prevents costly reprint surprises.
               </p>
-              <a href="blog-details.html" class="fw-bold small text-primary">Read More &rarr;</a>
+              <a href="blog-details.html?post=prepress-color-checklist" class="fw-bold small text-primary">Read More &rarr;</a>
             </div>
           </div>
         </div>
@@ -381,7 +407,9 @@
         <div class="col-lg-4 col-md-6 blog-list-item" data-category="design">
           <div class="blog-card">
             <div class="blog-img-wrap">
-              <img src="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=700&q=80" alt="Billboard Typography" loading="lazy">
+              <a href="blog-details.html?post=billboard-typography" class="blog-img-link d-block">
+                <img src="assets/images/blog/billboard-typography-highway-legibility.jpg" alt="Billboard Typography & Visual Hierarchy: The 3-Second Highway Legibility Rule" loading="lazy">
+              </a>
             </div>
             <div class="blog-card-body">
               <div class="blog-meta">
@@ -389,12 +417,12 @@
                 <span><i class="fa-regular fa-clock me-1"></i> 6 min</span>
               </div>
               <h3 class="blog-card-title">
-                <a href="blog-details.html">Billboard Typography & Visual Hierarchy: The 3-Second Highway Legibility Rule</a>
+                <a href="blog-details.html?post=billboard-typography">Billboard Typography & Visual Hierarchy: The 3-Second Highway Legibility Rule</a>
               </h3>
               <p class="blog-excerpt">
                 Drivers view highway hoardings for under 4 seconds. Discover the proven font weights, contrasting color pairings, and logo placements that maximize recall.
               </p>
-              <a href="blog-details.html" class="fw-bold small text-primary">Read More &rarr;</a>
+              <a href="blog-details.html?post=billboard-typography" class="fw-bold small text-primary">Read More &rarr;</a>
             </div>
           </div>
         </div>
@@ -403,7 +431,9 @@
         <div class="col-lg-4 col-md-6 blog-list-item" data-category="tech">
           <div class="blog-card">
             <div class="blog-img-wrap">
-              <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=700&q=80" alt="UV LED vs Eco-Solvent" loading="lazy">
+              <a href="blog-details.html?post=uv-vs-ecosolvent" class="blog-img-link d-block">
+                <img src="assets/images/blog/uv-curable-inks-vs-eco-solvent-chemistry.jpg" alt="UV Curable Inks vs Eco-Solvent Printing Chemistry" loading="lazy">
+              </a>
             </div>
             <div class="blog-card-body">
               <div class="blog-meta">
@@ -411,12 +441,12 @@
                 <span><i class="fa-regular fa-clock me-1"></i> 7 min</span>
               </div>
               <h3 class="blog-card-title">
-                <a href="blog-details.html">UV Curable Inks vs. Eco-Solvent: Which Chemistry Delivers Superior Outdoor Durability?</a>
+                <a href="blog-details.html?post=uv-vs-ecosolvent">UV Curable Inks vs. Eco-Solvent: Which Chemistry Delivers Superior Outdoor Durability?</a>
               </h3>
               <p class="blog-excerpt">
                 A scientific comparison of photoinitiator cross-linking in UV inks versus solvent resin adhesion on PVC flex substrates under harsh weather.
               </p>
-              <a href="blog-details.html" class="fw-bold small text-primary">Read More &rarr;</a>
+              <a href="blog-details.html?post=uv-vs-ecosolvent" class="fw-bold small text-primary">Read More &rarr;</a>
             </div>
           </div>
         </div>
@@ -425,7 +455,9 @@
         <div class="col-lg-4 col-md-6 blog-list-item" data-category="marketing">
           <div class="blog-card">
             <div class="blog-img-wrap">
-              <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=700&q=80" alt="Backlit Retail Signs" loading="lazy">
+              <a href="blog-details.html?post=illuminated-backlit-signs" class="blog-img-link d-block">
+                <img src="assets/images/blog/illuminated-backlit-signs-retail-footfall.jpg" alt="Why Illuminated Backlit Signs Drive 34% More Footfall in Evening Retail Districts" loading="lazy">
+              </a>
             </div>
             <div class="blog-card-body">
               <div class="blog-meta">
@@ -433,12 +465,12 @@
                 <span><i class="fa-regular fa-clock me-1"></i> 5 min</span>
               </div>
               <h3 class="blog-card-title">
-                <a href="blog-details.html">Why Illuminated Backlit Signs Drive 34% More Footfall in Evening Retail Districts</a>
+                <a href="blog-details.html?post=illuminated-backlit-signs">Why Illuminated Backlit Signs Drive 34% More Footfall in Evening Retail Districts</a>
               </h3>
               <p class="blog-excerpt">
                 Case study analyzing retail conversions after upgrading from standard frontlit flex to translucent LED backlit signboards across 12 branch locations.
               </p>
-              <a href="blog-details.html" class="fw-bold small text-primary">Read More &rarr;</a>
+              <a href="blog-details.html?post=illuminated-backlit-signs" class="fw-bold small text-primary">Read More &rarr;</a>
             </div>
           </div>
         </div>
@@ -447,7 +479,9 @@
         <div class="col-lg-4 col-md-6 blog-list-item" data-category="materials">
           <div class="blog-card">
             <div class="blog-img-wrap">
-              <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=700&q=80" alt="One Way Vision Window Film" loading="lazy">
+              <a href="blog-details.html?post=perforated-vinyl-guide" class="blog-img-link d-block">
+                <img src="assets/images/blog/perforated-vinyl-one-way-vision-film-guide.jpg" alt="Perforated Vinyl 101: 60/40 vs 70/30 One Way Vision Glass Films" loading="lazy">
+              </a>
             </div>
             <div class="blog-card-body">
               <div class="blog-meta">
@@ -455,12 +489,12 @@
                 <span><i class="fa-regular fa-clock me-1"></i> 6 min</span>
               </div>
               <h3 class="blog-card-title">
-                <a href="blog-details.html">Perforated Vinyl 101: Understanding 60/40 vs. 70/30 One Way Vision Glass Films</a>
+                <a href="blog-details.html?post=perforated-vinyl-guide">Perforated Vinyl 101: Understanding 60/40 vs. 70/30 One Way Vision Glass Films</a>
               </h3>
               <p class="blog-excerpt">
                 How hole ratio perforation influences daylight transmission, optical illusion clarity, and vehicle window safety compliance.
               </p>
-              <a href="blog-details.html" class="fw-bold small text-primary">Read More &rarr;</a>
+              <a href="blog-details.html?post=perforated-vinyl-guide" class="fw-bold small text-primary">Read More &rarr;</a>
             </div>
           </div>
         </div>
@@ -469,7 +503,9 @@
         <div class="col-lg-4 col-md-6 blog-list-item" data-category="marketing">
           <div class="blog-card">
             <div class="blog-img-wrap">
-              <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=700&q=80" alt="Vehicle Fleet Decals" loading="lazy">
+              <a href="blog-details.html?post=fleet-vehicle-wrapping" class="blog-img-link d-block">
+                <img src="assets/images/blog/commercial-vehicle-fleet-wrapping-cpm-impressions.jpg" alt="Commercial Vehicle Fleet Wrapping CPM Impressions" loading="lazy">
+              </a>
             </div>
             <div class="blog-card-body">
               <div class="blog-meta">
@@ -477,12 +513,12 @@
                 <span><i class="fa-regular fa-clock me-1"></i> 8 min</span>
               </div>
               <h3 class="blog-card-title">
-                <a href="blog-details.html">Commercial Vehicle Fleet Wrapping: Calculating True CPM Impressions vs. Digital Ads</a>
+                <a href="blog-details.html?post=fleet-vehicle-wrapping">Commercial Vehicle Fleet Wrapping: Calculating True CPM Impressions vs. Digital Ads</a>
               </h3>
               <p class="blog-excerpt">
                 Why a branded cargo van generates up to 70,000 daily visual impressions at a fraction of the cost of social pay-per-click advertising.
               </p>
-              <a href="blog-details.html" class="fw-bold small text-primary">Read More &rarr;</a>
+              <a href="blog-details.html?post=fleet-vehicle-wrapping" class="fw-bold small text-primary">Read More &rarr;</a>
             </div>
           </div>
         </div>
@@ -491,7 +527,9 @@
         <div class="col-lg-4 col-md-6 blog-list-item" data-category="tips">
           <div class="blog-card">
             <div class="blog-img-wrap">
-              <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=700&q=80" alt="RF Seam Welding" loading="lazy">
+              <a href="blog-details.html?post=rf-seam-welding" class="blog-img-link d-block">
+                <img src="assets/images/blog/rf-seam-welding-thermal-hemming-durability.jpg" alt="RF Seam Welding vs Thermal Hemming" loading="lazy">
+              </a>
             </div>
             <div class="blog-card-body">
               <div class="blog-meta">
@@ -499,12 +537,12 @@
                 <span><i class="fa-regular fa-clock me-1"></i> 5 min</span>
               </div>
               <h3 class="blog-card-title">
-                <a href="blog-details.html">RF Seam Welding vs. Thermal Hemming: Maximizing Tensile Wind Resistance</a>
+                <a href="blog-details.html?post=rf-seam-welding">RF Seam Welding vs. Thermal Hemming: Maximizing Tensile Wind Resistance</a>
               </h3>
               <p class="blog-excerpt">
                 Why radio-frequency molecular bonding prevents billboard tear-outs and banner pocket failures during high-gale storm conditions.
               </p>
-              <a href="blog-details.html" class="fw-bold small text-primary">Read More &rarr;</a>
+              <a href="blog-details.html?post=rf-seam-welding" class="fw-bold small text-primary">Read More &rarr;</a>
             </div>
           </div>
         </div>
@@ -513,7 +551,9 @@
         <div class="col-lg-4 col-md-6 blog-list-item" data-category="tech">
           <div class="blog-card">
             <div class="blog-img-wrap">
-              <img src="https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=700&q=80" alt="Piezo Printhead Calibration" loading="lazy">
+              <a href="blog-details.html?post=piezoelectric-printheads" class="blog-img-link d-block">
+                <img src="assets/images/blog/piezoelectric-printhead-micro-droplets.jpg" alt="Piezoelectric Printheads: Calibrating Variable Micro-Droplets" loading="lazy">
+              </a>
             </div>
             <div class="blog-card-body">
               <div class="blog-meta">
@@ -521,12 +561,12 @@
                 <span><i class="fa-regular fa-clock me-1"></i> 7 min</span>
               </div>
               <h3 class="blog-card-title">
-                <a href="blog-details.html">Piezoelectric Printheads: Calibrating Variable Micro-Droplets for Razor Sharpness</a>
+                <a href="blog-details.html?post=piezoelectric-printheads">Piezoelectric Printheads: Calibrating Variable Micro-Droplets for Razor Sharpness</a>
               </h3>
               <p class="blog-excerpt">
                 An engineering breakdown of greyscale piezo firing frequencies, nozzle clogging prevention, and color banding mitigation on superwide rolls.
               </p>
-              <a href="blog-details.html" class="fw-bold small text-primary">Read More &rarr;</a>
+              <a href="blog-details.html?post=piezoelectric-printheads" class="fw-bold small text-primary">Read More &rarr;</a>
             </div>
           </div>
         </div>
@@ -535,7 +575,9 @@
         <div class="col-lg-4 col-md-6 blog-list-item" data-category="materials">
           <div class="blog-card">
             <div class="blog-img-wrap">
-              <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=700&q=80" alt="Backlit Translucent Fabric" loading="lazy">
+              <a href="blog-details.html?post=backlit-vs-frontlit" class="blog-img-link d-block">
+                <img src="assets/images/blog/backlit-vs-frontlit-lightbox-substrates.jpg" alt="Backlit vs Frontlit Lightbox Substrates" loading="lazy">
+              </a>
             </div>
             <div class="blog-card-body">
               <div class="blog-meta">
@@ -543,12 +585,156 @@
                 <span><i class="fa-regular fa-clock me-1"></i> 6 min</span>
               </div>
               <h3 class="blog-card-title">
-                <a href="blog-details.html">Backlit vs. Frontlit Substrates: Selecting Opacity &amp; Yarn Density for Lightboxes</a>
+                <a href="blog-details.html?post=backlit-vs-frontlit">Backlit vs. Frontlit Substrates: Selecting Opacity &amp; Yarn Density for Lightboxes</a>
               </h3>
               <p class="blog-excerpt">
                 How light transmission ratios and diffusion coatings eliminate hotspotting while boosting color saturation in illuminated airport displays.
               </p>
-              <a href="blog-details.html" class="fw-bold small text-primary">Read More &rarr;</a>
+              <a href="blog-details.html?post=backlit-vs-frontlit" class="fw-bold small text-primary">Read More &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Post 10: Printing Tips (Item 3 for Tips) -->
+        <div class="col-lg-4 col-md-6 blog-list-item" data-category="tips">
+          <div class="blog-card">
+            <div class="blog-img-wrap">
+              <a href="blog-details.html?post=eyelet-spacing-hemming" class="blog-img-link d-block">
+                <img src="assets/images/blog/optimal-eyelet-spacing-reinforcement-hemming.jpg" alt="Optimal Eyelet Spacing & Reinforcement Hemming: Preventing Wind Shear Tear-Outs" loading="lazy">
+              </a>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-meta">
+                <span><i class="fa-regular fa-folder me-1 text-primary"></i> Printing Tips</span>
+                <span><i class="fa-regular fa-clock me-1"></i> 5 min</span>
+              </div>
+              <h3 class="blog-card-title">
+                <a href="blog-details.html?post=eyelet-spacing-hemming">Optimal Eyelet Spacing & Reinforcement Hemming: Preventing Wind Shear Tear-Outs</a>
+              </h3>
+              <p class="blog-excerpt">
+                Master structural wind loading calculations: why 18-inch brass eyelet intervals with dual-pass thermal welding double banner storm durability.
+              </p>
+              <a href="blog-details.html?post=eyelet-spacing-hemming" class="fw-bold small text-primary">Read More &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Post 11: Banner Design (Item 2 for Design) -->
+        <div class="col-lg-4 col-md-6 blog-list-item" data-category="design">
+          <div class="blog-card">
+            <div class="blog-img-wrap">
+              <a href="blog-details.html?post=high-contrast-cmyk" class="blog-img-link d-block">
+                <img src="assets/images/blog/high-contrast-cmyk-palettes-daylight-glare.jpg" alt="High-Contrast CMYK Palettes: Designing Banners That Cut Through Daylight Glare" loading="lazy">
+              </a>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-meta">
+                <span><i class="fa-regular fa-folder me-1 text-primary"></i> Banner Design</span>
+                <span><i class="fa-regular fa-clock me-1"></i> 4 min</span>
+              </div>
+              <h3 class="blog-card-title">
+                <a href="blog-details.html?post=high-contrast-cmyk">High-Contrast CMYK Palettes: Designing Banners That Cut Through Daylight Glare</a>
+              </h3>
+              <p class="blog-excerpt">
+                Why neon yellow-on-navy and rich black-on-warm amber outperform subtle pastels on highway hoardings by over 300% in distance readability.
+              </p>
+              <a href="blog-details.html?post=high-contrast-cmyk" class="fw-bold small text-primary">Read More &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Post 12: Banner Design (Item 3 for Design) -->
+        <div class="col-lg-4 col-md-6 blog-list-item" data-category="design">
+          <div class="blog-card">
+            <div class="blog-img-wrap">
+              <a href="blog-details.html?post=raster-vs-vector" class="blog-img-link d-block">
+                <img src="assets/images/blog/raster-vs-vector-scaling-billboard-dpi.jpg" alt="Raster vs Vector Scaling: Preparing 150 DPI Full-Scale Files for Billboards" loading="lazy">
+              </a>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-meta">
+                <span><i class="fa-regular fa-folder me-1 text-primary"></i> Banner Design</span>
+                <span><i class="fa-regular fa-clock me-1"></i> 6 min</span>
+              </div>
+              <h3 class="blog-card-title">
+                <a href="blog-details.html?post=raster-vs-vector">Raster vs. Vector Scaling: Preparing 150 DPI Full-Scale Files for 60-Foot Billboards</a>
+              </h3>
+              <p class="blog-excerpt">
+                Demystifying effective viewing distance: why 100-150 DPI at 100% scale yields razor clarity from 20 feet away while keeping RIP files lightweight.
+              </p>
+              <a href="blog-details.html?post=raster-vs-vector" class="fw-bold small text-primary">Read More &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Post 13: Printing Technology (Item 3 for Tech) -->
+        <div class="col-lg-4 col-md-6 blog-list-item" data-category="tech">
+          <div class="blog-card">
+            <div class="blog-img-wrap">
+              <a href="blog-details.html?post=flatbed-vs-rolltoroll" class="blog-img-link d-block">
+                <img src="assets/images/blog/flatbed-uv-vs-dedicated-roll-to-roll-press.jpg" alt="Flatbed UV vs Dedicated Roll to Roll Press Architecture" loading="lazy">
+              </a>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-meta">
+                <span><i class="fa-regular fa-folder me-1 text-primary"></i> Printing Technology</span>
+                <span><i class="fa-regular fa-clock me-1"></i> 7 min</span>
+              </div>
+              <h3 class="blog-card-title">
+                <a href="blog-details.html?post=flatbed-vs-rolltoroll">Flatbed UV vs. Dedicated Roll-to-Roll: Choosing The Ideal Press Architecture</a>
+              </h3>
+              <p class="blog-excerpt">
+                A comparative deep dive into vacuum bed suction, tension feeding, and instant LED-curing mechanisms across rigid versus flexible substrates.
+              </p>
+              <a href="blog-details.html?post=flatbed-vs-rolltoroll" class="fw-bold small text-primary">Read More &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Post 14: Advertising (Item 3 for Marketing) -->
+        <div class="col-lg-4 col-md-6 blog-list-item" data-category="marketing">
+          <div class="blog-card">
+            <div class="blog-img-wrap">
+              <a href="blog-details.html?post=pos-retractable-standees" class="blog-img-link d-block">
+                <img src="assets/images/blog/pos-retractable-standees-retail-mall.jpg" alt="Point-of-Sale Retractable Standees Driving Foot Traffic in Malls" loading="lazy">
+              </a>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-meta">
+                <span><i class="fa-regular fa-folder me-1 text-primary"></i> Advertising</span>
+                <span><i class="fa-regular fa-clock me-1"></i> 5 min</span>
+              </div>
+              <h3 class="blog-card-title">
+                <a href="blog-details.html?post=pos-retractable-standees">Point-of-Sale Retractable Standees: Driving Foot Traffic Inside High-Density Malls</a>
+              </h3>
+              <p class="blog-excerpt">
+                How placing dual-sided anodized aluminum standees at optical entrance angles boosts retail promotional coupon engagement by up to 42%.
+              </p>
+              <a href="blog-details.html?post=pos-retractable-standees" class="fw-bold small text-primary">Read More &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Post 15: Material Guides (Item 3 for Materials) -->
+        <div class="col-lg-4 col-md-6 blog-list-item" data-category="materials">
+          <div class="blog-card">
+            <div class="blog-img-wrap">
+              <a href="blog-details.html?post=rigid-sunboard-vs-corrugated" class="blog-img-link d-block">
+                <img src="assets/images/blog/rigid-sunboard-vs-corrugated-flute-boards.jpg" alt="Rigid Sunboard PVC Foam vs Corrugated Flute Boards" loading="lazy">
+              </a>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-meta">
+                <span><i class="fa-regular fa-folder me-1 text-primary"></i> Material Guides</span>
+                <span><i class="fa-regular fa-clock me-1"></i> 6 min</span>
+              </div>
+              <h3 class="blog-card-title">
+                <a href="blog-details.html?post=rigid-sunboard-vs-corrugated">Rigid Sunboard PVC Foam vs. Corrugated Flute: Structural Comparison for Exhibits</a>
+              </h3>
+              <p class="blog-excerpt">
+                Selecting between 3mm closed-cell rigid expanded foam and fluted polypropylene sheets for temporary indoor trade booths versus semi-permanent displays.
+              </p>
+              <a href="blog-details.html?post=rigid-sunboard-vs-corrugated" class="fw-bold small text-primary">Read More &rarr;</a>
             </div>
           </div>
         </div>
@@ -620,6 +806,7 @@
 <footer class="site-footer">
     <div class="container">
       <div class="row g-4">
+        <!-- Col 1: Brand -->
         <div class="col-lg-4 col-md-6">
           <div class="footer-brand">
             <a class="navbar-brand text-white" href="index.html">
@@ -805,38 +992,53 @@
         <span class="brand-text">FLEX<span class="brand-text-accent">ORA</span><span class="logo-dot">.</span></span>
       </a>
           </div>
-          <p class="footer-text">FLEXORA Industrial Flex & Banner Printing Shop. Precision wide-format flex printing, backlit displays, and nationwide dispatch.</p>
-          <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>840 Printworks Boulevard, Industrial Area Phase 2, New York, NY 10001</span></div>
-          <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><span>+1 (800) 555-FLEX</span></div>
+          <p class="footer-text">
+            FLEXORA is an industrial flex and banner printing shop engineered for high-volume commercial signage, hoardings, standees, and vinyl applications.
+          </p>
+        
+          <div class="footer-social-links mt-3">
+            <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
         </div>
+
+        <!-- Col 2: Quick Links -->
         <div class="col-lg-2 col-md-6 col-6">
           <h4 class="footer-title">Navigation</h4>
           <ul class="footer-links">
             <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Commercial Printing</a></li>
             <li><a href="home-2.html"><i class="fa-solid fa-angle-right"></i> Creative Showcase</a></li>
             <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> About Us</a></li>
-            <li><a href="products.html"><i class="fa-solid fa-angle-right"></i> Products</a></li>
-            <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> Services</a></li>
+            <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> Services</a></li><li><a href="products.html"><i class="fa-solid fa-angle-right"></i> Products</a></li>
+            
             <li><a href="rate-card.html"><i class="fa-solid fa-angle-right"></i> Rate Card</a></li>
             <li><a href="contact.html"><i class="fa-solid fa-angle-right"></i> Contact Us</a></li>
           </ul>
         </div>
+
+        <!-- Col 3: Product Types -->
         <div class="col-lg-3 col-md-6 col-6">
-          <h4 class="footer-title">Categories</h4>
+          <h4 class="footer-title">Top Products</h4>
           <ul class="footer-links">
-            <li><a href="blog.html"><i class="fa-solid fa-angle-right"></i> Printing Tips</a></li>
-            <li><a href="blog.html"><i class="fa-solid fa-angle-right"></i> Banner Design</a></li>
-            <li><a href="blog.html"><i class="fa-solid fa-angle-right"></i> Printing Technology</a></li>
-            <li><a href="blog.html"><i class="fa-solid fa-angle-right"></i> Business Advertising</a></li>
-            <li><a href="blog.html"><i class="fa-solid fa-angle-right"></i> Material Guides</a></li>
+            <li><a href="product-details.html?id=flex-banner"><i class="fa-solid fa-angle-right"></i> Frontlit Flex Banners</a></li>
+            <li><a href="product-details.html?id=backlit-banner"><i class="fa-solid fa-angle-right"></i> Backlit Translucent Flex</a></li>
+            <li><a href="product-details.html?id=rollup-standee"><i class="fa-solid fa-angle-right"></i> Roll-Up Pull Standees</a></li>
+            <li><a href="product-details.html?id=vinyl-printing"><i class="fa-solid fa-angle-right"></i> Self-Adhesive Vinyl</a></li>
+            <li><a href="product-details.html?id=oneway-vision"><i class="fa-solid fa-angle-right"></i> One Way Vision Films</a></li>
+            <li><a href="product-details.html?id=sunboard-printing"><i class="fa-solid fa-angle-right"></i> Sunboard Rigid Sheets</a></li>
+            <li><a href="product-details.html?id=vehicle-graphics"><i class="fa-solid fa-angle-right"></i> Fleet Vehicle Wraps</a></li>
           </ul>
         </div>
+
+        <!-- Col 4: Newsletter & Socials -->
         <div class="col-lg-3 col-md-6">
           <h4 class="footer-title">Print Bulletin</h4>
-          <p class="footer-text">Subscribe for monthly printing updates and wholesale trade rates.</p>
-          <form class="newsletter-form mb-3">
+          <p class="footer-text">Subscribe for monthly trade discounts, new substrate arrivals, and seasonal bulk rate drops.</p>
+          <form class="newsletter-form mb-3" novalidate>
             <div class="input-group">
-              <input type="email" class="form-control" placeholder="Email address..." required>
+              <input type="email" class="form-control" placeholder="Your business email..." required>
               <button class="btn btn-primary" type="submit"><i class="fa-solid fa-paper-plane"></i></button>
             </div>
           </form>
@@ -850,6 +1052,7 @@
           </div>
         </div>
       </div>
+
       </div>
     <!-- Footer Bottom Bar -->
     <div class="footer-bottom">
@@ -863,5 +1066,6 @@
   <script src="assets/js/theme.js"></script>
   <script src="assets/js/forms.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/blog.js"></script>
 </body>
 </html>

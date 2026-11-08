@@ -14,6 +14,37 @@
   <link rel="stylesheet" href="assets/css/dark-mode.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
   <link rel="stylesheet" href="assets/css/rtl.css">
+  <style>
+    /* Direct dark mode pill badge and alignment styling */
+    [data-theme="dark"] .pill-badge-lavender,
+    [data-theme="dark"] #serviceGradesBadge,
+    [data-theme="dark"] #serviceCalibratedBadge {
+      background: rgba(139, 92, 246, 0.32) !important;
+      color: #FFFFFF !important;
+      border: 1px solid rgba(192, 132, 252, 0.6) !important;
+      box-shadow: 0 0 16px rgba(139, 92, 246, 0.4) !important;
+      font-weight: 700 !important;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
+    }
+    .specs-intro-bar {
+      background: rgba(124, 58, 237, 0.06);
+      border: 1px dashed rgba(124, 58, 237, 0.28);
+      color: var(--secondary);
+    }
+    [data-theme="dark"] .specs-intro-bar {
+      background: rgba(139, 92, 246, 0.14) !important;
+      border-color: rgba(192, 132, 252, 0.35) !important;
+      color: #DDD6FE !important;
+    }
+    .card-meta-footer {
+      border-color: rgba(139, 92, 246, 0.18) !important;
+      font-size: 0.8rem;
+    }
+    [data-theme="dark"] .card-meta-footer {
+      border-color: rgba(139, 92, 246, 0.25) !important;
+      color: #94A3B8 !important;
+    }
+  </style>
 </head>
 <body>
 
@@ -219,8 +250,8 @@
               </ul>
             </li>
             <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-            <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
             <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
             <li class="nav-item"><a class="nav-link" href="rate-card.html">Rate Card</a></li>
             <li class="nav-item"><a class="nav-link" href="pricing.html">Packages</a></li>
             <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
@@ -263,21 +294,21 @@
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html"><i class="fa-solid fa-house me-1"></i> Home</a></li>
           <li class="breadcrumb-item"><a href="services.html">Services</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Large Format Printing</li>
+          <li class="breadcrumb-item active" aria-current="page" id="serviceBreadcrumb">Large Format Printing</li>
         </ol>
       </nav>
       <div class="d-flex justify-content-center mb-2">
         <span class="badge-tag d-inline-flex align-items-center gap-2">
-          <i class="fa-solid fa-gears text-accent"></i> Industrial Press Specifications
+          <i class="fa-solid fa-gears text-accent"></i> <span id="serviceBadgeTag">Industrial Press Specifications</span>
         </span>
       </div>
-      <h1 class="page-title">
+      <h1 class="page-title" id="servicePageTitle">
         Large Format <span class="highlight">Printing Services</span>
       </h1>
-      <p class="page-desc mx-auto">
+      <p class="page-desc mx-auto" id="servicePageDesc">
         Continuous industrial roll production up to 5.0 meters width with high-speed Japanese piezo printheads, RF seam welding, and weatherproof curing.
       </p>
-      <div class="page-meta-row justify-content-center">
+      <div class="page-meta-row justify-content-center" id="serviceMetaChips">
         <span class="page-meta-item"><i class="fa-solid fa-circle-check text-success"></i> 1440 DPI Japanese Engines</span>
         <span class="page-meta-item"><i class="fa-solid fa-bolt text-accent"></i> RF Seam Welding</span>
         <span class="page-meta-item"><i class="fa-solid fa-certificate text-primary"></i> Pantone Color Proofing</span>
@@ -291,22 +322,26 @@
     <div class="container py-3">
       <div class="row g-5 align-items-center">
         <div class="col-lg-6">
-          <span class="badge-tag mb-2">Industrial Service Showcase</span>
-          <h1 class="display-6 fw-bold mb-3">Large Format Billboard & Hoarding Printing</h1>
-          <p class="lead text-muted">
-            Engineered for massive outdoor visual dominance. Our superwide 3.2m and 5.0m continuous roll printing presses produce photorealistic highway hoardings, building wraps, and stadium mesh banners.
-          </p>
-          <div class="d-flex flex-wrap gap-3 mt-4">
-            <a href="contact.html?service=large-format" class="btn btn-primary btn-lg">
-              <i class="fa-solid fa-file-invoice"></i> Get Service Quote
-            </a>
-            <a href="rate-card.html" class="btn btn-secondary btn-lg">
-              <i class="fa-solid fa-calculator"></i> Calculate Pricing
-            </a>
+          <div class="service-hero-content-wrap">
+            <span class="badge-tag mb-2" id="serviceHeroBadge">Mega Scale Hoardings Division</span>
+            <h1 class="display-6 fw-bold mb-3" id="serviceHeroTitle">Superwide Building Wraps &amp; Highway Hoarding Graphics</h1>
+            <p class="lead text-muted mb-4" id="serviceHeroDesc">
+              Engineered for massive outdoor visual dominance. Our superwide 3.2m and 5.0m continuous roll printing presses produce photorealistic highway hoardings, building wraps, and stadium mesh banners with exceptional color density and structural integrity.
+            </p>
+            <div class="service-detail-actions d-flex flex-wrap gap-3">
+              <a href="contact.html?service=large-format" id="serviceQuoteBtn" class="btn btn-primary btn-lg">
+                <i class="fa-solid fa-file-invoice"></i> Get Service Quote
+              </a>
+              <a href="rate-card.html" class="btn btn-secondary btn-lg">
+                <i class="fa-solid fa-calculator"></i> Calculate Pricing
+              </a>
+            </div>
           </div>
         </div>
         <div class="col-lg-6">
-          <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80" alt="Large Format Printing Press" class="img-fluid rounded-4 shadow-sm">
+          <div class="service-hero-img-wrapper">
+            <img src="assets/images/services/superwide-building-wraps-highway-hoarding.jpg" id="serviceHeroImg" alt="Superwide Building Wraps &amp; Highway Hoarding Graphics" class="img-fluid rounded-4 shadow-sm">
+          </div>
         </div>
       </div>
     </div>
@@ -318,10 +353,10 @@
       <div class="section-header text-center">
         <span class="section-subtitle">Core Advantages</span>
         <h2 class="section-title">Features &amp; Engineering Benefits</h2>
-        <p class="section-desc">Why national billboard contractors and agencies partner with FLEXORA for their large-format executions.</p>
+        <p class="section-desc" id="serviceFeaturesDesc">Why national billboard contractors and agencies partner with FLEXORA for their large-format executions.</p>
       </div>
 
-      <div class="row g-4 align-items-stretch">
+      <div class="row g-4 align-items-stretch" id="serviceFeaturesRow">
         <div class="col-md-4">
           <div class="feature-benefit-card">
             <div class="feature-benefit-icon">
@@ -359,7 +394,7 @@
       <div class="section-header text-center mb-5">
         <span class="section-subtitle">Substrates &amp; Media</span>
         <h2 class="section-title">Available Printing Materials &amp; Technical Specs</h2>
-        <p class="section-desc">We stock an extensive inventory of certified flex substrates ready for instant machine loading and precision finishing.</p>
+        <p class="section-desc" id="serviceMaterialsDesc">We stock an extensive inventory of certified flex substrates ready for instant machine loading and precision finishing.</p>
       </div>
 
       <div class="row g-4 align-items-stretch">
@@ -370,38 +405,44 @@
               <h4 class="h5 fw-bold mb-0 d-flex align-items-center gap-2">
                 <i class="fa-solid fa-boxes-stacked text-primary"></i> Substrate Inventory &amp; Rates
               </h4>
-              <span class="badge rounded-pill px-3 py-2" style="background: rgba(124, 58, 237, 0.1); color: #7C3AED; font-weight: 700; font-size: 0.78rem;">4 Certified Grades</span>
+              <span class="badge rounded-pill px-3 py-2 pill-badge-lavender" id="serviceGradesBadge">4 Certified Grades</span>
             </div>
             
-            <div class="materials-list-wrapper flex-grow-1 d-flex flex-column justify-content-between">
-              <div class="material-item-row p-3 rounded-3 mb-2 d-flex justify-content-between align-items-center">
+            <div class="materials-list-wrapper flex-grow-1 d-flex flex-column gap-2" id="serviceMaterialsList">
+              <div class="material-item-row p-3 rounded-3 d-flex justify-content-between align-items-center">
                 <div class="pe-3">
-                  <div class="fw-bold material-title">340 GSM Frontlit Flex</div>
-                  <div class="small text-muted">Standard economy for short-to-medium duration outdoor campaigns.</div>
+                  <div class="fw-bold material-title">340 GSM Economy Frontlit Flex</div>
+                  <div class="small text-muted">Standard outdoor media for short-to-medium duration retail sales and trade announcements.</div>
                 </div>
                 <span class="price-chip">From $1.20 / sq.ft</span>
               </div>
-              <div class="material-item-row p-3 rounded-3 mb-2 d-flex justify-content-between align-items-center">
+              <div class="material-item-row p-3 rounded-3 d-flex justify-content-between align-items-center">
                 <div class="pe-3">
-                  <div class="fw-bold material-title">440 GSM Blackout Flex</div>
-                  <div class="small text-muted">Internal black core preventing rear sunlight show-through on double-sided hoardings.</div>
+                  <div class="fw-bold material-title">440 GSM Heavy Blackout Flex</div>
+                  <div class="small text-muted">Dense blackout core preventing rear sunlight show-through on double-sided highway billboards.</div>
                 </div>
                 <span class="price-chip">From $1.75 / sq.ft</span>
               </div>
-              <div class="material-item-row p-3 rounded-3 mb-2 d-flex justify-content-between align-items-center">
+              <div class="material-item-row p-3 rounded-3 d-flex justify-content-between align-items-center">
                 <div class="pe-3">
-                  <div class="fw-bold material-title">510 GSM Star Flex (Heavy Duty)</div>
-                  <div class="small text-muted">Ultra-dense smooth surface producing vibrant photographic color saturation.</div>
+                  <div class="fw-bold material-title">510 GSM Star Heavy-Duty Flex</div>
+                  <div class="small text-muted">Ultra-smooth micro-finish producing vibrant photographic color saturation and deep blacks.</div>
                 </div>
                 <span class="price-chip">From $2.10 / sq.ft</span>
               </div>
               <div class="material-item-row p-3 rounded-3 d-flex justify-content-between align-items-center">
                 <div class="pe-3">
-                  <div class="fw-bold material-title">280 GSM Air Mesh Fabric</div>
-                  <div class="small text-muted">37% airflow micro-perforations ideal for high-altitude building scaffold wraps.</div>
+                  <div class="fw-bold material-title">280 GSM Airflow Perforated Mesh</div>
+                  <div class="small text-muted">37% aerodynamic airflow micro-perforations ideal for high-altitude rooftop hoardings.</div>
                 </div>
-                <span class="price-chip">From $2.30 / sq.ft</span>
+                <span class="price-chip">From $2.40 / sq.ft</span>
               </div>
+            </div>
+
+            <!-- Left Card Footer Guarantee -->
+            <div class="card-meta-footer mt-auto pt-3 border-top d-flex justify-content-between align-items-center small text-muted">
+              <span><i class="fa-solid fa-shield-halved text-success me-1"></i> 100% Substrate Quality Guarantee</span>
+              <span class="fw-semibold text-primary">Volume Discounts Available</span>
             </div>
           </div>
         </div>
@@ -413,37 +454,61 @@
               <h4 class="h5 fw-bold mb-0 d-flex align-items-center gap-2">
                 <i class="fa-solid fa-sliders text-primary"></i> Technical Specifications Table
               </h4>
-              <span class="badge rounded-pill px-3 py-2" style="background: rgba(124, 58, 237, 0.1); color: #7C3AED; font-weight: 700; font-size: 0.78rem;">Factory Calibrated</span>
+              <span class="badge rounded-pill px-3 py-2 pill-badge-lavender" id="serviceCalibratedBadge">Factory Calibrated</span>
             </div>
-            <div class="table-responsive flex-grow-1 d-flex flex-column justify-content-center">
+
+            <!-- Top Quality & Calibration Bar (Eliminates empty gap) -->
+            <div class="specs-intro-bar d-flex align-items-center justify-content-between p-2 px-3 rounded-3 mb-3">
+              <span class="small fw-semibold d-flex align-items-center gap-2">
+                <i class="fa-solid fa-circle-check text-success"></i> ISO 9001 &amp; Pantone Color Validated
+              </span>
+              <span class="small text-muted d-none d-sm-inline">Daily Press Room QA Check</span>
+            </div>
+
+            <!-- Table Container (Natural flow with flex-grow-1) -->
+            <div class="table-responsive flex-grow-1">
               <table class="table table-bordered mb-0 specs-custom-table">
-                <tbody>
+                <tbody id="serviceSpecsTbody">
                   <tr>
                     <th class="spec-label-col">Maximum Print Width</th>
-                    <td class="spec-value-col">5.0 Meters (16.4 ft) seamless, infinite length</td>
+                    <td class="spec-value-col">10.5 Feet (3.2m) seamless, custom length up to 164 ft</td>
                   </tr>
                   <tr>
-                    <th class="spec-label-col">Resolution Options</th>
-                    <td class="spec-value-col">720 DPI (High Speed) / 1440 DPI (Ultra Fine)</td>
+                    <th class="spec-label-col">Print Resolution</th>
+                    <td class="spec-value-col">720 DPI (High Speed) / 1440 DPI (Ultra Fine Photo)</td>
                   </tr>
                   <tr>
                     <th class="spec-label-col">Ink System</th>
-                    <td class="spec-value-col">Japanese Eco-Solvent &amp; Industrial UV LED Curable</td>
+                    <td class="spec-value-col">Japanese Eco-Solvent &amp; Industrial UV-LED Curable</td>
                   </tr>
                   <tr>
-                    <th class="spec-label-col">Grommet Spacing</th>
-                    <td class="spec-value-col">Standard 1.5 ft or 2 ft center-to-center</td>
+                    <th class="spec-label-col">Wind Resistance</th>
+                    <td class="spec-value-col">Engineered to withstand up to 80 MPH sustained storm crosswinds</td>
                   </tr>
                   <tr>
-                    <th class="spec-label-col">Flame Retardancy</th>
-                    <td class="spec-value-col">NFPA 701, DIN 4102 B1 Certified</td>
+                    <th class="spec-label-col">Tensile Strength</th>
+                    <td class="spec-value-col">1,450 N / 5cm (500D x 500D high-tenacity polyester scrim)</td>
+                  </tr>
+                  <tr>
+                    <th class="spec-label-col">Perimeter Finishing</th>
+                    <td class="spec-value-col">1.5-inch continuous RF molecular heat-welded hems</td>
+                  </tr>
+                  <tr>
+                    <th class="spec-label-col">Grommet Configuration</th>
+                    <td class="spec-value-col">Rust-proof solid brass eyelets stamped every 2 ft</td>
                   </tr>
                   <tr>
                     <th class="spec-label-col">Standard Lead Time</th>
-                    <td class="spec-value-col">24-48 Hours / Express Same Day Dispatch</td>
+                    <td class="spec-value-col">24–48 Hours / Express Same Day Dispatch</td>
                   </tr>
                 </tbody>
               </table>
+            </div>
+
+            <!-- Right Card Footer Calibration Status -->
+            <div class="card-meta-footer mt-auto pt-3 border-top d-flex justify-content-between align-items-center small text-muted">
+              <span><i class="fa-solid fa-microchip text-accent me-1"></i> Japanese Piezo Print Engines</span>
+              <span class="fw-semibold text-success">Passed 10-Point QA Calibration</span>
             </div>
           </div>
         </div>
@@ -456,12 +521,12 @@
     <div class="container py-3">
       <div class="section-header text-center">
         <span class="section-subtitle">Common Questions</span>
-        <h2 class="section-title">Large Format Service FAQ</h2>
+        <h2 class="section-title" id="serviceFaqTitle">Large Format Service FAQ</h2>
       </div>
 
       <div class="row justify-content-center">
         <div class="col-lg-8">
-          <div class="accordion" id="serviceDetailsFaq">
+          <div class="accordion" id="serviceFaqAccordion">
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#servFaq1">
@@ -797,8 +862,8 @@
             <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Commercial Printing</a></li>
             <li><a href="home-2.html"><i class="fa-solid fa-angle-right"></i> Creative Showcase</a></li>
             <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> About Us</a></li>
-            <li><a href="products.html"><i class="fa-solid fa-angle-right"></i> Products</a></li>
-            <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> Services</a></li>
+            <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> Services</a></li><li><a href="products.html"><i class="fa-solid fa-angle-right"></i> Products</a></li>
+            
             <li><a href="rate-card.html"><i class="fa-solid fa-angle-right"></i> Rate Card</a></li>
             <li><a href="contact.html"><i class="fa-solid fa-angle-right"></i> Contact Us</a></li>
           </ul>
@@ -822,7 +887,7 @@
         <div class="col-lg-3 col-md-6">
           <h4 class="footer-title">Print Bulletin</h4>
           <p class="footer-text">Subscribe for monthly trade discounts, new substrate arrivals, and seasonal bulk rate drops.</p>
-          <form class="newsletter-form mb-3">
+          <form class="newsletter-form mb-3" novalidate>
             <div class="input-group">
               <input type="email" class="form-control" placeholder="Your business email..." required>
               <button class="btn btn-primary" type="submit"><i class="fa-solid fa-paper-plane"></i></button>
@@ -851,6 +916,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/theme.js"></script>
   <script src="assets/js/forms.js"></script>
+  <script src="assets/js/services.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>

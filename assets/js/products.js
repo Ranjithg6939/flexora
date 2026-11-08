@@ -19,12 +19,12 @@
       description: 'Heavy-duty 340 GSM flex banner printed with vibrant Eco-Solvent inks. Weatherproof and ideal for hoardings and outdoor branding.',
       sizes: 'Custom up to 10ft width',
       price: '$1.20 / sq.ft',
-      image: 'https://images.unsplash.com/photo-1513757378314-e46255f6ed16?auto=format&fit=crop&w=1000&q=80',
+      image: 'assets/images/products/standard-flex-banner-printing.jpg',
       gallery: [
-        'https://images.unsplash.com/photo-1513757378314-e46255f6ed16?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=600&q=80'
+        'assets/images/products/standard-flex-banner-printing.jpg',
+        'assets/images/services/high-definition-flex-banner.jpg',
+        'assets/images/commercial printing hero/highway-hoarding-flex.jpg',
+        'assets/images/services/large-format-billboard.jpg'
       ],
       material: '340 GSM Premium Flex',
       specs: 'UV Resistant, Tear Resistant, High Durability',
@@ -77,63 +77,63 @@
     {
       id: 'frontlit-banner',
       category: 'flex-banner',
-      categoryName: 'Flex & Outdoor Banners',
-      name: 'High-Resolution Frontlit Banner',
-      description: 'Engineered specifically for front-illuminated billboards and wall mounts. Smooth matte finish delivers crystal-clear legibility.',
-      sizes: '8x4 ft, 10x6 ft, Custom',
-      price: '$1.35 / sq.ft',
-      image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1000&q=80',
+      categoryName: 'Flex & Indoor Banners',
+      name: 'Ultra-Smooth Indoor Banners & Retail Hanging Displays',
+      description: 'Designed specifically for close-up consumer scrutiny in luxury malls, automotive showrooms, and corporate headquarters. Printed with certified odorless water-based latex and micro-piezo inks on composite anti-curl PET film for dead-flat hanging presentation.',
+      sizes: '2x4 ft, 3x6 ft, 4x8 ft, Custom up to 60" width',
+      price: '$2.80 / sq.ft',
+      image: 'assets/images/products/ultra-smooth-indoor-hanging-banners.jpg',
       gallery: [
-        'https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1513757378314-e46255f6ed16?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1520375412562-eab222cb8d43?auto=format&fit=crop&w=600&q=80'
+        'assets/images/products/ultra-smooth-indoor-hanging-banners.jpg',
+        'assets/images/products/high-resolution-frontlit-banner.jpg',
+        'assets/images/services/high-definition-flex-banner.jpg',
+        'assets/images/products/standard-flex-banner-printing.jpg'
       ],
-      material: '440 GSM Frontlit Vinyl Fabric',
-      specs: 'Flame Retardant, Matte / Gloss Finish',
-      turnaround: '24–48 Hours',
+      material: 'Anti-Curl Composite PET / Ultra-Smooth Matte Film',
+      specs: 'Zero Curl Memory, GREENGUARD Gold Certified, B1 Fire-Rated',
+      turnaround: 'Same-Day / 24–48 Hours',
       techSpecs: {
-        weight: '440 GSM heavy-grade frontlit substrate',
-        base: 'High-tenacity 1000D x 1000D polyester woven fabric',
-        ink: 'Japanese UV-LED Curable Inks with Micro-Droplet Technology',
-        tensile: 'Warp 1800 N/5cm / Weft 1500 N/5cm (Industrial Rigging)',
-        temp: '-30°C to +80°C (-22°F to 176°F)'
+        weight: '320–420 GSM multi-layer anti-curl blockout composite',
+        base: 'Bi-axially oriented PET film with dead-flat stay-flat memory',
+        ink: 'Certified Odorless Water-Based Latex & 1200 DPI Micro-Piezo',
+        tensile: 'Warp 950 N/5cm / Weft 900 N/5cm (Zero Edge Curl)',
+        temp: '-10°C to +65°C (14°F to 149°F) Climate Controlled'
       },
       applications: [
-        'Illuminated Commercial Outdoor Billboards',
-        'Architectural Building Facade Murals',
-        'Sports Stadium Perimeter Advertising Banners',
-        'High-End Commercial Real Estate Signage'
+        'Luxury Retail Mall Atrium Hanging Banners',
+        'Department Store Seasonal Promotion & Sale Drops',
+        'Automobile Showroom Feature Ceiling Displays',
+        'Corporate Lobby Architecture & Wayfinding Hangings'
       ],
       finishing: [
         {
-          icon: 'fa-shield-halved',
-          title: 'Reinforced Webbing Perimeter',
-          desc: 'High-strength nylon webbing welded inside hems to withstand high-altitude hurricane wind shear.'
+          icon: 'fa-grip-lines',
+          title: 'Aluminum Snap Rail Hanging Grippers',
+          desc: 'Anodized aluminum top and bottom clamp bars with ceiling suspension eyes for perfectly weighted vertical tension.'
         },
         {
-          icon: 'fa-wind',
-          title: 'Engineered Wind Slits',
-          desc: 'Half-moon wind pressure relief cuts precisely positioned to prevent banner tearing on high towers.'
+          icon: 'fa-shield',
+          title: 'Anti-Curl Edge Stabilization',
+          desc: 'PET composite core prevents edge fraying and eliminates inward curling common to unsupported ceiling hangings.'
         },
         {
-          icon: 'fa-certificate',
-          title: 'Anti-Glare Matte Topcoat',
-          desc: 'Eliminates headlight and spotlight glare for 100% legibility 24 hours a day.'
+          icon: 'fa-leaf',
+          title: 'UL GREENGUARD Gold Certified Inks',
+          desc: '100% odorless water-based latex chemistry safe for enclosed food courts, schools, and high-traffic shopping centers.'
         }
       ],
       faq: [
         {
-          q: 'What is the main difference between Frontlit and Standard Flex?',
-          a: 'Frontlit uses a higher density 1000D woven fabric with an anti-glare micro-embossed surface that maximizes external spotlight reflection without glare.'
+          q: 'Why choose anti-curl composite PET over traditional flex for indoor hanging?',
+          a: 'Standard flex has a woven fabric texture and tends to curl along unsupported edges when hung freely from ceilings. Our ultra-smooth composite PET has an internal blockout core that stays dead flat with photographic sharpness.'
         },
         {
-          q: 'Is this material fire retardant for indoor public exhibitions?',
-          a: 'Yes, our 440 GSM Frontlit is B1 and NFPA-701 certified flame-retardant, meeting international safety codes.'
+          q: 'Are the inks odor-free for indoor shopping malls and retail centers?',
+          a: 'Yes, we use certified odorless water-based latex and micro-piezo inks that emit zero VOC fumes, meeting strict commercial indoor air quality standards.'
         },
         {
-          q: 'Do you offer installation rigging hardware?',
-          a: 'Yes, we provide heavy-duty D-rings, turnbuckles, wire ropes, and stainless steel tension hooks upon request.'
+          q: 'Do you supply ceiling suspension cables and hardware?',
+          a: 'Yes, we offer complete ceiling hanging kits including aircraft wire cables, ceiling grid twist clips, and aluminum snap rails.'
         }
       ]
     },
@@ -145,12 +145,12 @@
       description: 'Uniform light dispersion fabric designed for lightboxes, airport displays, and retail store illumination.',
       sizes: 'Custom up to 10.5ft seamless',
       price: '$2.40 / sq.ft',
-      image: 'https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=1000&q=80',
+      image: 'assets/images/products/translucent-backlit-flex-banner.jpg',
       gallery: [
-        'https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1568017122356-f401efd3324c?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1513663055714-73414173c839?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1520375412562-eab222cb8d43?auto=format&fit=crop&w=600&q=80'
+        'assets/images/products/translucent-backlit-flex-banner.jpg',
+        'assets/images/creative showcase hero/luminescent-airport-lightbox.jpg',
+        'assets/images/commercial printing hero/retail-backlit-glow-sign.jpg',
+        'assets/images/services/backlit-glow-signage.jpg'
       ],
       material: '510 GSM High-Translucency Flex',
       specs: '1440 DPI Ultra High Definition, No hotspotting',
@@ -212,12 +212,12 @@
       description: 'Premium self-adhesive vinyl with bubble-free air release channels. Ideal for glass partitions, metal sheets, and smooth wall graphics.',
       sizes: 'Rolls up to 60" width',
       price: '$2.50 / sq.ft',
-      image: 'https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=1000&q=80',
+      image: 'assets/images/products/self-adhesive-cast-vinyl-printing.jpg',
       gallery: [
-        'https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80'
+        'assets/images/products/self-adhesive-cast-vinyl-printing.jpg',
+        'assets/images/services/commercial-vinyl-wrap.jpg',
+        'assets/images/commercial printing hero/fleet-vehicle-branding.jpg',
+        'assets/images/gallery/full-vehicle-cast-wrap-commercial-cargo-van.jpg'
       ],
       material: 'Polymeric Calendered Vinyl (100 micron)',
       specs: 'Cold / Hot Matte & Gloss Lamination available',
@@ -275,12 +275,14 @@
       description: 'Allows clear outward visibility while showcasing vibrant, bold high-res branding to people outside. Ideal for store glass and windows.',
       sizes: 'Custom window sizes',
       price: '$3.20 / sq.ft',
-      image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1000&q=80',
+      image: 'assets/images/products/perforated-one-way-vision-window-film.jpg',
       gallery: [
-        'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1520375412562-eab222cb8d43?auto=format&fit=crop&w=600&q=80'
+        'assets/images/products/perforated-one-way-vision-window-film.jpg',
+        'assets/images/blog/perforated-vinyl-one-way-vision-film-guide.jpg',
+        'assets/images/blog/perforated-vinyl-storefront-watch.jpg',
+        'assets/images/commercial printing hero/one-way-vision-storefront.jpg',
+        'assets/images/products/architectural-frosted-privacy-film.jpg',
+        'assets/images/products/self-adhesive-cast-vinyl-printing.jpg'
       ],
       material: '60/40 Perforated PVC Vinyl',
       specs: 'UV inks, removable adhesive with zero residue',
@@ -338,12 +340,12 @@
       description: 'Translucent dusted crystal frosted film with precision contour kiss-cutting. Enhances office privacy while diffusing natural light.',
       sizes: 'Rolls up to 54" width',
       price: '$3.80 / sq.ft',
-      image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1000&q=80',
+      image: 'assets/images/products/architectural-frosted-privacy-film.jpg',
       gallery: [
-        'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=600&q=80'
+        'assets/images/products/architectural-frosted-privacy-film.jpg',
+        'assets/images/products/self-adhesive-cast-vinyl-printing.jpg',
+        'assets/images/products/perforated-one-way-vision-window-film.jpg',
+        'assets/images/commercial printing hero/one-way-vision-storefront.jpg'
       ],
       material: 'Dusted Crystal Polymeric Vinyl (80 micron)',
       specs: 'Precision Plotter Cut, Residue-Free Removal',
@@ -405,12 +407,13 @@
       description: 'Direct UV flatbed print or vinyl mounted on durable PVC foam board. Lightweight, rigid, and perfect for retail point-of-sale displays.',
       sizes: '3mm, 5mm / up to 8x4 ft',
       price: '$4.10 / sq.ft',
-      image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1000&q=80',
+      image: 'assets/images/products/rigid-sunboard-foam-sheet-printing.jpg',
       gallery: [
-        'https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=600&q=80'
+        'assets/images/products/rigid-sunboard-showroom-display.jpg',
+        'assets/images/products/rigid-sunboard-foam-sheet-printing.jpg',
+        'assets/images/commercial printing hero/rigid-sunboard-pop-displays.jpg',
+        'assets/images/Recent Large Format Projects/rigid-sunboard-cafe-wall-1.jpg',
+        'assets/images/blog/rigid-sunboard-vs-corrugated-flute-boards.jpg'
       ],
       material: 'High-density PVC foam sheet',
       specs: 'CNC contour cutting, Direct UV Flatbed Printing',
@@ -468,12 +471,12 @@
       description: 'Fabricated aluminum box with high-efficiency waterproof LED modules and translucent flex or acrylic fascia for 24/7 retail illumination.',
       sizes: '8x3 ft, 10x4 ft, Custom',
       price: '$6.50 / sq.ft',
-      image: 'https://images.unsplash.com/photo-1568017122356-f401efd3324c?auto=format&fit=crop&w=1000&q=80',
+      image: 'assets/images/products/commercial-led-glow-sign-board.jpg',
       gallery: [
-        'https://images.unsplash.com/photo-1568017122356-f401efd3324c?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1513663055714-73414173c839?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1520375412562-eab222cb8d43?auto=format&fit=crop&w=600&q=80'
+        'assets/images/products/commercial-led-glow-sign-board.jpg',
+        'assets/images/products/commercial-led-glow-sign-board-storefront.jpg',
+        'assets/images/services/backlit-glow-signage.jpg',
+        'assets/images/commercial printing hero/retail-backlit-glow-sign.jpg'
       ],
       material: 'Rust-proof GI/Aluminum frame + Samsung LED',
       specs: 'IP67 Waterproof, Low power consumption',
@@ -531,12 +534,13 @@
       description: 'Laser-cut precision cast acrylic letters with beveled edges and halo-backlit LED illumination for corporate lobbies and retail facades.',
       sizes: 'Custom up to 48" height',
       price: '$8.50 / sq.ft',
-      image: 'https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=1000&q=80',
+      image: 'assets/images/products/acrylic-3d-dimensional-lettering.jpg',
       gallery: [
-        'https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1568017122356-f401efd3324c?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1513663055714-73414173c839?auto=format&fit=crop&w=600&q=80'
+        'assets/images/products/acrylic-3d-dimensional-lettering.jpg',
+        'assets/images/services/industrial-cnc-contour-routing-3d-dimensional-shaping.jpg',
+        'assets/images/creative showcase hero/backlit-3d-acrylic-lettering.jpg',
+        'assets/images/gallery/illuminated-storefront-acrylic-letters-backlit-sign.jpg',
+        'assets/images/products/commercial-led-glow-sign-board.jpg'
       ],
       material: '5mm–12mm Cast Acrylic + Standoff Studs',
       specs: 'Diamond Polished Edges, Halo / Front Lit',
@@ -598,12 +602,12 @@
       description: 'Portable, sleek anodized aluminum roll-up standee with premium non-curling star flex or PP synthetic graphic sheet. Includes carry bag.',
       sizes: '6x2.5 ft, 6x3 ft, 6x4 ft',
       price: '$35.00 / piece',
-      image: 'https://images.unsplash.com/photo-1511556532299-8f662fc26c06?auto=format&fit=crop&w=1000&q=80',
+      image: 'assets/images/products/aluminum-rollup-standee.jpg',
       gallery: [
-        'https://images.unsplash.com/photo-1511556532299-8f662fc26c06?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=600&q=80'
+        'assets/images/products/aluminum-rollup-standee.jpg',
+        'assets/images/products/standard-flex-banner-printing.jpg',
+        'assets/images/services/event-backdrops-trade-show-exhibition-graphics.jpg',
+        'assets/images/commercial printing hero/exhibition-booth-backdrop.jpg'
       ],
       material: 'Anti-curl synthetic media + Aluminum cartridge',
       specs: 'Instant 30-second setup, Padded nylon carrying bag',
@@ -661,12 +665,13 @@
       description: 'Dynamic outdoor advertising flags engineered to withstand gusty winds. Complete with fiberglass pole and water bag/ground spike.',
       sizes: '8ft, 10ft, 12ft, 14ft height',
       price: '$45.00 / set',
-      image: 'https://images.unsplash.com/photo-1508057198894-247b23fe5ade?auto=format&fit=crop&w=1000&q=80',
+      image: 'assets/images/products/promotional-teardrop-feather-banners.jpg',
       gallery: [
-        'https://images.unsplash.com/photo-1508057198894-247b23fe5ade?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1511556532299-8f662fc26c06?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1513757378314-e46255f6ed16?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=600&q=80'
+        'assets/images/products/promotional-teardrop-feather-banners.jpg',
+        'assets/images/services/dynamic-teardrop-flags-popup-canopies-pos-hardware.jpg',
+        'assets/images/products/aluminum-rollup-standee.jpg',
+        'assets/images/services/event-backdrops-trade-show-exhibition-graphics.jpg',
+        'assets/images/commercial printing hero/exhibition-booth-backdrop.jpg'
       ],
       material: '110 GSM Knitted Polyester Flag Media',
       specs: 'Dye-sublimation print, 95% reverse bleedthrough',
@@ -724,12 +729,12 @@
       description: 'Seamless exhibition backdrop banners and pop-up spider display walls. Vibrant color saturation with zero glare under bright hall spotlights.',
       sizes: '10x8 ft, 20x10 ft, Custom',
       price: '$2.80 / sq.ft',
-      image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1000&q=80',
+      image: 'assets/images/products/exhibition-stall-backdrop-truss-graphics.jpg',
       gallery: [
-        'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1511556532299-8f662fc26c06?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=600&q=80'
+        'assets/images/products/exhibition-stall-backdrop-truss-graphics.jpg',
+        'assets/images/services/event-backdrops-trade-show-exhibition-graphics.jpg',
+        'assets/images/commercial printing hero/exhibition-booth-backdrop.jpg',
+        'assets/images/Recent Large Format Projects/truss-wall-backdrop-global-tech-summit.jpg'
       ],
       material: 'Matte non-reflective blackout flex',
       specs: 'Wrinkle-resistant, eyeleted or velcro attached',
@@ -791,12 +796,12 @@
       description: 'Stunning 12-color archival pigment printing on 260 GSM satin or gloss photo paper. Perfect for architectural renderings and retail posters.',
       sizes: 'A2, A1, A0, 24x36 in, 40x60 in',
       price: '$3.50 / sq.ft',
-      image: 'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1000&q=80',
+      image: 'assets/images/products/large-format-photo-quality-wall-posters.jpg',
       gallery: [
-        'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=600&q=80'
+        'assets/images/products/large-format-photo-quality-wall-posters.jpg',
+        'assets/images/creative showcase hero/textured-fine-art-canvas-mural.jpg',
+        'assets/images/creative showcase hero/corporate-spatial-graphics.jpg',
+        'assets/images/products/high-resolution-frontlit-banner.jpg'
       ],
       material: '260 GSM Premium Photo Satin Paper',
       specs: '2400 DPI UltraChrome Pigment Inks',
@@ -854,12 +859,13 @@
       description: 'Turn commercial delivery vans, trucks, and buses into mobile billboards. Cast wrap vinyl with protective UV-blocking gloss overlaminate.',
       sizes: 'Full & Partial wraps, Decals',
       price: '$5.50 / sq.ft',
-      image: 'https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=1000&q=80',
+      image: 'assets/images/products/commercial-van-truck-vinyl-wraps.jpg',
       gallery: [
-        'https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
+        'assets/images/products/commercial-van-truck-vinyl-wraps.jpg',
+        'assets/images/services/high-impact-commercial-van-truck-fleet-wraps.jpg',
+        'assets/images/services/commercial-vinyl-wrap.jpg',
+        'assets/images/commercial printing hero/fleet-vehicle-branding.jpg',
+        'assets/images/gallery/full-vehicle-cast-wrap-commercial-cargo-van.jpg'
       ],
       material: '3M / Avery Dennison Cast Wrap Vinyl',
       specs: '5-year outdoor warranty against fading and peeling',
@@ -917,12 +923,12 @@
       description: 'R10-certified textured anti-slip floor decals engineered for high-traffic retail aisles, airport concourses, and trade show pathways.',
       sizes: 'Custom die-cut up to 54"',
       price: '$4.50 / sq.ft',
-      image: 'https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?auto=format&fit=crop&w=1000&q=80',
+      image: 'assets/images/products/heavy-duty-slip-resistant-floor-graphics.jpg',
       gallery: [
-        'https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=600&q=80'
+        'assets/images/products/heavy-duty-slip-resistant-floor-graphics.jpg',
+        'assets/images/products/self-adhesive-cast-vinyl-printing.jpg',
+        'assets/images/products/perforated-one-way-vision-window-film.jpg',
+        'assets/images/products/architectural-frosted-privacy-film.jpg'
       ],
       material: 'High-Tack Vinyl + R10 Anti-Slip Overlaminate',
       specs: 'Certified Anti-Slip, Scuff Resistant, Residue-Free',
@@ -1010,7 +1016,7 @@
     }
 
     container.innerHTML = list.map(p => `
-      <div class="col-lg-4 col-md-6 mb-4 animate-on-scroll" data-animate="fade-up">
+      <div class="col-lg-4 col-md-6 mb-4 animate-on-scroll is-animated" data-animate="fade-up">
         <div class="card-product">
           <div class="product-img-box">
             <img src="${p.image}" alt="${p.name}" loading="lazy">
@@ -1025,16 +1031,20 @@
             </div>
             <div class="product-actions">
               <a href="product-details.html?id=${p.id}" class="btn btn-outline-primary btn-sm">
-                <i class="fa-regular fa-eye"></i> Details
+                <i class="fa-regular fa-eye me-1"></i> Details
               </a>
-              <a href="contact.html?product=${p.id}" class="btn btn-primary btn-sm">
-                <i class="fa-solid fa-paper-plane"></i> Get Quote
-              </a>
+              <button type="button" class="btn btn-primary btn-sm btn-open-quote" data-product-id="${p.id}">
+                <i class="fa-solid fa-paper-plane me-1"></i> Get Quote
+              </button>
             </div>
           </div>
         </div>
       </div>
     `).join('');
+
+    if (typeof window.initScrollAnimations === 'function') {
+      window.initScrollAnimations();
+    }
   }
 
   // Setup catalog page interaction
@@ -1126,10 +1136,11 @@
       mainImg.alt = product.name;
     }
 
-    // Dynamic Clickable Thumbnail Strip
+    // Dynamic Clickable Thumbnail Strip (Unique Non-Repeating Images)
     const thumbsContainer = document.getElementById('detailThumbnailsRow');
-    if (thumbsContainer && product.gallery && product.gallery.length > 0) {
-      thumbsContainer.innerHTML = product.gallery.map((imgUrl, idx) => `
+    const uniqueGallery = product.gallery ? Array.from(new Set(product.gallery)) : [];
+    if (thumbsContainer && uniqueGallery.length > 0) {
+      thumbsContainer.innerHTML = uniqueGallery.map((imgUrl, idx) => `
         <div class="col-3">
           <div class="product-thumb-item ${idx === 0 ? 'active' : ''}">
             <img src="${imgUrl}" alt="${product.name} angle ${idx + 1}" class="product-thumb-img" data-full="${imgUrl}">
@@ -1156,7 +1167,9 @@
     // Quote button
     const quoteLink = document.getElementById('detailQuoteBtn');
     if (quoteLink) {
-      quoteLink.href = `contact.html?product=${product.id}`;
+      quoteLink.setAttribute('data-product-id', product.id);
+      quoteLink.classList.add('btn-open-quote');
+      quoteLink.removeAttribute('href');
     }
 
     // Dynamic Technical Specifications Table
@@ -1240,9 +1253,9 @@
                 <a href="product-details.html?id=${p.id}" class="btn btn-outline-primary btn-sm">
                   <i class="fa-regular fa-eye me-1"></i> Details
                 </a>
-                <a href="contact.html?product=${p.id}" class="btn btn-primary btn-sm">
+                <button type="button" class="btn btn-primary btn-sm btn-open-quote" data-product-id="${p.id}">
                   <i class="fa-solid fa-paper-plane me-1"></i> Quote
-                </a>
+                </button>
               </div>
             </div>
           </div>
@@ -1250,6 +1263,370 @@
       `).join('');
     }
   }
+
+  // -------------------------------------------------------------
+  // Interactive Quick Quote Modal System
+  // Keeps users on the current page with live dimension & price calculations
+  // -------------------------------------------------------------
+  let activeQuoteProduct = null;
+
+  function ensureQuickQuoteModal() {
+    let modalEl = document.getElementById('quickQuoteModal');
+    if (modalEl) return modalEl;
+
+    const modalHTML = `
+      <div class="modal fade" id="quickQuoteModal" tabindex="-1" aria-labelledby="quickQuoteModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content border-0 shadow-lg" style="border-radius: var(--radius-lg); overflow: hidden; background-color: var(--surface);">
+            
+            <!-- Modal Header -->
+            <div class="modal-header px-3 px-sm-4 py-3 align-items-start" style="background: linear-gradient(135deg, rgba(124, 58, 237, 0.08), rgba(236, 72, 153, 0.06)); border-bottom: 1px solid rgba(124, 58, 237, 0.15);">
+              <div class="d-flex flex-column align-items-start gap-1 pe-2">
+                <span class="badge bg-primary text-white px-2 py-1 rounded-pill small" style="font-size: 0.72rem; letter-spacing: 0.02em;"><i class="fa-solid fa-bolt me-1"></i> Fast Trade Quote</span>
+                <h5 class="modal-title fw-bold mb-0" id="quickQuoteModalLabel" style="line-height: 1.25;">Get Instant Product Quote</h5>
+              </div>
+              <button type="button" class="btn-close mt-1 flex-shrink-0" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <!-- Modal Body: Form View -->
+            <div class="modal-body p-3 p-sm-4" id="quoteModalFormBody">
+              
+              <!-- Product Overview Card -->
+              <div class="quote-product-overview d-flex align-items-center gap-3 p-3 mb-4 rounded-4" style="background: rgba(124, 58, 237, 0.04); border: 1px solid rgba(124, 58, 237, 0.15);">
+                <img id="quoteModalImg" src="" alt="Product" class="rounded-3 border" style="width: 64px; height: 64px; object-fit: cover; flex-shrink: 0;">
+                <div class="quote-product-info flex-grow-1" style="min-width: 0;">
+                  <div class="d-flex align-items-center gap-2 flex-wrap mb-1">
+                    <span class="badge bg-primary-subtle text-primary rounded-pill small" id="quoteModalCategory">Category</span>
+                    <span class="badge bg-success-subtle text-success rounded-pill small" id="quoteModalTurnaround">24h Turnaround</span>
+                  </div>
+                  <h5 class="fw-bold mb-1" id="quoteModalTitle" style="font-size: 1.05rem; line-height: 1.35; word-wrap: break-word;">Product Name</h5>
+                  <div class="small text-muted" id="quoteModalMaterial" style="line-height: 1.4; word-wrap: break-word;">Material specs</div>
+                </div>
+                <div class="quote-product-rate text-end ps-2 flex-shrink-0">
+                  <div class="small text-muted">Base Rate</div>
+                  <div class="fw-bold text-primary fs-5" id="quoteModalBasePrice">$1.20 / sq.ft</div>
+                </div>
+              </div>
+
+              <!-- Quote Form -->
+              <form id="quickQuoteForm" novalidate>
+                <input type="hidden" id="quoteProductId" name="productId" value="">
+                
+                <!-- Dimensions & Quantity Row -->
+                <div class="row g-3 mb-3">
+                  <div class="col-sm-4" id="quoteWidthCol">
+                    <label class="form-label fw-bold small text-muted mb-1">Width (Feet)</label>
+                    <div class="input-group">
+                      <input type="number" step="0.5" min="1" max="100" class="form-control fw-bold" id="quoteWidth" value="8" required>
+                      <span class="input-group-text small">ft</span>
+                    </div>
+                  </div>
+                  <div class="col-sm-4" id="quoteHeightCol">
+                    <label class="form-label fw-bold small text-muted mb-1">Height (Feet)</label>
+                    <div class="input-group">
+                      <input type="number" step="0.5" min="1" max="100" class="form-control fw-bold" id="quoteHeight" value="4" required>
+                      <span class="input-group-text small">ft</span>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <label class="form-label fw-bold small text-muted mb-1">Quantity</label>
+                    <div class="input-group">
+                      <button class="btn btn-outline-secondary" type="button" id="quoteQtyMinus"><i class="fa-solid fa-minus"></i></button>
+                      <input type="number" min="1" max="1000" class="form-control text-center fw-bold" id="quoteQty" value="1" required>
+                      <button class="btn btn-outline-secondary" type="button" id="quoteQtyPlus"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Finishing Options & Live Calculation Strip -->
+                <div class="row g-3 mb-4 align-items-center">
+                  <div class="col-md-7">
+                    <label class="form-label fw-bold small text-muted mb-1">Edge Finishing / Mounting</label>
+                    <select class="form-select" id="quoteFinishing">
+                      <option value="grommets">Solid Marine Brass Eyelets (Every 2 Ft)</option>
+                      <option value="welded-hems">RF Continuous Heat-Welded Hems</option>
+                      <option value="pole-pockets">Pole Pockets (Top &amp; Bottom Sleeves)</option>
+                      <option value="clean-cut">Straight Laser Clean Cut Edge</option>
+                      <option value="none">Standard Factory Raw Edge</option>
+                    </select>
+                  </div>
+                  <div class="col-md-5">
+                    <div class="p-2 px-3 rounded-3 text-center border" style="background: linear-gradient(135deg, rgba(124, 58, 237, 0.08), rgba(0, 245, 255, 0.05)); border-color: rgba(124, 58, 237, 0.25) !important;">
+                      <div class="small text-muted" id="quoteSqFtDisplay">32 sq.ft total</div>
+                      <div class="fw-bold text-primary fs-4" id="quoteEstimatedTotal">$38.40</div>
+                      <div class="text-muted" style="font-size: 0.72rem;">*Estimated factory wholesale subtotal</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Customer Details Row -->
+                <div class="row g-3 mb-3">
+                  <div class="col-md-6">
+                    <label class="form-label fw-bold small text-muted mb-1">Your Name *</label>
+                    <input type="text" class="form-control" id="quoteClientName" placeholder="e.g. John Doe / Company" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label fw-bold small text-muted mb-1">Business Email *</label>
+                    <input type="email" class="form-control" id="quoteClientEmail" placeholder="name@company.com" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label fw-bold small text-muted mb-1">Phone Number *</label>
+                    <input type="tel" class="form-control" id="quoteClientPhone" placeholder="+1 (555) 000-0000" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label fw-bold small text-muted mb-1">Turnaround Priority</label>
+                    <select class="form-select" id="quotePriority">
+                      <option value="standard">Standard Dispatch (24–48 Hours)</option>
+                      <option value="express">Same-Day Priority Express Rush</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label fw-bold small text-muted mb-1">Project Notes / Artwork Instructions (Optional)</label>
+                    <textarea class="form-control" id="quoteNotes" rows="2" placeholder="Tell us about your installation location, Pantone color codes, or artwork file links..."></textarea>
+                  </div>
+                </div>
+
+                <!-- Submit Row -->
+                <div class="d-flex gap-2 justify-content-end align-items-center pt-2 border-top">
+                  <button type="button" class="btn btn-outline-secondary px-3" data-bs-dismiss="modal">Cancel</button>
+                  <button type="submit" class="btn btn-primary px-4 fw-bold">
+                    <i class="fa-solid fa-paper-plane me-1"></i> Submit Trade Quote
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <!-- Modal Body: Success Confirmation View -->
+            <div class="modal-body p-5 text-center d-none" id="quoteModalSuccessBody">
+              <div class="mb-4">
+                <div class="d-inline-flex align-items-center justify-content-center rounded-circle shadow-sm" style="width: 76px; height: 76px; background: rgba(34, 197, 94, 0.15); color: #22C55E;">
+                  <i class="fa-solid fa-circle-check fa-3x"></i>
+                </div>
+              </div>
+              <span class="badge bg-success-subtle text-success px-3 py-1 rounded-pill fw-bold mb-2">Quote Request Submitted</span>
+              <h3 class="fw-bold mb-2">Thank You, <span id="successClientName">Client</span>!</h3>
+              <p class="text-muted mx-auto mb-4" style="max-width: 480px;">
+                Your quote request for <strong id="successProductName">Product</strong> (<span id="successDimensions">Dimensions</span>) has been assigned reference ID <strong class="text-primary" id="successRefId">#FX-8492</strong>.
+              </p>
+              
+              <div class="p-3 rounded-4 mb-4 text-start mx-auto border" style="max-width: 480px; background: rgba(124, 58, 237, 0.04); border-color: rgba(124, 58, 237, 0.2) !important;">
+                <div class="d-flex justify-content-between mb-2">
+                  <span class="text-muted small">Estimated Total:</span>
+                  <strong class="text-primary fs-5" id="successTotalAmount">$0.00</strong>
+                </div>
+                <div class="d-flex justify-content-between mb-1">
+                  <span class="text-muted small">Pre-Press Review:</span>
+                  <span class="fw-semibold small text-success">Under 15 Minutes</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <span class="text-muted small">Official PDF Invoice:</span>
+                  <span class="fw-semibold small" id="successEmailTarget">Emailed to you</span>
+                </div>
+              </div>
+
+              <div class="d-flex gap-2 justify-content-center flex-wrap">
+                <button type="button" class="btn btn-primary px-4" data-bs-dismiss="modal">
+                  <i class="fa-solid fa-arrow-left me-1"></i> Continue Browsing
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    `;
+
+    document.body.insertAdjacentHTML('beforeend', modalHTML);
+    modalEl = document.getElementById('quickQuoteModal');
+
+    // Attach form and live calculator listeners
+    const form = document.getElementById('quickQuoteForm');
+    const widthInput = document.getElementById('quoteWidth');
+    const heightInput = document.getElementById('quoteHeight');
+    const qtyInput = document.getElementById('quoteQty');
+    const qtyMinus = document.getElementById('quoteQtyMinus');
+    const qtyPlus = document.getElementById('quoteQtyPlus');
+
+    function updateLiveEstimate() {
+      if (!activeQuoteProduct) return;
+      const w = Math.max(0.5, parseFloat(widthInput.value) || 8);
+      const h = Math.max(0.5, parseFloat(heightInput.value) || 4);
+      const qty = Math.max(1, parseInt(qtyInput.value) || 1);
+
+      const priceStr = activeQuoteProduct.price || '$2.50';
+      const isUnit = /set|pc|stand/i.test(priceStr);
+      const numRate = parseFloat(priceStr.replace(/[^0-9.]/g, '')) || 2.50;
+
+      const totalEl = document.getElementById('quoteEstimatedTotal');
+      const sqFtEl = document.getElementById('quoteSqFtDisplay');
+
+      if (isUnit) {
+        const total = (numRate * qty).toFixed(2);
+        if (totalEl) totalEl.textContent = `$${total}`;
+        if (sqFtEl) sqFtEl.textContent = `${qty} unit(s) @ ${priceStr}`;
+      } else {
+        const singleSqFt = w * h;
+        const totalSqFt = singleSqFt * qty;
+        const total = (totalSqFt * numRate).toFixed(2);
+        if (totalEl) totalEl.textContent = `$${total}`;
+        if (sqFtEl) sqFtEl.textContent = `${totalSqFt.toFixed(1)} sq.ft total (${qty} pcs)`;
+      }
+    }
+
+    [widthInput, heightInput, qtyInput].forEach(inp => {
+      if (inp) inp.addEventListener('input', updateLiveEstimate);
+    });
+
+    if (qtyMinus) {
+      qtyMinus.addEventListener('click', () => {
+        let val = parseInt(qtyInput.value) || 1;
+        if (val > 1) {
+          qtyInput.value = val - 1;
+          updateLiveEstimate();
+        }
+      });
+    }
+
+    if (qtyPlus) {
+      qtyPlus.addEventListener('click', () => {
+        let val = parseInt(qtyInput.value) || 1;
+        qtyInput.value = val + 1;
+        updateLiveEstimate();
+      });
+    }
+
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const nameInput = document.getElementById('quoteClientName');
+        const emailInput = document.getElementById('quoteClientEmail');
+        const phoneInput = document.getElementById('quoteClientPhone');
+
+        if (!nameInput.value.trim() || !emailInput.value.trim() || !phoneInput.value.trim()) {
+          form.classList.add('was-validated');
+          return;
+        }
+
+        const refId = 'FX-' + Math.floor(1000 + Math.random() * 9000);
+        const w = widthInput.value;
+        const h = heightInput.value;
+        const qty = qtyInput.value;
+        const totalEstimated = document.getElementById('quoteEstimatedTotal').textContent;
+
+        document.getElementById('successClientName').textContent = nameInput.value.trim();
+        document.getElementById('successProductName').textContent = activeQuoteProduct ? activeQuoteProduct.name : 'Product';
+        document.getElementById('successDimensions').textContent = `${w}x${h} ft, Qty: ${qty}`;
+        document.getElementById('successRefId').textContent = '#' + refId;
+        document.getElementById('successTotalAmount').textContent = totalEstimated;
+        document.getElementById('successEmailTarget').textContent = emailInput.value.trim();
+
+        document.getElementById('quoteModalFormBody').classList.add('d-none');
+        document.getElementById('quoteModalSuccessBody').classList.remove('d-none');
+      });
+    }
+
+    return modalEl;
+  }
+
+  function openQuickQuoteModal(productId) {
+    const modalEl = ensureQuickQuoteModal();
+    activeQuoteProduct = PRODUCTS.find(p => p.id === productId) || PRODUCTS[0];
+
+    // Reset view
+    const formBody = document.getElementById('quoteModalFormBody');
+    const successBody = document.getElementById('quoteModalSuccessBody');
+    if (formBody) formBody.classList.remove('d-none');
+    if (successBody) successBody.classList.add('d-none');
+
+    const form = document.getElementById('quickQuoteForm');
+    if (form) form.classList.remove('was-validated');
+
+    // Populate product details
+    const imgEl = document.getElementById('quoteModalImg');
+    if (imgEl) {
+      imgEl.src = activeQuoteProduct.image;
+      imgEl.alt = activeQuoteProduct.name;
+    }
+    const titleEl = document.getElementById('quoteModalTitle');
+    if (titleEl) titleEl.textContent = activeQuoteProduct.name;
+
+    const catEl = document.getElementById('quoteModalCategory');
+    if (catEl) catEl.textContent = activeQuoteProduct.categoryName.split('&')[0].trim();
+
+    const matEl = document.getElementById('quoteModalMaterial');
+    if (matEl) matEl.textContent = activeQuoteProduct.material;
+
+    const priceEl = document.getElementById('quoteModalBasePrice');
+    if (priceEl) priceEl.textContent = activeQuoteProduct.price;
+
+    const turnEl = document.getElementById('quoteModalTurnaround');
+    if (turnEl) turnEl.textContent = activeQuoteProduct.turnaround || '24h Turnaround';
+
+    const pIdInput = document.getElementById('quoteProductId');
+    if (pIdInput) pIdInput.value = activeQuoteProduct.id;
+
+    // Reset default sizes
+    const wInput = document.getElementById('quoteWidth');
+    const hInput = document.getElementById('quoteHeight');
+    const qInput = document.getElementById('quoteQty');
+
+    if (wInput) wInput.value = '8';
+    if (hInput) hInput.value = '4';
+    if (qInput) qInput.value = '1';
+
+    // Check if unit item (like rollup standee or teardrop flag)
+    const isUnit = /set|pc|stand/i.test(activeQuoteProduct.price);
+    const widthCol = document.getElementById('quoteWidthCol');
+    const heightCol = document.getElementById('quoteHeightCol');
+    if (isUnit) {
+      if (widthCol) widthCol.style.opacity = '0.5';
+      if (heightCol) heightCol.style.opacity = '0.5';
+    } else {
+      if (widthCol) widthCol.style.opacity = '1';
+      if (heightCol) heightCol.style.opacity = '1';
+    }
+
+    // Trigger calculation
+    const totalEl = document.getElementById('quoteEstimatedTotal');
+    const sqFtEl = document.getElementById('quoteSqFtDisplay');
+    const numRate = parseFloat(activeQuoteProduct.price.replace(/[^0-9.]/g, '')) || 2.50;
+
+    if (isUnit) {
+      if (totalEl) totalEl.textContent = `$${numRate.toFixed(2)}`;
+      if (sqFtEl) sqFtEl.textContent = `1 unit @ ${activeQuoteProduct.price}`;
+    } else {
+      if (totalEl) totalEl.textContent = `$${(32 * numRate).toFixed(2)}`;
+      if (sqFtEl) sqFtEl.textContent = `32.0 sq.ft total (1 pcs)`;
+    }
+
+    // Show modal
+    if (window.bootstrap && window.bootstrap.Modal) {
+      const bsModal = window.bootstrap.Modal.getOrCreateInstance(modalEl);
+      bsModal.show();
+    } else {
+      modalEl.classList.add('show');
+      modalEl.style.display = 'block';
+    }
+  }
+
+  window.openQuickQuoteModal = openQuickQuoteModal;
+
+  // Intercept any click on quote buttons across the document
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.btn-open-quote, [href*="contact.html?product="]');
+    if (btn) {
+      e.preventDefault();
+      e.stopPropagation();
+      let prodId = btn.getAttribute('data-product-id');
+      if (!prodId && btn.href) {
+        try {
+          const url = new URL(btn.href, window.location.origin);
+          prodId = url.searchParams.get('product');
+        } catch (err) {}
+      }
+      openQuickQuoteModal(prodId || 'flex-banner');
+    }
+  });
 
   document.addEventListener('DOMContentLoaded', () => {
     initProductsPage();
