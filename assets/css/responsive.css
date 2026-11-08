@@ -1195,6 +1195,48 @@ h3, .h3 { font-size: clamp(1.25rem, 2.2vw, 1.85rem); }
     gap: 1.25rem !important;
   }
 
+  /* Products Catalog Grid & Cards Alignment */
+  #productsGridContainer > [class*="col-"] {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .card-product {
+    width: 100% !important;
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .product-img-box {
+    height: 220px !important;
+    margin: 10px 10px 0 10px !important;
+    border-radius: 12px !important;
+  }
+
+  .product-body {
+    padding: 1.25rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    flex-grow: 1 !important;
+  }
+
+  .product-title {
+    height: auto !important;
+    min-height: 2.9rem !important;
+    font-size: 1.1rem !important;
+  }
+
+  .product-desc {
+    height: auto !important;
+    min-height: 4rem !important;
+    font-size: 0.88rem !important;
+  }
+
+  .product-meta {
+    margin-top: auto !important;
+  }
+
   /* Responsive Search Cockpits & Filters */
   .product-search-cockpit .search-input-wrap,
   .blog-search-filter-wrap .search-input-wrap {
@@ -1627,17 +1669,65 @@ h3, .h3 { font-size: clamp(1.25rem, 2.2vw, 1.85rem); }
     width: 100% !important;
   }
 
+  /* Products Page Small Mobile Cards Alignment */
+  #productsGridContainer > [class*="col-"] {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .card-product {
+    width: 100% !important;
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .product-img-box {
+    height: 200px !important;
+    margin: 8px 8px 0 8px !important;
+    border-radius: 12px !important;
+  }
+
+  .product-body {
+    padding: 1.1rem 0.9rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    flex-grow: 1 !important;
+  }
+
+  .product-title {
+    font-size: 1.05rem !important;
+    line-height: 1.35 !important;
+    height: auto !important;
+    min-height: 2.8rem !important;
+    margin-bottom: 0.45rem !important;
+  }
+
+  .product-desc {
+    font-size: 0.85rem !important;
+    line-height: 1.5 !important;
+    height: auto !important;
+    min-height: 3.8rem !important;
+    margin-bottom: 0.85rem !important;
+  }
+
+  .product-meta {
+    margin-top: auto !important;
+    margin-bottom: 0.85rem !important;
+    padding: 0.4rem 0.85rem !important;
+    min-height: 40px !important;
+    height: 40px !important;
+    font-size: 0.8rem !important;
+  }
+
   .product-actions {
     grid-template-columns: 1fr !important;
     gap: 0.5rem !important;
   }
 
-  .card-product-body {
-    padding: 1.1rem 0.9rem !important;
-  }
-
-  .card-product-title {
-    font-size: 1.1rem !important;
+  .product-actions .btn {
+    min-height: 38px !important;
+    font-size: 0.82rem !important;
   }
 
   /* Quick Quote Modal Small Mobile Fit */

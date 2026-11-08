@@ -1874,12 +1874,26 @@ img {
 }
 
 /* --- Product Cards --- */
-/* Ensure dynamic catalog search results and filtered cards are always visible */
+/* Ensure dynamic catalog search results and filtered cards are always visible & perfectly aligned */
+#productsGridContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#productsGridContainer > [class*="col-"] {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
 #productsGridContainer .animate-on-scroll,
 #productsGridContainer .card-product {
   opacity: 1 !important;
   transform: none !important;
   visibility: visible !important;
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
 }
 
 .card-product {
@@ -1902,11 +1916,12 @@ img {
 
 .product-img-box {
   position: relative;
-  height: 220px;
+  height: 230px;
   overflow: hidden;
-  margin: 10px 10px 0 10px;
-  border-radius: var(--radius-sm);
+  margin: 12px 12px 0 12px;
+  border-radius: 12px;
   background-color: #EFEFEA;
+  flex-shrink: 0;
 }
 
 .product-img-box img {
