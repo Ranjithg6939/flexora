@@ -61,9 +61,9 @@ const BLOG_POSTS = {
     "authorAvatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=80&q=80",
     "date": "March 22, 2026",
     "readTime": "5 min read",
-    "featuredImage": "assets/images/blog/prepress-color-workflow-avoid-muddy-colors.png",
-    "featuredImageAlt": "5 Crucial Prepress Checklist Items to Avoid Muddy Colors on Large Flex Prints",
-    "figureCaption": "Figure 1: Industrial roll-to-roll piezo printhead applying CMYK calibration bands during prepress color verification.",
+    "featuredImage": "assets/images/blog/prepress-color-workflow-avoid-muddy-colors.jpg",
+    "featuredImageAlt": "Prepress color technicians inspecting CMYK print targets with a spectrophotometer and closed-loop color control system",
+    "figureCaption": "Figure 1: Prepress color technicians performing closed-loop spectrophotometer calibration and CMYK press sheet verification to eliminate muddy print tones.",
     "toc": [
       {
         "id": "section-1",

@@ -128,7 +128,7 @@
     const navClickables = collapseEl.querySelectorAll('.nav-link:not(.dropdown-toggle), .dropdown-item, .nav-actions .btn');
     navClickables.forEach(item => {
       item.addEventListener('click', () => {
-        if (window.innerWidth <= 991.98) {
+        if (window.innerWidth <= 768) {
           setTimeout(closeMenu, 180);
         }
       });
@@ -136,7 +136,7 @@
 
     // 2. Close on outside click
     document.addEventListener('click', (e) => {
-      if (window.innerWidth <= 991.98 && isMenuOpen()) {
+      if (window.innerWidth <= 768 && isMenuOpen()) {
         const isClickInside = collapseEl.contains(e.target) || toggler.contains(e.target);
         if (!isClickInside) {
           closeMenu();
@@ -151,9 +151,9 @@
       }
     });
 
-    // 4. Close automatically when screen is resized above 991.98px
+    // 4. Close automatically when screen is resized to tablet or desktop (> 768px, i.e. 769px+)
     window.addEventListener('resize', () => {
-      if (window.innerWidth >= 992 && isMenuOpen()) {
+      if (window.innerWidth > 768 && isMenuOpen()) {
         closeMenu();
       }
     });
@@ -175,7 +175,7 @@
     const navLinks = navContainer.querySelectorAll(':scope > .nav-item > .nav-link');
 
     function updatePill(targetLink, animate = true) {
-      if (!targetLink || window.innerWidth <= 991.98) {
+      if (!targetLink || window.innerWidth <= 768) {
         pill.style.opacity = '0';
         navContainer.classList.remove('has-sliding-pill');
         return;
@@ -186,18 +186,19 @@
 
       // Exact layout coordinates (unaffected by hover/active CSS scale transforms)
       let leftOffset = navItem.offsetLeft;
-      let topOffset = navItem.offsetTop;
 
       // Fallback if offsetParent is not navContainer
       if (navItem.offsetParent !== navContainer) {
         const containerRect = navContainer.getBoundingClientRect();
-        const linkRect = targetLink.getBoundingClientRect();
-        leftOffset = linkRect.left - containerRect.left;
-        topOffset = linkRect.top - containerRect.top;
+        const itemRect = navItem.getBoundingClientRect();
+        leftOffset = itemRect.left - containerRect.left;
       }
 
       const width = navItem.offsetWidth;
-      const height = targetLink.offsetHeight || 36;
+      const containerHeight = navContainer.clientHeight || 36;
+      // Strictly contain pill inside capsule with uniform 3px vertical breathing room
+      const height = Math.max(containerHeight - 6, 24);
+      const topOffset = Math.max(Math.round((containerHeight - height) / 2), 0);
 
       if (!animate) {
         pill.style.transition = 'none';
@@ -215,7 +216,7 @@
     let activeLink = navContainer.querySelector(':scope > .nav-item > .nav-link.active') || navLinks[0];
     if (activeLink) {
       setTimeout(() => {
-        if (window.innerWidth > 991.98) {
+        if (window.innerWidth > 768) {
           updatePill(activeLink, false);
           navContainer.classList.add('has-sliding-pill');
           requestAnimationFrame(() => {
@@ -245,8 +246,8 @@
 
     // Window resize handler
     window.addEventListener('resize', () => {
-      const currentActive = navContainer.querySelector(':scope > .nav-item > .nav-link.active');
-      if (window.innerWidth <= 991.98) {
+      const currentActive = navContainer.querySelector(':scope > .nav-item > .nav-link.active') || navLinks[0];
+      if (window.innerWidth <= 768) {
         pill.style.opacity = '0';
         navContainer.classList.remove('has-sliding-pill');
       } else if (currentActive) {

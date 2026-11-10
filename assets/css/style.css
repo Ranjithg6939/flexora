@@ -646,6 +646,7 @@ img {
   font-size: 0.88rem;
   color: #170936 !important;
   height: 36px;
+  min-width: 56px;
   padding: 0 0.95rem !important;
   border-radius: var(--radius-pill);
   position: relative;
@@ -695,7 +696,7 @@ img {
 }
 
 /* Responsive adjustment for mobile collapsed navbar */
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
   .navbar-nav {
     border-radius: var(--radius-md);
     padding: 8px;
