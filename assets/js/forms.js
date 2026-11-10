@@ -20,29 +20,50 @@
 
     const toast = document.createElement('div');
     toast.className = `custom-toast toast-${type}`;
-    const iconClass = type === 'success' ? 'fa-circle-check text-success' : 'fa-circle-exclamation text-danger';
+    toast.setAttribute('role', 'status');
+    toast.setAttribute('aria-live', 'polite');
+
+    const iconClass = type === 'success'
+      ? 'fa-circle-check'
+      : (type === 'error' ? 'fa-triangle-exclamation' : 'fa-circle-info');
+
+    const badgeLabel = type === 'success'
+      ? 'Success'
+      : (type === 'error' ? 'Action Required' : 'Notice');
 
     toast.innerHTML = `
-      <i class="fa-solid ${iconClass} fa-lg"></i>
-      <div class="toast-content flex-grow-1">
-        <div class="toast-msg fw-medium">${message}</div>
+      <div class="toast-indicator-icon">
+        <i class="fa-solid ${iconClass}"></i>
       </div>
-      <button type="button" class="btn-close btn-close-white" aria-label="Close" style="font-size: 0.75rem;"></button>
+      <div class="toast-content flex-grow-1">
+        <div class="toast-title">${badgeLabel}</div>
+        <div class="toast-msg">${message}</div>
+      </div>
+      <button type="button" class="toast-close-btn" aria-label="Close notification">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="toast-progress-track">
+        <div class="toast-progress-bar"></div>
+      </div>
     `;
 
-    const closeBtn = toast.querySelector('.btn-close');
-    closeBtn.addEventListener('click', () => {
-      toast.remove();
-    });
+    const closeBtn = toast.querySelector('.toast-close-btn');
+    const dismissToast = () => {
+      toast.classList.add('toast-dismissing');
+      setTimeout(() => {
+        if (toast.parentElement) toast.remove();
+      }, 280);
+    };
+
+    if (closeBtn) {
+      closeBtn.addEventListener('click', dismissToast);
+    }
 
     container.appendChild(toast);
 
     setTimeout(() => {
-      if (toast.parentElement) {
-        toast.style.opacity = '0';
-        toast.style.transform = 'translateX(100%)';
-        toast.style.transition = 'all 0.3s ease';
-        setTimeout(() => toast.remove(), 300);
+      if (toast.parentElement && !toast.classList.contains('toast-dismissing')) {
+        dismissToast();
       }
     }, 4500);
   };
@@ -968,8 +989,23 @@
   }
 
   // ===================================================================
-  // 13. DOM INITIALIZATION
+  // 13. DOM INITIALIZATION & GLOBAL EXPORT
   // ===================================================================
+  window.FlexoraValidators = {
+    validateName,
+    validateEmail,
+    validatePhone,
+    validateNumber,
+    validateMessage,
+    validateDate,
+    validateDropdown,
+    validateCheckbox,
+    showFieldError,
+    clearFieldError,
+    resetFieldValidation,
+    attachRealtimeValidation
+  };
+
   document.addEventListener('DOMContentLoaded', () => {
     initPasswordToggles();
     initOrderForm();

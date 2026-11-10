@@ -1886,7 +1886,12 @@ img {
   flex-direction: column !important;
 }
 
-#productsGridContainer .animate-on-scroll,
+#productsGridContainer .animate-on-scroll {
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
+}
+
 #productsGridContainer .card-product {
   opacity: 1 !important;
   transform: none !important;
@@ -5504,48 +5509,182 @@ img {
   transform: translateY(-3px);
 }
 
-/* --- Toast Notification System --- */
+/* --- Toast Notification System (Modern Glassmorphic Floating Stack) --- */
 .custom-toast-container {
   position: fixed;
-  bottom: 25px;
-  right: 25px;
-  z-index: 3000;
+  bottom: 28px;
+  right: 28px;
+  z-index: 9999;
   display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+  flex-direction: column-reverse;
+  gap: 12px;
+  pointer-events: none;
+  max-width: 440px;
+  width: calc(100vw - 36px);
 }
 
 .custom-toast {
-  background-color: var(--secondary);
-  color: #FFFFFF;
-  padding: 1rem 1.25rem;
-  border-radius: var(--radius-sm);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-  border-left: 4px solid var(--primary);
+  pointer-events: auto;
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  color: #0F172A;
+  padding: 1rem 1.15rem;
+  border-radius: 18px;
+  border: 1px solid rgba(124, 58, 237, 0.18);
+  box-shadow: 0 20px 45px -10px rgba(17, 5, 44, 0.18), 0 0 1px 1px rgba(124, 58, 237, 0.08);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.95rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: modernToastIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.custom-toast.toast-dismissing {
+  animation: modernToastOut 0.28s ease forwards !important;
+}
+
+.toast-indicator-icon {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
-  gap: 0.85rem;
-  min-width: 300px;
-  max-width: 420px;
-  animation: slideInRight 0.3s ease forwards;
+  justify-content: center;
+  font-size: 1.05rem;
+  flex-shrink: 0;
+  margin-top: 2px;
 }
 
-.custom-toast.toast-success {
-  border-left-color: #28a745;
+.custom-toast.toast-success .toast-indicator-icon {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.16), rgba(16, 185, 129, 0.25));
+  color: #10B981;
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  box-shadow: 0 4px 14px rgba(34, 197, 94, 0.2);
 }
 
-.custom-toast.toast-error {
-  border-left-color: #dc3545;
+.custom-toast.toast-error .toast-indicator-icon {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.16), rgba(220, 38, 38, 0.25));
+  color: #EF4444;
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  box-shadow: 0 4px 14px rgba(239, 68, 68, 0.2);
 }
 
-@keyframes slideInRight {
+.custom-toast.toast-info .toast-indicator-icon {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.16), rgba(236, 72, 153, 0.22));
+  color: #7C3AED;
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  box-shadow: 0 4px 14px rgba(124, 58, 237, 0.2);
+}
+
+.toast-content {
+  flex-grow: 1;
+  min-width: 0;
+  padding-right: 0.25rem;
+}
+
+.toast-title {
+  font-size: 0.74rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 3px;
+  line-height: 1.2;
+}
+
+.custom-toast.toast-success .toast-title {
+  color: #059669;
+}
+
+.custom-toast.toast-error .toast-title {
+  color: #DC2626;
+}
+
+.toast-msg {
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.42;
+  color: #1E293B;
+  word-wrap: break-word;
+}
+
+.toast-close-btn {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  border-radius: 50%;
+  background: rgba(100, 116, 139, 0.08);
+  border: none;
+  color: #64748B;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  margin-top: 2px;
+  padding: 0;
+}
+
+.toast-close-btn:hover {
+  background: rgba(100, 116, 139, 0.2);
+  color: #0F172A;
+  transform: scale(1.08);
+}
+
+.toast-progress-track {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3.5px;
+  background: rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  border-radius: 0 0 18px 18px;
+}
+
+.toast-progress-bar {
+  height: 100%;
+  width: 100%;
+  animation: modernToastProgress 4.5s linear forwards;
+}
+
+.custom-toast.toast-success .toast-progress-bar {
+  background: linear-gradient(90deg, #10B981, #059669);
+}
+
+.custom-toast.toast-error .toast-progress-bar {
+  background: linear-gradient(90deg, #EF4444, #F43F5E);
+}
+
+@keyframes modernToastProgress {
+  from { width: 100%; }
+  to { width: 0%; }
+}
+
+@keyframes modernToastIn {
   from {
     opacity: 0;
-    transform: translateX(100%);
+    transform: translateY(22px) scale(0.94);
   }
   to {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes modernToastOut {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-16px) scale(0.92);
   }
 }
 
@@ -5605,15 +5744,84 @@ img {
   box-shadow: 0 25px 60px rgba(10, 3, 30, 0.35);
 }
 
+#quickQuoteModal .modal-header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+}
+
 #quickQuoteModal .modal-header .btn-close {
-  margin: 0;
+  margin: 0 !important;
+  margin-inline-start: auto !important;
   opacity: 0.75;
   transition: opacity 0.2s ease, transform 0.2s ease;
+  flex-shrink: 0 !important;
 }
 
 #quickQuoteModal .modal-header .btn-close:hover {
   opacity: 1;
   transform: scale(1.1);
+}
+
+/* Quick Quote Modal Action Buttons Alignment */
+#quickQuoteModal .quote-modal-actions {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 0.75rem !important;
+}
+
+#quickQuoteModal .quote-cancel-btn {
+  background-color: #F1F5F9 !important;
+  border: 1.5px solid #CBD5E1 !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04) !important;
+  outline: none !important;
+  color: #475569 !important;
+  font-weight: 700 !important;
+  font-size: 0.92rem !important;
+  padding: 0.55rem 1.4rem !important;
+  min-height: 44px !important;
+  height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: var(--radius-pill) !important;
+  text-decoration: none !important;
+  transition: all 0.25s ease !important;
+  cursor: pointer;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+}
+
+#quickQuoteModal .quote-cancel-btn:hover {
+  background-color: #EF4444 !important;
+  border-color: #DC2626 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 14px rgba(239, 68, 68, 0.35) !important;
+  transform: translateY(-1px);
+}
+
+#quickQuoteModal .quote-submit-btn {
+  white-space: nowrap !important;
+  font-size: 0.92rem !important;
+  font-weight: 700 !important;
+  padding: 0.6rem 1.75rem !important;
+  min-height: 44px !important;
+  height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.5rem !important;
+  line-height: 1 !important;
+  flex-shrink: 0 !important;
+}
+
+#quickQuoteModal .quote-submit-btn i {
+  font-size: 0.88rem !important;
+  display: inline-block !important;
+  line-height: 1 !important;
+  vertical-align: middle !important;
 }
 
 /* ===================================================================
@@ -5649,9 +5857,27 @@ img {
   font-size: 0.8125rem;
   font-weight: 600;
   color: #DC2626 !important;
-  margin-top: 0.35rem;
+  margin-top: 0.45rem !important;
+  margin-bottom: 0.35rem !important;
   line-height: 1.35;
   animation: fadeInError 0.25s ease forwards;
+  position: relative;
+  z-index: 2;
+  clear: both;
+}
+
+#generalContactForm textarea.form-control {
+  resize: vertical;
+}
+
+#generalContactForm .field-error-msg {
+  margin-top: 0.45rem !important;
+  margin-bottom: 0.65rem !important;
+  flex-shrink: 0 !important;
+}
+
+#generalContactForm button[type="submit"] {
+  margin-top: 0.5rem !important;
 }
 
 @keyframes fadeInError {

@@ -1016,8 +1016,8 @@
     }
 
     container.innerHTML = list.map(p => `
-      <div class="col-lg-4 col-md-6 mb-4 animate-on-scroll is-animated" data-animate="fade-up">
-        <div class="card-product">
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card-product animate-on-scroll is-animated" data-animate="fade-up">
           <div class="product-img-box">
             <img src="${p.image}" alt="${p.name}" loading="lazy">
             <span class="product-category-badge">${p.categoryName.split('&')[0].trim()}</span>
@@ -1280,12 +1280,12 @@
           <div class="modal-content border-0 shadow-lg" style="border-radius: var(--radius-lg); overflow: hidden; background-color: var(--surface);">
             
             <!-- Modal Header -->
-            <div class="modal-header px-3 px-sm-4 py-3 align-items-start" style="background: linear-gradient(135deg, rgba(124, 58, 237, 0.08), rgba(236, 72, 153, 0.06)); border-bottom: 1px solid rgba(124, 58, 237, 0.15);">
-              <div class="d-flex flex-column align-items-start gap-1 pe-2">
+            <div class="modal-header d-flex align-items-center justify-content-between px-3 px-sm-4 py-3" style="background: linear-gradient(135deg, rgba(124, 58, 237, 0.08), rgba(236, 72, 153, 0.06)); border-bottom: 1px solid rgba(124, 58, 237, 0.15);">
+              <div class="d-flex flex-column align-items-start gap-1">
                 <span class="badge bg-primary text-white px-2 py-1 rounded-pill small" style="font-size: 0.72rem; letter-spacing: 0.02em;"><i class="fa-solid fa-bolt me-1"></i> Fast Trade Quote</span>
                 <h5 class="modal-title fw-bold mb-0" id="quickQuoteModalLabel" style="line-height: 1.25;">Get Instant Product Quote</h5>
               </div>
-              <button type="button" class="btn-close mt-1 flex-shrink-0" data-bs-dismiss="modal" aria-label="Close"></button>
+              <button type="button" class="btn-close ms-auto flex-shrink-0" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
 
             <!-- Modal Body: Form View -->
@@ -1387,10 +1387,10 @@
                 </div>
 
                 <!-- Submit Row -->
-                <div class="d-flex gap-2 justify-content-end align-items-center pt-2 border-top">
-                  <button type="button" class="btn btn-outline-secondary px-3" data-bs-dismiss="modal">Cancel</button>
-                  <button type="submit" class="btn btn-primary px-4 fw-bold">
-                    <i class="fa-solid fa-paper-plane me-1"></i> Submit Trade Quote
+                <div class="quote-modal-actions d-flex gap-2 justify-content-end align-items-center pt-3 mt-2 border-top">
+                  <button type="button" class="btn quote-cancel-btn" data-bs-dismiss="modal">Cancel</button>
+                  <button type="submit" class="btn btn-primary quote-submit-btn fw-bold">
+                    <i class="fa-solid fa-paper-plane me-1.5"></i> Submit Trade Quote
                   </button>
                 </div>
               </form>
@@ -1495,33 +1495,335 @@
       });
     }
 
+    // --- Dedicated Validation Helpers for Quote Modal ---
+    function getErrorAnchor(field) {
+      const group = field.closest('.input-group');
+      if (group) return group;
+      return field;
+    }
+
+    function showQuoteError(field, message) {
+      if (!field) return;
+      field.classList.remove('is-valid');
+      field.classList.add('is-invalid');
+      const anchor = getErrorAnchor(field);
+      let errEl = anchor.parentElement.querySelector(`.field-error-msg[data-for="${field.id}"]`);
+      if (!errEl) {
+        errEl = document.createElement('div');
+        errEl.className = 'field-error-msg';
+        errEl.setAttribute('data-for', field.id);
+        anchor.insertAdjacentElement('afterend', errEl);
+      }
+      errEl.innerHTML = `<i class="fa-solid fa-circle-exclamation me-1"></i> ${message}`;
+    }
+
+    function clearQuoteError(field, markValid = true) {
+      if (!field) return;
+      field.classList.remove('is-invalid');
+      if (markValid) {
+        field.classList.add('is-valid');
+      } else {
+        field.classList.remove('is-valid');
+      }
+      const anchor = getErrorAnchor(field);
+      const errEl = anchor.parentElement.querySelector(`.field-error-msg[data-for="${field.id}"]`);
+      if (errEl) errEl.remove();
+    }
+
+    function validateNameField(val) {
+      const trimmed = (val || '').trim();
+      if (!trimmed) {
+        return { isValid: false, message: 'Your name is required.' };
+      }
+      if (trimmed.length < 3) {
+        return { isValid: false, message: 'Name must be at least 3 characters.' };
+      }
+      if (trimmed.length > 50) {
+        return { isValid: false, message: 'Name cannot exceed 50 characters.' };
+      }
+      if (!/^[A-Za-z\s]+$/.test(trimmed)) {
+        return { isValid: false, message: 'Name can only contain alphabetic letters and spaces.' };
+      }
+      return { isValid: true };
+    }
+
+    function validateEmailField(val) {
+      const trimmed = (val || '').trim();
+      if (!trimmed) {
+        return { isValid: false, message: 'Business email is required.' };
+      }
+      if (!trimmed.includes('@')) {
+        return { isValid: false, message: 'Email address must include an "@" symbol (e.g. name@company.com).' };
+      }
+      const parts = trimmed.split('@');
+      if (parts.length !== 2 || !parts[0] || !parts[1]) {
+        return { isValid: false, message: 'Please provide both username and domain (e.g. name@company.com).' };
+      }
+      if (!parts[1].includes('.')) {
+        return { isValid: false, message: 'Email domain must contain a valid extension (e.g. .com, .org).' };
+      }
+      const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/;
+      if (!emailRegex.test(trimmed)) {
+        return { isValid: false, message: 'Please enter a valid email address (e.g. name@company.com).' };
+      }
+      return { isValid: true };
+    }
+
+    function validatePhoneField(val) {
+      const trimmed = (val || '').trim();
+      if (!trimmed) {
+        return { isValid: false, message: 'Phone number is required.' };
+      }
+      if (/[^\d\s+\-()]/g.test(trimmed)) {
+        return { isValid: false, message: 'Phone number can only contain digits, spaces, hyphens, and a leading (+) country code.' };
+      }
+      const digits = trimmed.replace(/\D/g, '');
+      if (digits.length < 10) {
+        return { isValid: false, message: 'Phone number must contain at least 10 digits.' };
+      }
+      if (digits.length > 15) {
+        return { isValid: false, message: 'Phone number cannot exceed 15 digits.' };
+      }
+      if (digits.length === 10 && !/^[6-9]/.test(digits)) {
+        return { isValid: false, message: 'Indian 10-digit mobile numbers must start with 6, 7, 8, or 9.' };
+      }
+      if (digits.length === 12 && digits.startsWith('91') && !/^[6-9]/.test(digits.slice(2))) {
+        return { isValid: false, message: 'Indian mobile numbers with +91 must start with 6, 7, 8, or 9.' };
+      }
+      return { isValid: true };
+    }
+
+    function validateDimensionField(val, min = 0.5, max = 100, label = 'Dimension') {
+      const num = parseFloat(val);
+      if (isNaN(num)) {
+        return { isValid: false, message: `Please enter a valid number for ${label}.` };
+      }
+      if (num < min) {
+        return { isValid: false, message: `${label} must be at least ${min} ft.` };
+      }
+      if (num > max) {
+        return { isValid: false, message: `${label} cannot exceed ${max} ft.` };
+      }
+      return { isValid: true };
+    }
+
+    function validateQtyField(val) {
+      const num = parseInt(val, 10);
+      if (isNaN(num) || num < 1) {
+        return { isValid: false, message: 'Quantity must be at least 1.' };
+      }
+      if (num > 10000) {
+        return { isValid: false, message: 'Quantity cannot exceed 10,000 units.' };
+      }
+      return { isValid: true };
+    }
+
+    const nameInput = document.getElementById('quoteClientName');
+    const emailInput = document.getElementById('quoteClientEmail');
+    const phoneInput = document.getElementById('quoteClientPhone');
+
+    // Realtime listeners
+    if (nameInput) {
+      nameInput.addEventListener('blur', () => {
+        const res = validateNameField(nameInput.value);
+        if (!res.isValid) showQuoteError(nameInput, res.message);
+        else clearQuoteError(nameInput, true);
+      });
+      nameInput.addEventListener('input', () => {
+        const res = validateNameField(nameInput.value);
+        if (!res.isValid) {
+          showQuoteError(nameInput, res.message);
+        } else {
+          clearQuoteError(nameInput, true);
+        }
+      });
+    }
+
+    if (emailInput) {
+      emailInput.addEventListener('blur', () => {
+        const res = validateEmailField(emailInput.value);
+        if (!res.isValid) showQuoteError(emailInput, res.message);
+        else clearQuoteError(emailInput, true);
+      });
+      emailInput.addEventListener('input', () => {
+        const res = validateEmailField(emailInput.value);
+        if (!res.isValid) {
+          showQuoteError(emailInput, res.message);
+        } else {
+          clearQuoteError(emailInput, true);
+        }
+      });
+    }
+
+    if (phoneInput) {
+      phoneInput.addEventListener('blur', () => {
+        const res = validatePhoneField(phoneInput.value);
+        if (!res.isValid) showQuoteError(phoneInput, res.message);
+        else clearQuoteError(phoneInput, true);
+      });
+      phoneInput.addEventListener('input', () => {
+        const res = validatePhoneField(phoneInput.value);
+        if (!res.isValid) {
+          showQuoteError(phoneInput, res.message);
+        } else {
+          clearQuoteError(phoneInput, true);
+        }
+      });
+    }
+
+    if (widthInput) {
+      widthInput.addEventListener('blur', () => {
+        const res = validateDimensionField(widthInput.value, 0.5, 100, 'Width');
+        if (!res.isValid) showQuoteError(widthInput, res.message);
+        else clearQuoteError(widthInput, false);
+      });
+      widthInput.addEventListener('input', () => {
+        if (widthInput.classList.contains('is-invalid')) {
+          const res = validateDimensionField(widthInput.value, 0.5, 100, 'Width');
+          if (res.isValid) clearQuoteError(widthInput, false);
+        }
+      });
+    }
+
+    if (heightInput) {
+      heightInput.addEventListener('blur', () => {
+        const res = validateDimensionField(heightInput.value, 0.5, 100, 'Height');
+        if (!res.isValid) showQuoteError(heightInput, res.message);
+        else clearQuoteError(heightInput, false);
+      });
+      heightInput.addEventListener('input', () => {
+        if (heightInput.classList.contains('is-invalid')) {
+          const res = validateDimensionField(heightInput.value, 0.5, 100, 'Height');
+          if (res.isValid) clearQuoteError(heightInput, false);
+        }
+      });
+    }
+
+    if (qtyInput) {
+      qtyInput.addEventListener('blur', () => {
+        const res = validateQtyField(qtyInput.value);
+        if (!res.isValid) showQuoteError(qtyInput, res.message);
+        else clearQuoteError(qtyInput, false);
+      });
+      qtyInput.addEventListener('input', () => {
+        if (qtyInput.classList.contains('is-invalid')) {
+          const res = validateQtyField(qtyInput.value);
+          if (res.isValid) clearQuoteError(qtyInput, false);
+        }
+      });
+    }
+
     if (form) {
       form.addEventListener('submit', (e) => {
         e.preventDefault();
-        const nameInput = document.getElementById('quoteClientName');
-        const emailInput = document.getElementById('quoteClientEmail');
-        const phoneInput = document.getElementById('quoteClientPhone');
 
-        if (!nameInput.value.trim() || !emailInput.value.trim() || !phoneInput.value.trim()) {
-          form.classList.add('was-validated');
+        const nameRes = validateNameField(nameInput?.value);
+        const emailRes = validateEmailField(emailInput?.value);
+        const phoneRes = validatePhoneField(phoneInput?.value);
+        const widthRes = validateDimensionField(widthInput?.value, 0.5, 100, 'Width');
+        const heightRes = validateDimensionField(heightInput?.value, 0.5, 100, 'Height');
+        const qtyRes = validateQtyField(qtyInput?.value);
+
+        let hasError = false;
+        let firstInvalid = null;
+
+        if (!widthRes.isValid) {
+          showQuoteError(widthInput, widthRes.message);
+          hasError = true;
+          if (!firstInvalid) firstInvalid = widthInput;
+        } else {
+          clearQuoteError(widthInput, false);
+        }
+
+        if (!heightRes.isValid) {
+          showQuoteError(heightInput, heightRes.message);
+          hasError = true;
+          if (!firstInvalid) firstInvalid = heightInput;
+        } else {
+          clearQuoteError(heightInput, false);
+        }
+
+        if (!qtyRes.isValid) {
+          showQuoteError(qtyInput, qtyRes.message);
+          hasError = true;
+          if (!firstInvalid) firstInvalid = qtyInput;
+        } else {
+          clearQuoteError(qtyInput, false);
+        }
+
+        if (!nameRes.isValid) {
+          showQuoteError(nameInput, nameRes.message);
+          hasError = true;
+          if (!firstInvalid) firstInvalid = nameInput;
+        } else {
+          clearQuoteError(nameInput, true);
+        }
+
+        if (!emailRes.isValid) {
+          showQuoteError(emailInput, emailRes.message);
+          hasError = true;
+          if (!firstInvalid) firstInvalid = emailInput;
+        } else {
+          clearQuoteError(emailInput, true);
+        }
+
+        if (!phoneRes.isValid) {
+          showQuoteError(phoneInput, phoneRes.message);
+          hasError = true;
+          if (!firstInvalid) firstInvalid = phoneInput;
+        } else {
+          clearQuoteError(phoneInput, true);
+        }
+
+        if (hasError) {
+          if (typeof window.showToast === 'function') {
+            window.showToast('Please correct the highlighted form errors before submitting.', 'error');
+          }
+          if (firstInvalid) firstInvalid.focus();
           return;
         }
 
-        const refId = 'FX-' + Math.floor(1000 + Math.random() * 9000);
-        const w = widthInput.value;
-        const h = heightInput.value;
-        const qty = qtyInput.value;
-        const totalEstimated = document.getElementById('quoteEstimatedTotal').textContent;
+        // Visual loading state on submit button
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalBtnHTML = submitBtn ? submitBtn.innerHTML : '';
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-1" role="status" aria-hidden="true"></span> Submitting...';
+        }
 
-        document.getElementById('successClientName').textContent = nameInput.value.trim();
-        document.getElementById('successProductName').textContent = activeQuoteProduct ? activeQuoteProduct.name : 'Product';
-        document.getElementById('successDimensions').textContent = `${w}x${h} ft, Qty: ${qty}`;
-        document.getElementById('successRefId').textContent = '#' + refId;
-        document.getElementById('successTotalAmount').textContent = totalEstimated;
-        document.getElementById('successEmailTarget').textContent = emailInput.value.trim();
+        setTimeout(() => {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnHTML;
+          }
 
-        document.getElementById('quoteModalFormBody').classList.add('d-none');
-        document.getElementById('quoteModalSuccessBody').classList.remove('d-none');
+          const refId = 'FX-' + Math.floor(1000 + Math.random() * 9000);
+          const w = widthInput ? widthInput.value : '8';
+          const h = heightInput ? heightInput.value : '4';
+          const qty = qtyInput ? qtyInput.value : '1';
+          const totalEstimated = document.getElementById('quoteEstimatedTotal') ? document.getElementById('quoteEstimatedTotal').textContent : '$0.00';
+
+          const sClientName = document.getElementById('successClientName');
+          const sProdName = document.getElementById('successProductName');
+          const sDims = document.getElementById('successDimensions');
+          const sRefId = document.getElementById('successRefId');
+          const sTotal = document.getElementById('successTotalAmount');
+          const sEmail = document.getElementById('successEmailTarget');
+
+          if (sClientName) sClientName.textContent = nameInput.value.trim();
+          if (sProdName) sProdName.textContent = activeQuoteProduct ? activeQuoteProduct.name : 'Product';
+          if (sDims) sDims.textContent = `${w}x${h} ft, Qty: ${qty}`;
+          if (sRefId) sRefId.textContent = '#' + refId;
+          if (sTotal) sTotal.textContent = totalEstimated;
+          if (sEmail) sEmail.textContent = emailInput.value.trim();
+
+          if (typeof window.showToast === 'function') {
+            window.showToast(`Quote request #${refId} submitted successfully!`, 'success');
+          }
+
+          document.getElementById('quoteModalFormBody').classList.add('d-none');
+          document.getElementById('quoteModalSuccessBody').classList.remove('d-none');
+        }, 500);
       });
     }
 
@@ -1539,7 +1841,11 @@
     if (successBody) successBody.classList.add('d-none');
 
     const form = document.getElementById('quickQuoteForm');
-    if (form) form.classList.remove('was-validated');
+    if (form) {
+      form.classList.remove('was-validated');
+      form.querySelectorAll('.is-invalid, .is-valid').forEach(el => el.classList.remove('is-invalid', 'is-valid'));
+      form.querySelectorAll('.field-error-msg').forEach(el => el.remove());
+    }
 
     // Populate product details
     const imgEl = document.getElementById('quoteModalImg');
