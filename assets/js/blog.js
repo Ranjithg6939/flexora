@@ -803,7 +803,7 @@ function initBlogDetails() {
         <div class="col-md-6">
           <div class="p-3 border rounded-4 shadow-sm h-100 d-flex flex-column justify-content-between" style="background-color: var(--surface) !important; border-color: var(--border-color) !important;">
             <div>
-              <span class="badge-tag mb-1">${relPost.category}</span>
+              <span class="badge-tag mb-3">${relPost.category}</span>
               <h5 class="h6 fw-bold mb-2">
                 <a href="blog-details.html?post=${relPost.id}" class="text-secondary text-decoration-none">${relPost.title}</a>
               </h5>

@@ -2184,15 +2184,23 @@ img {
 /* --- Gallery & Lightbox --- */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
+  width: 100%;
+}
+
+@media (max-width: 991.98px) {
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+  }
 }
 
 .gallery-item {
   position: relative;
   border-radius: var(--radius-sm);
   overflow: hidden;
-  height: 260px;
+  height: 280px;
   cursor: pointer;
 }
 
@@ -4060,6 +4068,18 @@ img {
   z-index: 10;
 }
 
+/* Related Technical Articles: Ensure Category Pill Never Collides with Headline */
+#blogDetailRelatedContainer .badge-tag {
+  display: inline-flex !important;
+  margin-bottom: 0.95rem !important;
+  align-self: flex-start;
+}
+
+#blogDetailRelatedContainer h5 {
+  line-height: 1.4 !important;
+  margin-top: 0 !important;
+}
+
 /* 2-Column Grid Layout: Independent Left Scroll & Sticky Right Sidebar */
 @media (min-width: 992px) {
   .blog-details-layout,
@@ -5067,10 +5087,13 @@ img {
 
 .industrial-showcase-section .section-title {
   color: var(--secondary);
+  margin-top: 0;
+  line-height: 1.25;
 }
 
 .industrial-showcase-section .lead-desc {
   color: #52486E;
+  line-height: 1.6;
 }
 
 .industrial-stat-box {
